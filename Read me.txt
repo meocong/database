@@ -3,4 +3,5 @@
  Chay toàn bo code de tao co so du lieu
 - File code nam trong GiaoDienCuaHangMoi
  Chay file GiaoDienCuaHangMoi\GiaoDienCuaHang\bin\Debug\GiaoDienCuaHang.exe
+viehdbbfb
 
