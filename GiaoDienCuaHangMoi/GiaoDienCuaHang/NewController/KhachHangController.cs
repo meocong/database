@@ -10,15 +10,11 @@ namespace GiaoDienCuaHang.NewController
     class KhachHangController
     {
         KhachHangData data = new KhachHangData();
-        public void HienThi(TextBox txtMKH, TextBox txtHT, TextBox txtDC, TextBox txtDT, DataGridView dg)
+        public void HienThi(DataGridView dg)
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = data.LayDSKhachHang();
             dg.DataSource = bs;
-            txtMKH.DataBindings.Add("Text", bs, "MAKH");
-            txtHT.DataBindings.Add("Text", bs, "HOTEN");
-            txtDC.DataBindings.Add("Text", bs, "DIACHI");
-            txtDT.DataBindings.Add("Text", bs, "DIENTHOAI");
         }
         string strTenKhachHang;
 

@@ -377,6 +377,52 @@ ADD CONSTRAINT F_PSC_HH FOREIGN KEY(MAHH) REFERENCES HANGHOA(MAHH)
 ALTER TABLE TONKHO 
 ADD CONSTRAINT F_TONKHO_HH FOREIGN KEY(MAHH) REFERENCES HANGHOA(MAHH)
 
+------------------------------------------------------------------
+----===========FUNCTION========================-------------------
+------------------------------------------------------------------
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'AUTO_IDKhachHang')
+DROP FUNCTION dbo.AUTO_IDKhachHang;
+GO
+	CREATE FUNCTION dbo.AUTO_IDKhachHang()
+	RETURNS VARCHAR(5)
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(5)
+		IF (SELECT COUNT(MAKH) FROM KHACHHANG) = 0
+			SET @ID = '001'
+		ELSE
+		BEGIN
+			SELECT @ID = MAX(RIGHT(MAKH, LEN(MAKH) - 2)) FROM KHACHHANG;
+			SET @ID = @ID + 1
+			WHILE LEN(@ID) < 3 
+			BEGIN 
+				SET @ID = '0' + @ID 
+			END
+		END
+		SET @ID = 'KH' + @ID
+
+		RETURN @ID
+	END
+GO
+
+DECLARE @t1 VARCHAR(10)
+SET @t1 = dbo.AUTO_IDKhachHang()
+SELECT name FROM sys.objects
+SELECT dbo.AUTO_IDKhachHang() 
+
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_Customer')
+DROP PROCEDURE dbo.Insert_New_Customer;
+GO
+	CREATE PROCEDURE dbo.Insert_New_Customer
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(5) 
+		SELECT @ID = dbo.AUTO_IDKhachHang() 
+		INSERT INTO KHACHHANG
+		VALUES(@ID,'','','')
+	END
+GO
+
 -----------------------------------------------
 --==============NH?P LI?U ====================
 -----------------------------------------------

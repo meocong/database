@@ -44,7 +44,93 @@ namespace GiaoDienCuaHang.DataLayer
 
 
        }
-       public void Update()
+
+        public void AddNewRow()
+        {
+            ds.Exec("EXEC dbo.Insert_New_Customer");
+        }
+
+        public DataTable DataKhachHang(String id, String name, String address, String phone)
+        {
+            bool checkWhere = false;
+            SqlCommand cmd = new SqlCommand();
+            String SQL = "SELECT * FROM KHACHHANG ";
+
+            // Find Id
+            if (id != "")
+            {
+                if (checkWhere == false)
+                {
+                    checkWhere = true;
+                    SQL += " WHERE ";
+                }
+                else
+                {
+                    SQL += " AND ";
+                }
+
+                SQL += " MAKH LIKE '%' + @mKH + '%' ";
+                cmd.Parameters.Add("mKH", SqlDbType.NVarChar).Value = id;
+            }
+
+            // Find name
+            if (name != "")
+            {
+                if (checkWhere == false)
+                {
+                    checkWhere = true;
+                    SQL += " WHERE ";
+                }
+                else
+                {
+                    SQL += " AND ";
+                }
+
+                SQL += " HOTEN LIKE '%' + @tKH + '%' ";
+                cmd.Parameters.Add("tKH", SqlDbType.NVarChar).Value = name;
+            }
+
+            // Find address
+            if (address != "")
+            {
+                if (checkWhere == false)
+                {
+                    checkWhere = true;
+                    SQL += " WHERE ";
+                }
+                else
+                {
+                    SQL += " AND ";
+                }
+
+                SQL += " DIACHI LIKE '%' + @dc  + '%' ";
+                cmd.Parameters.Add("dc", SqlDbType.NVarChar).Value = address;
+            }
+
+            // Find phone
+            if (phone != "")
+            {
+                if (checkWhere == false)
+                {
+                    checkWhere = true;
+                    SQL += " WHERE ";
+                }
+                else
+                {
+                    SQL += " AND ";
+                }
+
+                SQL += " DIENTHOAI LIKE '%' + @dt  + '%' ";
+                cmd.Parameters.Add("dt", SqlDbType.VarChar).Value = phone;
+            }
+
+            cmd.CommandText = SQL;
+
+            ds.Load(cmd);
+
+            return ds;
+        }
+        public void Update()
        {
            ds.Update();
        }

@@ -32,6 +32,16 @@ namespace GiaoDienCuaHang
             m_DataAdapter.Fill(this);
         }
 
+        public void Exec(string queryString)
+        {
+            using (SqlConnection connection = new SqlConnection(strConn))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+
         public void Update()
         {
             SqlCommandBuilder builder = new SqlCommandBuilder(m_DataAdapter);
