@@ -28,7 +28,7 @@ namespace GiaoDienCuaHang
         private void frmThongKePhieuBanHang_Load(object sender, EventArgs e)
         {
             GiaoDienCuaHang.DataLayer.KhachHangData khdata = new GiaoDienCuaHang.DataLayer.KhachHangData();
-            comboBox1.DataSource = khdata.LayDSKhachHang();
+            comboBox1.DataSource = khdata.LayDSKhachHang("");
             comboBox1.DisplayMember = "HOTEN";
             comboBox1.ValueMember = "MAKH";
             

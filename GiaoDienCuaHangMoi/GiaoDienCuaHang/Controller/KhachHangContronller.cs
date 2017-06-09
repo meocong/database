@@ -14,7 +14,7 @@ namespace GiaoDienCuaHang.Controller
        public void HienThi(TextBox txtMKH, TextBox txtHT, TextBox txtDC, TextBox txtDT, DataGridView dg, BindingNavigator bn)
        {
            BindingSource bs = new BindingSource();
-           bs.DataSource = data.LayDSKhachHang();
+           bs.DataSource = data.LayDSKhachHang("");
            dg.DataSource = bs;
            bn.BindingSource = bs;
            txtMKH.DataBindings.Add("Text", bs,"MAKH");
@@ -27,7 +27,7 @@ namespace GiaoDienCuaHang.Controller
        public ListViewItem.ListViewSubItem LoadListViewSubItemKhachHang(string str)
        {
            ListViewItem.ListViewSubItem subI = new ListViewItem.ListViewSubItem();
-           DataTable dt = data.LayDSKhachHang();
+           DataTable dt = data.LayDSKhachHang("");
            subI.Tag = dt;
            foreach (DataRow dr in dt.Rows)
            {
@@ -41,7 +41,7 @@ namespace GiaoDienCuaHang.Controller
 
        public void LoadComboBoxKhachHang(ComboBox cmb)
        {
-           cmb.DataSource = data.LayDSKhachHang();
+           cmb.DataSource = data.LayDSKhachHang("");
            cmb.DisplayMember = "HOTEN";
            cmb.ValueMember = "MAKH";
            cmb.SelectedValue = "MAKH";

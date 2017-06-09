@@ -14,8 +14,9 @@ namespace GiaoDienCuaHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDShanghoahethan());
-            Application.Run(new FormMain());
+            //Application.Run(new frmDShanghoahethan());
+            //Application.Run(new FormMain());
+            Application.Run(new frmThongKeKhachHang());
             
         }
     }

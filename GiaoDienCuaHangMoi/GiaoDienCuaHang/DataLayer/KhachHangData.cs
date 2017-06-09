@@ -9,11 +9,22 @@ namespace GiaoDienCuaHang.DataLayer
    public class KhachHangData
     {
        DataService ds = new DataService();
-       public DataTable LayDSKhachHang()
+       public DataTable LayDSKhachHang(string MaKh)
        {
-           SqlCommand cmd = new SqlCommand("select * from KHACHHANG");
-           ds.Load(cmd);
-           return ds;
+
+            if(MaKh == "")
+            {
+                SqlCommand cmd = new SqlCommand("select * from KHACHHANG");
+                ds.Load(cmd);
+                return ds;
+            }
+            else
+            {
+                SqlCommand cmd = new SqlCommand("select * from KHACHHANG where MAKH ='" + MaKh + "'");
+                ds.Load(cmd);
+                return ds;
+            }
+
        }
        public DataTable TKKhachHang(String tenkhachhang, String chondchi, String dchi, String chondthoai, String dthoai)
        {
