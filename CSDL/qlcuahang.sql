@@ -405,11 +405,6 @@ GO
 	END
 GO
 
-DECLARE @t1 VARCHAR(10)
-SET @t1 = dbo.AUTO_IDKhachHang()
-SELECT name FROM sys.objects
-SELECT dbo.AUTO_IDKhachHang() 
-
 IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_Customer')
 DROP PROCEDURE dbo.Insert_New_Customer;
 GO

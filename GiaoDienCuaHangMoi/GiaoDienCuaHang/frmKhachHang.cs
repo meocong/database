@@ -114,10 +114,10 @@ namespace GiaoDienCuaHang
 
         private void buttonSaving_Click(object sender, EventArgs e)
         {
-            dataGridView1.EndEdit();
+            //dataGridView1.EndEdit();
 
-            int rowSelected = dataGridView1.SelectedCells[0].RowIndex;
-            int colSelected = dataGridView1.SelectedCells[0].ColumnIndex;
+            //int rowSelected = dataGridView1.SelectedCells[0].RowIndex;
+            //int colSelected = dataGridView1.SelectedCells[0].ColumnIndex;
 
             //dataGridView1.MultiSelect = false;
             //dataGridView1.Rows[0].Selected = true;
