@@ -230,6 +230,12 @@
     <Compile Include="frmKhachHang.Designer.cs">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhaCungCap.Designer.cs">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThongKeDonViTinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -394,6 +400,7 @@
     </Compile>
     <Compile Include="LIBRARY\DataGridViewCalendarColumn.cs" />
     <Compile Include="NewController\KhachHangController.cs" />
+    <Compile Include="NewController\NhaCungCapController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CrystalReportChonhanghoa.rpt">
@@ -465,6 +472,9 @@
     <EmbeddedResource Include="frmLapPhieuSuCo.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmLapPhieuSuCo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhaCungCap.resx">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongKeDonViTinh.resx">
       <SubType>Designer</SubType>

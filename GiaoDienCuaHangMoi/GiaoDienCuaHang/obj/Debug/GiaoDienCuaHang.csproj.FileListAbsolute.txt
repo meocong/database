@@ -261,3 +261,4 @@ E:\Subjects\database\GitHub project\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\
 E:\Subjects\database\GitHub project\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmTonKho.resources
 E:\Subjects\database\GitHub project\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.Properties.Resources.resources
 E:\Subjects\database\GitHub project\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.csproj.GenerateResource.Cache
+C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmNhaCungCap.resources

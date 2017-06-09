@@ -17,7 +17,7 @@ namespace GiaoDienCuaHang
         frmTonKho tonk = null;
         frmThongKeTonKho tktkho = null;
         frmKhachHang kh = null;
-        fNhaCungCap ncc = null;
+        frmNhaCungCap ncc = null;
         fHangHoa hh = null;
         frmDonViTinh dvt = null;
         fLapPhieuBanHang pbh = null;
@@ -214,7 +214,7 @@ namespace GiaoDienCuaHang
         private void NCCToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (ncc == null || ncc.IsDisposed)
-                ncc = new fNhaCungCap();
+                ncc = new frmNhaCungCap();
             ncc.MdiParent = this;
             ncc.Show();
         }
@@ -246,7 +246,7 @@ namespace GiaoDienCuaHang
         private void toolStripButtonNCC_Click(object sender, EventArgs e)
         {
             if (ncc == null || ncc.IsDisposed)
-                ncc = new fNhaCungCap();
+                ncc = new frmNhaCungCap();
             ncc.MdiParent = this;
             ncc.Show();
         }
@@ -270,7 +270,7 @@ namespace GiaoDienCuaHang
         private void taskItemNCC_Click(object sender, EventArgs e)
         {
             if (ncc == null || ncc.IsDisposed)
-                ncc = new fNhaCungCap();
+                ncc = new frmNhaCungCap();
             ncc.MdiParent = this;
             ncc.Show();
         }
@@ -745,7 +745,7 @@ namespace GiaoDienCuaHang
         private void buttonItem4_Click(object sender, EventArgs e)
         {
             if (ncc == null || ncc.IsDisposed)
-                ncc = new fNhaCungCap();
+                ncc = new frmNhaCungCap();
             ncc.MdiParent = this;
             ncc.Show();
         }
@@ -814,7 +814,7 @@ namespace GiaoDienCuaHang
         private void buttonItem21_Click(object sender, EventArgs e)
         {
             if (ncc == null || ncc.IsDisposed)
-                ncc = new fNhaCungCap();
+                ncc = new frmNhaCungCap();
             ncc.MdiParent = this;
             ncc.Show();
         }
@@ -822,7 +822,7 @@ namespace GiaoDienCuaHang
         private void buttonItem22_Click(object sender, EventArgs e)
         {
             if (ncc == null || ncc.IsDisposed)
-                ncc = new fNhaCungCap();
+                ncc = new frmNhaCungCap();
             ncc.MdiParent = this;
             ncc.Show();
         }
