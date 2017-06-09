@@ -15,18 +15,22 @@ namespace GiaoDienCuaHang
     public partial class frmKhachHang : DevComponents.DotNetBar.OfficeForm
     {
         KhachHangController ctrl = new KhachHangController();
-        KhachHangData data = new KhachHangData();
-        private BindingSource dataSource = new BindingSource();
 
         public frmKhachHang()
         {
             InitializeComponent();
+
         }
 
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
             ctrl.HienThi(dataGridView1);
             updateDataSource();
+
+            textBox1.CharacterCasing = CharacterCasing.Upper;
+            textBox2.CharacterCasing = CharacterCasing.Upper;
+            textBox3.CharacterCasing = CharacterCasing.Upper;
+            textBox4.CharacterCasing = CharacterCasing.Upper;
         }
 
         private void updateDataSource()
@@ -42,13 +46,12 @@ namespace GiaoDienCuaHang
             {
 
             }
-            
-            dataSource.DataSource = dataGridView1.DataSource;
-            this.textBox1.DataBindings.Add("Text", dataSource.DataSource, "MAKH");
+                      
+            this.textBox1.DataBindings.Add("Text", dataGridView1.DataSource, "MAKH", false, DataSourceUpdateMode.OnPropertyChanged);
             this.textBox1.Enabled = false;
-            this.textBox2.DataBindings.Add("Text", dataSource.DataSource, "HOTEN");
-            this.textBox3.DataBindings.Add("Text", dataSource.DataSource, "DIACHI");
-            this.textBox4.DataBindings.Add("Text", dataSource.DataSource, "DIENTHOAI");
+            this.textBox2.DataBindings.Add("Text", dataGridView1.DataSource, "HOTEN", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.textBox3.DataBindings.Add("Text", dataGridView1.DataSource, "DIACHI", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.textBox4.DataBindings.Add("Text", dataGridView1.DataSource, "DIENTHOAI", false, DataSourceUpdateMode.OnPropertyChanged);
         }
 
         private void buttonDeleting_Click(object sender, EventArgs e)
@@ -65,14 +68,8 @@ namespace GiaoDienCuaHang
 
         private void buttonAdding_Click(object sender, EventArgs e)
         {
-            data.AddNewRow();
+            ctrl.AddNewRow();
             finding("", "", "", "");
-
-            //dataGridView1.Rows[dataGridView1.RowCount-1].Selected = true;
-            //foreach (DataGridViewCell cell in dataGridView1.SelectedCells)
-            //{
-            //   cell.Selected = false;
-            //}
 
             dataGridView1.ClearSelection();//If you want
 
@@ -91,7 +88,7 @@ namespace GiaoDienCuaHang
 
         private void finding(string textID, string textName, string textAddress, string textNumber)
         {
-            dataGridView1.DataSource = data.DataKhachHang(textID, textName, textAddress, textNumber);
+            dataGridView1.DataSource = ctrl.DataKhachHang(textID, textName, textAddress, textNumber).DataSource;
             updateDataSource();
         }
 
@@ -118,9 +115,47 @@ namespace GiaoDienCuaHang
         private void buttonSaving_Click(object sender, EventArgs e)
         {
             dataGridView1.EndEdit();
-            ctrl.Update();
+
+            int rowSelected = dataGridView1.SelectedCells[0].RowIndex;
+            int colSelected = dataGridView1.SelectedCells[0].ColumnIndex;
+
+            //dataGridView1.MultiSelect = false;
+            //dataGridView1.Rows[0].Selected = true;
+            //dataGridView1.Rows[0].Cells[0].Selected = true;
+
+            //ctrl.Update();
+            ctrl.Update_to_database(this.dataGridView1);
             dataGridView1.Update();
             dataGridView1.Refresh();
+
+            //dataGridView1.Rows[rowSelected].Selected = true;
+            //dataGridView1.Rows[rowSelected].Cells[colSelected].Selected = true;
+            //dataGridView1.Rows[0].Selected = false;
+            //dataGridView1.Rows[0].Cells[0].Selected = false;
+            //dataGridView1.MultiSelect = true;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {   
+            //dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[1].Value = textBox2.Text;
+            //dataGridView1.Update();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            //dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[2].Value = textBox3.Text;
+            //dataGridView1.Update();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            //dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[3].Value = textBox4.Text;
+            //dataGridView1.Update();
+        }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }

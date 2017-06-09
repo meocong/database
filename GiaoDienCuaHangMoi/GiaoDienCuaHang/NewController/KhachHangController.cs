@@ -54,5 +54,22 @@ namespace GiaoDienCuaHang.NewController
         {
             data.Update();
         }
+
+        public void Update_to_database(System.Windows.Forms.DataGridView bindingSource1)
+        {
+            data.Update_to_database(bindingSource1);
+        }
+        
+        public void AddNewRow()
+        {
+            data.AddNewRow();
+        }
+
+        public BindingSource DataKhachHang(String id, String name, String address, String phone)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource =  data.DataKhachHang(id, name, address, phone);
+            return bs;
+        }
     }
 }

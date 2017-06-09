@@ -134,5 +134,9 @@ namespace GiaoDienCuaHang.DataLayer
        {
            ds.Update();
        }
+        public void Update_to_database(System.Windows.Forms.DataGridView bindingSource1)
+        {
+            ds.Update_to_database(bindingSource1);
+        }
     }
 }
