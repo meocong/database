@@ -13,7 +13,7 @@ namespace GiaoDienCuaHang.NewController
         public void HienThi(DataGridView dg)
         {
             BindingSource bs = new BindingSource();
-            bs.DataSource = data.LayDSKhachHang();
+            bs.DataSource = data.LayDSKhachHang("");
             dg.DataSource = bs;
         }
         string strTenKhachHang;
@@ -21,7 +21,7 @@ namespace GiaoDienCuaHang.NewController
         public ListViewItem.ListViewSubItem LoadListViewSubItemKhachHang(string str)
         {
             ListViewItem.ListViewSubItem subI = new ListViewItem.ListViewSubItem();
-            DataTable dt = data.LayDSKhachHang();
+            DataTable dt = data.LayDSKhachHang("");
             subI.Tag = dt;
             foreach (DataRow dr in dt.Rows)
             {
@@ -35,7 +35,7 @@ namespace GiaoDienCuaHang.NewController
 
         public void LoadComboBoxKhachHang(ComboBox cmb)
         {
-            cmb.DataSource = data.LayDSKhachHang();
+            cmb.DataSource = data.LayDSKhachHang("");
             cmb.DisplayMember = "HOTEN";
             cmb.ValueMember = "MAKH";
             cmb.SelectedValue = "MAKH";

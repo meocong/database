@@ -575,6 +575,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportKhachHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportKhachHang.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -596,6 +600,17 @@
     <Compile Include="frmTimKiemPhieuDatHang.Designer.cs">
       <DependentUpon>frmTimKiemPhieuDatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLCHmoiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLCHmoiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportKhachHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportKhachHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -604,6 +619,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="house_48.ico" />
+    <None Include="QLCHmoiDataSet.xsc">
+      <DependentUpon>QLCHmoiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLCHmoiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLCHmoiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLCHmoiDataSet.xss">
+      <DependentUpon>QLCHmoiDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\search.png" />
     <None Include="Resources\save.png" />
     <None Include="Resources\delete.png" />
