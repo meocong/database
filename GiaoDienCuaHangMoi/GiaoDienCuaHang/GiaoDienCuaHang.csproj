@@ -157,6 +157,11 @@
       <DependentUpon>CrystalReportPhieuBanHang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReportPhieuBanHang_V2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportPhieuBanHang_V2.rpt</DependentUpon>
+    </Compile>
     <Compile Include="CrystalReportPhieuDatHang.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -180,6 +185,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportTonKho.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportTonKho_V2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportTonKho_V2.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReportTonKho_V3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportTonKho_V3.rpt</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\ChiTietPhieuBanHangData.cs" />
     <Compile Include="DataLayer\ChiTietPhieuDatHangData.cs" />
@@ -460,6 +475,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportPhieuBanHang.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportPhieuBanHang_V2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportPhieuBanHang_V2.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportPhieuDatHang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportPhieuDatHang.cs</LastGenOutput>
@@ -475,6 +494,14 @@
     <EmbeddedResource Include="CrystalReportTonKho.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportTonKho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportTonKho_V2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportTonKho_V2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportTonKho_V3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportTonKho_V3.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="fHangHoa.resx">
       <SubType>Designer</SubType>
