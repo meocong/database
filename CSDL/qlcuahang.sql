@@ -380,6 +380,8 @@ ADD CONSTRAINT F_TONKHO_HH FOREIGN KEY(MAHH) REFERENCES HANGHOA(MAHH)
 ------------------------------------------------------------------
 ----===========FUNCTION========================-------------------
 ------------------------------------------------------------------
+
+------------------Khach Hang---------------------
 IF EXISTS(SELECT name FROM sys.objects WHERE name = N'AUTO_IDKhachHang')
 DROP FUNCTION dbo.AUTO_IDKhachHang;
 GO
@@ -397,10 +399,6 @@ GO
 			WHILE LEN(@ID) < 3 
 			BEGIN 
 				SET @ID = '0' + @ID 
-			END
-			IF LEN(@ID + 1) > LEN(@ID)
-			BEGIN
-				SET @ID = @ID + 1
 			END
 		END
 		SET @ID = 'KH' + @ID
@@ -422,6 +420,8 @@ GO
 	END
 GO
 
+
+------------------Nha cung cap---------------------
 IF EXISTS(SELECT name FROM sys.objects WHERE name = N'AUTO_IDNhaCungCap')
 DROP FUNCTION dbo.AUTO_IDNhaCungCap;
 GO
@@ -439,10 +439,6 @@ GO
 			WHILE LEN(@ID) < 3 
 			BEGIN 
 				SET @ID = '0' + @ID 
-			END
-			IF LEN(@ID + 1) > LEN(@ID)
-			BEGIN
-				SET @ID = @ID + 1
 			END
 		END
 		SET @ID = 'NCC' + @ID
@@ -464,7 +460,83 @@ GO
 	END
 GO
 
+------------------Don Vi Tinh---------------------
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'AUTO_IDDonViTinh')
+DROP FUNCTION dbo.AUTO_IDDonViTinh;
+GO
+	CREATE FUNCTION dbo.AUTO_IDDonViTinh()
+	RETURNS VARCHAR(6)
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(6)
+		IF (SELECT COUNT(MADVT) FROM DONVITINH) = 0
+			SET @ID = '001'
+		ELSE
+		BEGIN
+			SELECT @ID = MAX(RIGHT(MADVT, LEN(MADVT) - 3)) FROM DONVITINH;
+			SET @ID = @ID + 1
+			WHILE LEN(@ID) < 3 
+			BEGIN 
+				SET @ID = '0' + @ID 
+			END
+		END
+		SET @ID = 'DVT' + @ID
 
+		RETURN @ID
+	END
+GO
+
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_Unit')
+DROP PROCEDURE dbo.Insert_New_Unit;
+GO
+	CREATE PROCEDURE dbo.Insert_New_Unit
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(6)
+		SELECT @ID = dbo.AUTO_IDDonViTinh() 
+		INSERT INTO DONVITINH
+		VALUES(@ID,'')
+	END
+GO
+
+------------------Hang Hoa---------------------
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'AUTO_IDHangHoa')
+DROP FUNCTION dbo.AUTO_IDHangHoa;
+GO
+	CREATE FUNCTION dbo.AUTO_IDHangHoa()
+	RETURNS VARCHAR(8)
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(8)
+		IF (SELECT COUNT(MAHH) FROM HANGHOA) = 0
+			SET @ID = '001'
+		ELSE
+		BEGIN
+			SELECT @ID = MAX(RIGHT(MAHH, LEN(MAHH) - 2)) FROM HANGHOA;
+			SET @ID = @ID + 1
+			WHILE LEN(@ID) < 3 
+			BEGIN 
+				SET @ID = '0' + @ID 
+			END
+		END
+		SET @ID = 'HH' + @ID
+
+		RETURN @ID
+	END
+GO
+
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_Goods')
+DROP PROCEDURE dbo.Insert_New_Goods;
+GO
+	CREATE PROCEDURE dbo.Insert_New_Goods
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(8)
+		SELECT @ID = dbo.AUTO_IDHangHoa() 
+		INSERT INTO HANGHOA
+		VALUES(@ID,'','DVT001','1/1/2017','0','0','0','')
+	END
+GO
 -----------------------------------------------
 --==============NH?P LI?U ====================
 -----------------------------------------------

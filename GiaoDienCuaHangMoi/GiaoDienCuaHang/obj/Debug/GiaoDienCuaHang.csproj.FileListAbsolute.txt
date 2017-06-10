@@ -176,7 +176,6 @@ C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDien
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmThongKeTonKho.resources
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.FormMain.resources
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDangNhap.resources
-C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDonViTinh.resources
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmLapPhieuDatHang.resources
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmLapPhieuNhanHang.resources
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fKhachHang.resources
@@ -262,3 +261,6 @@ E:\Subjects\database\GitHub project\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\
 E:\Subjects\database\GitHub project\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.Properties.Resources.resources
 E:\Subjects\database\GitHub project\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.csproj.GenerateResource.Cache
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmNhaCungCap.resources
+C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fDonViTinh.resources
+C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDonViTinh.resources
+C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmHangHoa.resources
