@@ -19,7 +19,7 @@ namespace GiaoDienCuaHang
         {
             GiaoDienCuaHang.DataLayer.DonViTinhData dvt = new GiaoDienCuaHang.DataLayer.DonViTinhData();
             DataTable tbl = dvt.LayDSDonViTinh();
-            CrystalReportDonviTinh report = new CrystalReportDonviTinh();
+            CRDonViTinh report = new CRDonViTinh();
             report.SetDataSource(tbl);
             crystalReportViewer1.ReportSource = report;
         }
