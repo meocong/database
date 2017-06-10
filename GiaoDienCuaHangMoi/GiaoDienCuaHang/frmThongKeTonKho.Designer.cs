@@ -33,11 +33,13 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonhienthi = new System.Windows.Forms.Button();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.bttHienThiToanBo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.bttHienThiToanBo);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.buttonhienthi);
@@ -87,6 +89,16 @@
             this.crystalReportViewer1.TabIndex = 1;
             this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
+            // bttHienThiToanBo
+            // 
+            this.bttHienThiToanBo.Location = new System.Drawing.Point(405, 38);
+            this.bttHienThiToanBo.Name = "bttHienThiToanBo";
+            this.bttHienThiToanBo.Size = new System.Drawing.Size(130, 23);
+            this.bttHienThiToanBo.TabIndex = 3;
+            this.bttHienThiToanBo.Text = "Hiển Thị Toàn Bộ";
+            this.bttHienThiToanBo.UseVisualStyleBackColor = true;
+            this.bttHienThiToanBo.Click += new System.EventHandler(this.bttHienThiToanBo_Click);
+            // 
             // frmThongKeTonKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,7 +107,7 @@
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.panel1);
             this.Name = "frmThongKeTonKho";
-            this.Text = "frmThongKeTonKho";
+            this.Text = "Thống Kê Tồn Kho";
             this.Load += new System.EventHandler(this.frmThongKeTonKho_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -110,5 +122,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button buttonhienthi;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private System.Windows.Forms.Button bttHienThiToanBo;
     }
 }

@@ -16,6 +16,15 @@ namespace GiaoDienCuaHang.DataLayer
            ds.Load(new SqlCommand("select * from PHIEUBANHANG"));
            return ds;
        }
+
+        public DataTable LayDS_TK_PBH_ToanBo()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT CHITIETPHIEUBANHANG.THANHTIEN, PHIEUBANHANG.MAPHIEU, KHACHHANG.HOTEN, NHANVIEN.HOTEN, NHANVIEN.MALOAINV FROM CHITIETPHIEUBANHANG , PHIEUBANHANG, KHACHHANG, NHANVIEN WHERE CHITIETPHIEUBANHANG.MAPHIEU = PHIEUBANHANG.MAPHIEU AND KHACHHANG.MAKH = PHIEUBANHANG.MAKH AND NHANVIEN.MANV = PHIEUBANHANG.MANV");
+            ds.Load(cmd);
+            return ds;
+        }
+
+
        public DataTable LayDSCTPBH()
        {
 
@@ -24,10 +33,21 @@ namespace GiaoDienCuaHang.DataLayer
        }
        public DataTable LayDSPhieuBanHang(String pbh)
        {
-           SqlCommand cmd = new SqlCommand("SELECT * FROM PHIEUBANHANG WHERE MAKH=@k");
-           cmd.Parameters.Add("k", SqlDbType.VarChar).Value = pbh;
-           ds.Load(cmd);
-           return ds;
+            if(pbh == "")
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM PHIEUBANHANG");
+                cmd.Parameters.Add("k", SqlDbType.VarChar).Value = pbh;
+                ds.Load(cmd);
+                return ds;
+            }
+            else
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM PHIEUBANHANG WHERE MAKH=@k");
+                cmd.Parameters.Add("k", SqlDbType.VarChar).Value = pbh;
+                ds.Load(cmd);
+                return ds;
+            }
+           
        }
 
        public DataTable TimKiemPhieuBanHang(String MaKH, String chonMaNV, String MaNV, String chonNgayLap,DateTime TuNgay,DateTime DenNgay)
@@ -60,6 +80,9 @@ namespace GiaoDienCuaHang.DataLayer
 
 
        }
+
+
+
        public DataRow NewRow()
        {
            return ds.NewRow();

@@ -17,12 +17,18 @@ namespace GiaoDienCuaHang
 
         private void buttonhienthi_Click(object sender, EventArgs e)
         {
-            String hh = comboBox1.SelectedValue.ToString();
+            /*String hh = comboBox1.SelectedValue.ToString();
             GiaoDienCuaHang.DataLayer.TonKhoData tk = new GiaoDienCuaHang.DataLayer.TonKhoData();
             CrystalReportTonKho parameter = new CrystalReportTonKho();
             parameter.SetDataSource(tk.LayDS_TonKho(hh));
             parameter.SetParameterValue("tenhh", comboBox1.Text);
-            crystalReportViewer1.ReportSource = parameter; 
+            crystalReportViewer1.ReportSource = parameter;*/
+
+            GiaoDienCuaHang.DataLayer.TonKhoData tk = new GiaoDienCuaHang.DataLayer.TonKhoData();
+            CrystalReportTonKho_V3 parameter = new CrystalReportTonKho_V3();
+            parameter.SetDataSource(tk.LayDS_TK_TonKho_MotPhan(comboBox1.Text));
+            parameter.SetParameterValue("tenHangHoa", comboBox1.Text);
+            crystalReportViewer1.ReportSource = parameter;
         }
 
         private void frmThongKeTonKho_Load(object sender, EventArgs e)
@@ -32,5 +38,15 @@ namespace GiaoDienCuaHang
             comboBox1.DisplayMember = "TENHH";
             comboBox1.ValueMember = "MAHH";
         }
+
+        private void bttHienThiToanBo_Click(object sender, EventArgs e)
+        {
+            GiaoDienCuaHang.DataLayer.TonKhoData tk = new GiaoDienCuaHang.DataLayer.TonKhoData();
+            CrystalReportTonKho_V2 parameter = new CrystalReportTonKho_V2();
+            parameter.SetDataSource(tk.LayDS_TK_TonKho());
+            crystalReportViewer1.ReportSource = parameter;
+
+        }
+        
     }
 }
