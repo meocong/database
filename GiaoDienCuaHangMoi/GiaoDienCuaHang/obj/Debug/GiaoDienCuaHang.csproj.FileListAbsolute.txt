@@ -316,7 +316,6 @@ C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDShanghoahethan.resources
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmHangHoa.resources
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmKhachHang.resources
-C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmLapPhieuSuCo.resources
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmLoaiNhanVien.resources
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmNhaCungCap.resources
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmNhanVien.resources
@@ -432,3 +431,5 @@ C:\Users\Trung\Desktop\New folder\GiaoDienCuaHangMoi\GiaoDienCuaHang\bin\Debug\G
 C:\Users\Trung\Desktop\New folder\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.exe
 C:\Users\Trung\Desktop\New folder\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.pdb
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDanhSachHangHoaSapHetHan.resources
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fLapPhieuSuCo.resources
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmPhieuSuCo.resources

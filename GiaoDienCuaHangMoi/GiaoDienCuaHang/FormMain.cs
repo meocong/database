@@ -23,7 +23,7 @@ namespace GiaoDienCuaHang
         fLapPhieuBanHang pbh = null;
         frmLapPhieuDatHang pdh = null;
         frmLapPhieuNhanHang pnh = null;
-        frmLapPhieuSuCo psc = null;
+        fLapPhieuSuCo psc = null;
         frmTimKiemKhachHang tkkh = null;
         frmTimKiemNhaCungCap tkncc = null;
         frmTimKiemHangHoa tkhh = null;
@@ -337,7 +337,7 @@ namespace GiaoDienCuaHang
         private void SCToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (psc == null || psc.IsDisposed)
-                psc = new frmLapPhieuSuCo();
+                psc = new fLapPhieuSuCo();
             psc.MdiParent = this;
             psc.Show();
         }
@@ -393,7 +393,7 @@ namespace GiaoDienCuaHang
         private void taskItemSC_Click(object sender, EventArgs e)
         {
             if (psc == null || psc.IsDisposed)
-                psc = new frmLapPhieuSuCo();
+                psc = new fLapPhieuSuCo();
             psc.MdiParent = this;
             psc.Show();
         }
@@ -832,7 +832,7 @@ namespace GiaoDienCuaHang
         private void buttonItem12_Click(object sender, EventArgs e)
         {
             if (psc == null || psc.IsDisposed)
-                psc = new frmLapPhieuSuCo();
+                psc = new fLapPhieuSuCo();
             psc.MdiParent = this;
             psc.Show();
         }
@@ -939,7 +939,7 @@ namespace GiaoDienCuaHang
         private void buttonItem29_Click(object sender, EventArgs e)
         {
             if (psc == null || psc.IsDisposed)
-                psc = new frmLapPhieuSuCo();
+                psc = new fLapPhieuSuCo();
             psc.MdiParent = this;
             psc.Show();
         }

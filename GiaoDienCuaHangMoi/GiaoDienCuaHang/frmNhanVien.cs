@@ -71,7 +71,7 @@ namespace GiaoDienCuaHang
                             continue;
                         }
                     }
-                    catch (Exception Ex)
+                    catch 
                     {
                         //MessageBox.Show(Ex.Message);
                         continue;
