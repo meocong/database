@@ -431,3 +431,4 @@ C:\Users\Trung\Desktop\clone\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Deb
 C:\Users\Trung\Desktop\New folder\GiaoDienCuaHangMoi\GiaoDienCuaHang\bin\Debug\GiaoDienCuaHang.exe.config
 C:\Users\Trung\Desktop\New folder\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.exe
 C:\Users\Trung\Desktop\New folder\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.pdb
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDanhSachHangHoaSapHetHan.resources

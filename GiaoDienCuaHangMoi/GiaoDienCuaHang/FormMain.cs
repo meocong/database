@@ -32,6 +32,8 @@ namespace GiaoDienCuaHang
         frmTimKiemPhieuDatHang tkpdh = null;
         frmTimKiemPhieuNhanHang tkpnh = null;
         frmNhanVien nv = null;
+        frmLoaiNhanVien loainv = null;
+        frmDanhSachHangHoaSapHetHan hethan = null;
 
 
         public FormMain()
@@ -138,6 +140,7 @@ namespace GiaoDienCuaHang
             buttonItem6.Enabled = false;
             buttonItem7.Enabled = false;
             buttonItem8.Enabled = false;
+            buttonItem10.Enabled = false;
         }
 
         private void LogIn()
@@ -170,11 +173,16 @@ namespace GiaoDienCuaHang
                         buttonItem20.Enabled = false;
                         //dangnhap.Dispose();
 
-                        frmDShanghoahethan hethan = new frmDShanghoahethan();
-
-                        if (hethan.dataGridView1.Rows.Count > 1)
+                        if (hethan == null || hethan.IsDisposed)
                         {
-                            hethan.ShowDialog();
+                            hethan = new frmDanhSachHangHoaSapHetHan();
+                            hethan.MdiParent = this;
+                        }
+                        hethan.Show();
+
+                        if (hethan.dataGridView1.Rows.Count < 1)
+                        {
+                            hethan.Close();
                         }
                     }
                 }
@@ -491,9 +499,11 @@ namespace GiaoDienCuaHang
         {
             switch (Phanquyen)
             {
-                case "MNV001": QUANLY();
+                case "MNV001":
+                    QUANLY();
                     break;
-                case "MNV002": BANHANG();
+                case "MNV002":
+                    BANHANG();
                     break;
                 default:
                     disable_menu();
@@ -503,7 +513,7 @@ namespace GiaoDienCuaHang
 
         private void BANHANG()
         {
-            
+
             int i = 0;
             //foreach (ToolStripMenuItem mnuitem in menuStrip1.Items)
             //{
@@ -576,6 +586,7 @@ namespace GiaoDienCuaHang
             buttonItem6.Enabled = true;
             buttonItem7.Enabled = true;
             buttonItem8.Enabled = true;
+            buttonItem10.Enabled = true;
         }
 
         private void QUANLY()
@@ -607,6 +618,7 @@ namespace GiaoDienCuaHang
             buttonItem6.Enabled = true;
             buttonItem7.Enabled = true;
             buttonItem8.Enabled = true;
+            buttonItem10.Enabled = true;
         }
 
         private void tknvToolStripMenuItem_Click(object sender, EventArgs e)
@@ -698,7 +710,7 @@ namespace GiaoDienCuaHang
         private void HDSDToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-           Help.ShowHelp(this, helpProvider1.HelpNamespace);
+            Help.ShowHelp(this, helpProvider1.HelpNamespace);
         }
 
         private void TGToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1011,6 +1023,25 @@ namespace GiaoDienCuaHang
         private void buttonItem11_Click_2(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonItem9_Click_1(object sender, EventArgs e)
+        {
+            if (loainv == null || loainv.IsDisposed)
+                loainv = new frmLoaiNhanVien();
+            loainv.MdiParent = this;
+            loainv.Show();
+
+        }
+
+        private void buttonItem10_Click_1(object sender, EventArgs e)
+        {
+            if (hethan == null || hethan.IsDisposed)
+            {
+                hethan = new frmDanhSachHangHoaSapHetHan();
+            }
+            hethan.MdiParent = this;
+            hethan.Show();
         }
     }
 }
