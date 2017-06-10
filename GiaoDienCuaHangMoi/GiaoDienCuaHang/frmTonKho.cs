@@ -41,5 +41,18 @@ namespace GiaoDienCuaHang
                 }
             }
         }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            //ctrl.TimKiemTonKho(textMonth, textYear, dataGridView1);
+            //ctrl.Reload_bindings
+        }
+
+        private void comboBoxEx1_TextChanged(object sender, EventArgs e)
+        {
+            //string temp = comboBoxEx1.SelectedValue.ToString();
+            //ctrl.TimKiemTonKho(textMonth, textYear, dataGridView1);
+            //ctrl.Reload_bindings
+        }
     }
 }
