@@ -115,6 +115,12 @@
     <Compile Include="Controller\PhieuNhanHangController.cs" />
     <Compile Include="Controller\PhieuSuCoController.cs" />
     <Compile Include="Controller\TonKhoController.cs" />
+    <Compile Include="CRDonViTinh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRDonViTinh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReportChonhanghoa.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -161,6 +167,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportPhieuBanHang_V2.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalReportPhieuDatHang.cs">
       <AutoGen>True</AutoGen>
@@ -190,11 +197,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportTonKho_V2.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalReportTonKho_V3.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportTonKho_V3.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataLayer\ChiTietPhieuBanHangData.cs" />
     <Compile Include="DataLayer\ChiTietPhieuDatHangData.cs" />
@@ -437,6 +446,12 @@
     <Compile Include="frmTonKho.Designer.cs">
       <DependentUpon>frmTonKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="fTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTonKho.Designer.cs">
+      <DependentUpon>fTonKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="LIBRARY\DataGridViewCalendarColumn.cs" />
     <Compile Include="NewController\DonViTinhController.cs" />
     <Compile Include="NewController\GioiTinhController.cs" />
@@ -445,8 +460,13 @@
     <Compile Include="NewController\LoaiNhanVienController.cs" />
     <Compile Include="NewController\NhaCungCapController.cs" />
     <Compile Include="NewController\NhanVienController.cs" />
+    <Compile Include="NewController\TonKhoController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CRDonViTinh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRDonViTinh.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportChonhanghoa.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportChonhanghoa.cs</LastGenOutput>
@@ -645,8 +665,11 @@
       <DependentUpon>frmTimKiemPhieuNhanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTonKho.resx">
-      <SubType>Designer</SubType>
       <DependentUpon>frmTonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTonKho.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>fTonKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
