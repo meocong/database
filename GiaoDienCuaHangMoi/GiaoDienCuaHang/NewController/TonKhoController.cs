@@ -4,13 +4,14 @@ using System.Text;
 using System.Windows.Forms;
 using GiaoDienCuaHang.DataLayer;
 using DevComponents.Editors.DateTimeAdv;
+using DevComponents.DotNetBar.Controls;
 
 namespace GiaoDienCuaHang.NewController
 {
     public class TonKhoController
     {
         TonKhoData data = new TonKhoData();
-        public void HienThiDataGridView(DateTimeInput dateTime, ComboBox cmbMSP, TextBox txtSLT, DataGridView dgv, ComboBox cmbMSPFind)
+        public void HienThiDataGridView(DateTimeInput dateTime, ComboBox cmbMSP, TextBox txtSLT, ComboBoxEx cmbMSPFind, DataGridView dgv)
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = data.LayDSTonKho();
@@ -25,6 +26,9 @@ namespace GiaoDienCuaHang.NewController
             dgv.Columns.Remove("MAHH");
 
             hhCtrl.LoadComboBoxHangHoa(cmbMSP);
+
+            HangHoaController hhCtrl1 = new HangHoaController();
+            hhCtrl1.LoadComboBoxHangHoa(cmbMSPFind);
         }
         public void Update()
         {

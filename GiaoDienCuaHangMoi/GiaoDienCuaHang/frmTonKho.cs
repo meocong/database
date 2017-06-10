@@ -42,6 +42,11 @@ namespace GiaoDienCuaHang
             }
         }
 
-
+        private void finding(string textID, string textName, string textAddress, string textNumber)
+        {
+            dataGridView1.DataSource = ctrl.DataKhachHang(textID, textName, textAddress, textNumber).DataSource;
+            updateDataSource();
+            textBox2.Focus();
+        }
     }
 }
