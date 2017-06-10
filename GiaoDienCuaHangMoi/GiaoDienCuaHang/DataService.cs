@@ -9,10 +9,10 @@ namespace GiaoDienCuaHang
 {
     public class DataService:DataTable
     {
-        static SqlConnection m_Connection;
+        public SqlConnection m_Connection;
         SqlDataAdapter m_DataAdapter;
         SqlCommand m_Command;
-        string strConn = "Data Source=DESKTOP-BM7POO3\\SQLEXPRESS;Initial Catalog=QLCHmoi;Integrated Security=True";
+        string strConn = "Data Source=.\\SQLEXPRESS;Initial Catalog=QLCHmoi;Integrated Security=True";//Data Source=.\\SQLEXPRESS;Initial Catalog=QLCHmoi;Integrated Security=True
 
         public DataService()
         {
@@ -38,9 +38,11 @@ namespace GiaoDienCuaHang
         {
             using (SqlConnection connection = new SqlConnection(strConn))
             {
+                m_Connection.Open();
                 SqlCommand command = new SqlCommand(queryString, connection);
                 command.Connection.Open();
                 command.ExecuteNonQuery();
+                m_Connection.Close();
             }
         }
 
@@ -49,29 +51,6 @@ namespace GiaoDienCuaHang
             m_Connection.Open();
             SqlCommandBuilder builder = new SqlCommandBuilder(m_DataAdapter);
             m_DataAdapter.Update(this);
-            m_Connection.Close();
-        }
-
-        public void Update_to_database(System.Windows.Forms.DataGridView dataGridView1)
-        {
-            m_Connection.Open();
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                if (row.Index == dataGridView1.Rows.Count - 1)
-                {
-                    break;
-                }
-
-                string SQL = "UPDATE KHACHHANG SET HOTEN = @name, DIACHI = @address, DIENTHOAI = @phone WHERE MAKH = @id ";
-                SqlCommand cmd = new SqlCommand(SQL, m_Connection);
-  
-                cmd.Parameters.Add("id", SqlDbType.NVarChar).Value = row.Cells[0].Value;
-                cmd.Parameters.Add("name", SqlDbType.NVarChar).Value = row.Cells[1].Value;
-                cmd.Parameters.Add("address", SqlDbType.NVarChar).Value = row.Cells[2].Value;
-                cmd.Parameters.Add("phone", SqlDbType.NVarChar).Value = row.Cells[3].Value;
-
-                cmd.ExecuteNonQuery();
-            }
             m_Connection.Close();
         }
     }

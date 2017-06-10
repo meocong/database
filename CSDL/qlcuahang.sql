@@ -92,7 +92,7 @@ IF EXISTS (SELECT *
 GO
 CREATE TABLE NHACUNGCAP
 (
-	MANCC VARCHAR(6) NOT NULL,
+	MANCC VARCHAR(8) NOT NULL,
 	TENNCC NVARCHAR(30) NULL,
 	DIACHI NVARCHAR(40) NULL,
 	DIENTHOAI VARCHAR(11)NULL
@@ -124,7 +124,7 @@ IF EXISTS (SELECT *
 GO
 CREATE TABLE HANGHOA
 (
-	MAHH VARCHAR(6) NOT NULL,
+	MAHH VARCHAR(8) NOT NULL,
 	TENHH NVARCHAR(30) NULL,
 	MADVT VARCHAR(6)NULL,	
 	NGAYHETHAN DATETIME NULL,
@@ -380,14 +380,16 @@ ADD CONSTRAINT F_TONKHO_HH FOREIGN KEY(MAHH) REFERENCES HANGHOA(MAHH)
 ------------------------------------------------------------------
 ----===========FUNCTION========================-------------------
 ------------------------------------------------------------------
+
+------------------Khach Hang---------------------
 IF EXISTS(SELECT name FROM sys.objects WHERE name = N'AUTO_IDKhachHang')
 DROP FUNCTION dbo.AUTO_IDKhachHang;
 GO
 	CREATE FUNCTION dbo.AUTO_IDKhachHang()
-	RETURNS VARCHAR(5)
+	RETURNS VARCHAR(8)
 	AS
 	BEGIN
-		DECLARE @ID VARCHAR(5)
+		DECLARE @ID VARCHAR(8)
 		IF (SELECT COUNT(MAKH) FROM KHACHHANG) = 0
 			SET @ID = '001'
 		ELSE
@@ -405,24 +407,136 @@ GO
 	END
 GO
 
-DECLARE @t1 VARCHAR(10)
-SET @t1 = dbo.AUTO_IDKhachHang()
-SELECT name FROM sys.objects
-SELECT dbo.AUTO_IDKhachHang() 
-
 IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_Customer')
 DROP PROCEDURE dbo.Insert_New_Customer;
 GO
 	CREATE PROCEDURE dbo.Insert_New_Customer
 	AS
 	BEGIN
-		DECLARE @ID VARCHAR(5) 
+		DECLARE @ID VARCHAR(8)
 		SELECT @ID = dbo.AUTO_IDKhachHang() 
 		INSERT INTO KHACHHANG
 		VALUES(@ID,'','','')
 	END
 GO
 
+
+------------------Nha cung cap---------------------
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'AUTO_IDNhaCungCap')
+DROP FUNCTION dbo.AUTO_IDNhaCungCap;
+GO
+	CREATE FUNCTION dbo.AUTO_IDNhaCungCap()
+	RETURNS VARCHAR(8)
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(8)
+		IF (SELECT COUNT(MANCC) FROM NHACUNGCAP) = 0
+			SET @ID = '001'
+		ELSE
+		BEGIN
+			SELECT @ID = MAX(RIGHT(MANCC, LEN(MANCC) - 3)) FROM NHACUNGCAP;
+			SET @ID = @ID + 1
+			WHILE LEN(@ID) < 3 
+			BEGIN 
+				SET @ID = '0' + @ID 
+			END
+		END
+		SET @ID = 'NCC' + @ID
+
+		RETURN @ID
+	END
+GO
+
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_Supplier')
+DROP PROCEDURE dbo.Insert_New_Supplier;
+GO
+	CREATE PROCEDURE dbo.Insert_New_Supplier
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(8)
+		SELECT @ID = dbo.AUTO_IDNhaCungCap() 
+		INSERT INTO NHACUNGCAP
+		VALUES(@ID,'','','')
+	END
+GO
+
+------------------Don Vi Tinh---------------------
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'AUTO_IDDonViTinh')
+DROP FUNCTION dbo.AUTO_IDDonViTinh;
+GO
+	CREATE FUNCTION dbo.AUTO_IDDonViTinh()
+	RETURNS VARCHAR(6)
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(6)
+		IF (SELECT COUNT(MADVT) FROM DONVITINH) = 0
+			SET @ID = '001'
+		ELSE
+		BEGIN
+			SELECT @ID = MAX(RIGHT(MADVT, LEN(MADVT) - 3)) FROM DONVITINH;
+			SET @ID = @ID + 1
+			WHILE LEN(@ID) < 3 
+			BEGIN 
+				SET @ID = '0' + @ID 
+			END
+		END
+		SET @ID = 'DVT' + @ID
+
+		RETURN @ID
+	END
+GO
+
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_Unit')
+DROP PROCEDURE dbo.Insert_New_Unit;
+GO
+	CREATE PROCEDURE dbo.Insert_New_Unit
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(6)
+		SELECT @ID = dbo.AUTO_IDDonViTinh() 
+		INSERT INTO DONVITINH
+		VALUES(@ID,'')
+	END
+GO
+
+------------------Hang Hoa---------------------
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'AUTO_IDHangHoa')
+DROP FUNCTION dbo.AUTO_IDHangHoa;
+GO
+	CREATE FUNCTION dbo.AUTO_IDHangHoa()
+	RETURNS VARCHAR(8)
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(8)
+		IF (SELECT COUNT(MAHH) FROM HANGHOA) = 0
+			SET @ID = '001'
+		ELSE
+		BEGIN
+			SELECT @ID = MAX(RIGHT(MAHH, LEN(MAHH) - 2)) FROM HANGHOA;
+			SET @ID = @ID + 1
+			WHILE LEN(@ID) < 3 
+			BEGIN 
+				SET @ID = '0' + @ID 
+			END
+		END
+		SET @ID = 'HH' + @ID
+
+		RETURN @ID
+	END
+GO
+
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_Goods')
+DROP PROCEDURE dbo.Insert_New_Goods;
+GO
+	CREATE PROCEDURE dbo.Insert_New_Goods
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(8)
+		SELECT @ID = dbo.AUTO_IDHangHoa() 
+		INSERT INTO HANGHOA
+		VALUES(@ID,'','DVT001','1/1/2017','0','0','0','')
+	END
+GO
 -----------------------------------------------
 --==============NH?P LI?U ====================
 -----------------------------------------------

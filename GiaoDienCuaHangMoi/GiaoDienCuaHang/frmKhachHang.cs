@@ -31,6 +31,12 @@ namespace GiaoDienCuaHang
             textBox2.CharacterCasing = CharacterCasing.Upper;
             textBox3.CharacterCasing = CharacterCasing.Upper;
             textBox4.CharacterCasing = CharacterCasing.Upper;
+
+            textBoxX1.CharacterCasing = CharacterCasing.Upper;
+            textBoxX2.CharacterCasing = CharacterCasing.Upper;
+            textBoxX3.CharacterCasing = CharacterCasing.Upper;
+            textBoxX4.CharacterCasing = CharacterCasing.Upper;
+            textBox2.Focus();
         }
 
         private void updateDataSource()
@@ -47,15 +53,20 @@ namespace GiaoDienCuaHang
 
             }
                       
-            this.textBox1.DataBindings.Add("Text", dataGridView1.DataSource, "MAKH", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.textBox1.DataBindings.Add("Text", dataGridView1.DataSource, "MAKH", true, DataSourceUpdateMode.OnPropertyChanged);
             this.textBox1.Enabled = false;
-            this.textBox2.DataBindings.Add("Text", dataGridView1.DataSource, "HOTEN", false, DataSourceUpdateMode.OnPropertyChanged);
-            this.textBox3.DataBindings.Add("Text", dataGridView1.DataSource, "DIACHI", false, DataSourceUpdateMode.OnPropertyChanged);
-            this.textBox4.DataBindings.Add("Text", dataGridView1.DataSource, "DIENTHOAI", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.textBox2.DataBindings.Add("Text", dataGridView1.DataSource, "HOTEN", true, DataSourceUpdateMode.OnPropertyChanged);
+            this.textBox3.DataBindings.Add("Text", dataGridView1.DataSource, "DIACHI", true, DataSourceUpdateMode.OnPropertyChanged);
+            this.textBox4.DataBindings.Add("Text", dataGridView1.DataSource, "DIENTHOAI", true, DataSourceUpdateMode.OnPropertyChanged);
         }
 
         private void buttonDeleting_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.Rows.Count == 1)
+            {
+                MessageBox.Show("Bạn không còn gì để xóa!");
+                return;
+            }
             if (MessageBox.Show("Bạn chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
@@ -84,12 +95,14 @@ namespace GiaoDienCuaHang
             dataGridView1.FirstDisplayedScrollingRowIndex = nRowIndex;
             dataGridView1.MultiSelect = true;
             dataGridView1.Rows[nRowIndex].Cells[nColumnIndex].Selected = true;
+            textBox2.Focus();
         }
 
         private void finding(string textID, string textName, string textAddress, string textNumber)
         {
             dataGridView1.DataSource = ctrl.DataKhachHang(textID, textName, textAddress, textNumber).DataSource;
             updateDataSource();
+            textBox2.Focus();
         }
 
         private void textBoxX1_TextChanged(object sender, EventArgs e)
@@ -114,16 +127,16 @@ namespace GiaoDienCuaHang
 
         private void buttonSaving_Click(object sender, EventArgs e)
         {
-            dataGridView1.EndEdit();
+            //dataGridView1.EndEdit();
 
-            int rowSelected = dataGridView1.SelectedCells[0].RowIndex;
-            int colSelected = dataGridView1.SelectedCells[0].ColumnIndex;
+            //int rowSelected = dataGridView1.SelectedCells[0].RowIndex;
+            //int colSelected = dataGridView1.SelectedCells[0].ColumnIndex;
 
             //dataGridView1.MultiSelect = false;
             //dataGridView1.Rows[0].Selected = true;
             //dataGridView1.Rows[0].Cells[0].Selected = true;
 
-            //ctrl.Update();
+            ctrl.Update();
             ctrl.Update_to_database(this.dataGridView1);
             dataGridView1.Update();
             dataGridView1.Refresh();
@@ -139,23 +152,61 @@ namespace GiaoDienCuaHang
         {   
             //dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[1].Value = textBox2.Text;
             //dataGridView1.Update();
+            //dataGridView1.Refresh();
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             //dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[2].Value = textBox3.Text;
             //dataGridView1.Update();
+            //dataGridView1.Refresh();
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
             //dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[3].Value = textBox4.Text;
             //dataGridView1.Update();
+            //dataGridView1.Refresh();
         }
 
         private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
+        }
+
+        private void textBox3_Enter(object sender, EventArgs e)
+        {
+            dataGridView1.Refresh();
+        }
+
+        private void textBox4_Enter(object sender, EventArgs e)
+        {
+            dataGridView1.Refresh();
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            dataGridView1.Refresh();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox2.Focus();
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            dataGridView1.Refresh();
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            dataGridView1.Refresh();
+        }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+            dataGridView1.Refresh();
         }
     }
 }

@@ -73,9 +73,67 @@ namespace GiaoDienCuaHang.DataLayer
 
 
        }
-       public void Update()
+
+        public DataTable TimKiemHangHoaNew(string MaHH, string tenHH, DateTime start, DateTime end, Int32 beginCount, Int32 endCount)
+        {
+            SqlCommand cmd = new SqlCommand();
+            String SQL = "SELECT * FROM HANGHOA WHERE MAHH LIKE '%' + @mHH + '%' AND TENHH LIKE '%' + @tHH + '%' AND NGAYHETHAN >= @start AND NGAYHETHAN <=  @end ";
+
+            cmd.Parameters.Add("mHH", SqlDbType.VarChar).Value = MaHH;
+
+            cmd.Parameters.Add("tHH", SqlDbType.VarChar).Value = tenHH;
+
+            cmd.Parameters.Add("start", SqlDbType.DateTime).Value = start;
+
+            cmd.Parameters.Add("end", SqlDbType.DateTime).Value = end;
+
+            SQL += " AND SOLUONG >=  @beginCount ";
+            cmd.Parameters.Add("beginCount", SqlDbType.Int).Value = beginCount;
+
+            SQL += " AND SOLUONG <= @endCount ";
+            cmd.Parameters.Add("endCount", SqlDbType.Int).Value = endCount;
+
+            cmd.CommandText = SQL;
+            ds.Load(cmd);
+
+            return ds;
+        }
+
+        public void AddNewRow()
+        {
+            ds.Exec("EXEC dbo.Insert_New_Goods");
+        }
+
+        public void Update()
        {
            ds.Update();
        }
+
+        public void Update_to_database(DataGridView dataGridView1)
+        {
+            ds.m_Connection.Open();
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Index == dataGridView1.Rows.Count - 1)
+                {
+                    break;
+                }
+
+                string SQL = "UPDATE HANGHOA SET TENHH = @name, MADVT = @dvt, NGAYHETHAN = @day, SOLUONG = @count, SOLUONGGIAM = @countdown, TILEGIAM = @ratiodown, DONGIA = @price WHERE MAHH = @id ";
+                SqlCommand cmd = new SqlCommand(SQL, ds.m_Connection);
+
+                cmd.Parameters.Add("id", SqlDbType.NVarChar).Value = row.Cells[0].Value;
+                cmd.Parameters.Add("name", SqlDbType.NVarChar).Value = row.Cells[1].Value;
+                cmd.Parameters.Add("dvt", SqlDbType.NVarChar).Value = row.Cells[2].Value;
+                cmd.Parameters.Add("day", SqlDbType.NVarChar).Value = row.Cells[3].Value;
+                cmd.Parameters.Add("count", SqlDbType.NVarChar).Value = row.Cells[4].Value;
+                cmd.Parameters.Add("countdown", SqlDbType.NVarChar).Value = row.Cells[5].Value;
+                cmd.Parameters.Add("ratiodown", SqlDbType.NVarChar).Value = row.Cells[6].Value;
+                cmd.Parameters.Add("price", SqlDbType.NVarChar).Value = row.Cells[7].Value;
+
+                cmd.ExecuteNonQuery();
+            }
+            ds.m_Connection.Close();
+        }
     }
 }

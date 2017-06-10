@@ -17,8 +17,8 @@ namespace GiaoDienCuaHang
         frmTonKho tonk = null;
         frmThongKeTonKho tktkho = null;
         frmKhachHang kh = null;
-        fNhaCungCap ncc = null;
-        fHangHoa hh = null;
+        frmNhaCungCap ncc = null;
+        frmHangHoa hh = null;
         frmDonViTinh dvt = null;
         fLapPhieuBanHang pbh = null;
         frmLapPhieuDatHang pdh = null;
@@ -214,7 +214,7 @@ namespace GiaoDienCuaHang
         private void NCCToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (ncc == null || ncc.IsDisposed)
-                ncc = new fNhaCungCap();
+                ncc = new frmNhaCungCap();
             ncc.MdiParent = this;
             ncc.Show();
         }
@@ -222,7 +222,7 @@ namespace GiaoDienCuaHang
         private void HHToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (hh == null || hh.IsDisposed)
-                hh = new fHangHoa();
+                hh = new frmHangHoa();
             hh.MdiParent = this;
             hh.Show();
         }
@@ -246,7 +246,7 @@ namespace GiaoDienCuaHang
         private void toolStripButtonNCC_Click(object sender, EventArgs e)
         {
             if (ncc == null || ncc.IsDisposed)
-                ncc = new fNhaCungCap();
+                ncc = new frmNhaCungCap();
             ncc.MdiParent = this;
             ncc.Show();
         }
@@ -254,7 +254,7 @@ namespace GiaoDienCuaHang
         private void toolStripButtonHH_Click(object sender, EventArgs e)
         {
             if (hh == null || hh.IsDisposed)
-                hh = new fHangHoa();
+                hh = new frmHangHoa();
             hh.MdiParent = this;
             hh.Show();
         }
@@ -270,7 +270,7 @@ namespace GiaoDienCuaHang
         private void taskItemNCC_Click(object sender, EventArgs e)
         {
             if (ncc == null || ncc.IsDisposed)
-                ncc = new fNhaCungCap();
+                ncc = new frmNhaCungCap();
             ncc.MdiParent = this;
             ncc.Show();
         }
@@ -278,7 +278,7 @@ namespace GiaoDienCuaHang
         private void taskItemHH_Click(object sender, EventArgs e)
         {
             if (hh == null || hh.IsDisposed)
-                hh = new fHangHoa();
+                hh = new frmHangHoa();
             hh.MdiParent = this;
             hh.Show();
         }
@@ -745,7 +745,7 @@ namespace GiaoDienCuaHang
         private void buttonItem4_Click(object sender, EventArgs e)
         {
             if (ncc == null || ncc.IsDisposed)
-                ncc = new fNhaCungCap();
+                ncc = new frmNhaCungCap();
             ncc.MdiParent = this;
             ncc.Show();
         }
@@ -753,7 +753,7 @@ namespace GiaoDienCuaHang
         private void buttonItem5_Click(object sender, EventArgs e)
         {
             if (hh == null || hh.IsDisposed)
-                hh = new fHangHoa();
+                hh = new frmHangHoa();
             hh.MdiParent = this;
             hh.Show();
         }
@@ -814,17 +814,17 @@ namespace GiaoDienCuaHang
         private void buttonItem21_Click(object sender, EventArgs e)
         {
             if (ncc == null || ncc.IsDisposed)
-                ncc = new fNhaCungCap();
+                ncc = new frmNhaCungCap();
             ncc.MdiParent = this;
             ncc.Show();
         }
 
         private void buttonItem22_Click(object sender, EventArgs e)
         {
-            if (ncc == null || ncc.IsDisposed)
-                ncc = new fNhaCungCap();
-            ncc.MdiParent = this;
-            ncc.Show();
+            if (hh == null || hh.IsDisposed)
+                hh = new frmHangHoa();
+            hh.MdiParent = this;
+            hh.Show();
         }
 
         private void buttonItem23_Click(object sender, EventArgs e)
