@@ -108,7 +108,6 @@ namespace GiaoDienCuaHang
 
         private void disable_menu()
         {
-            int i = 0;
             //foreach (ToolStripMenuItem menuitem in menuStrip1.Items)
             //{
 
@@ -118,7 +117,6 @@ namespace GiaoDienCuaHang
             //        menuitem.Enabled = true;
             //    i++;
             //}
-            i = 0;
             foreach (ButtonItem item in ribbonBar2.Items)
             {
                 item.Enabled = false;
