@@ -93,16 +93,6 @@ namespace GiaoDienCuaHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _17458380_1853597991588008_5813562843013189558_n {
-            get {
-                object obj = ResourceManager.GetObject("17458380_1853597991588008_5813562843013189558_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap brown_man_icon {
             get {
                 object obj = ResourceManager.GetObject("brown-man-icon", resourceCulture);

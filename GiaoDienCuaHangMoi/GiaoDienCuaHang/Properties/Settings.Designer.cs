@@ -26,8 +26,7 @@ namespace GiaoDienCuaHang.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-BM7POO3\\SQLEXPRESS;Initial Catalog=QLCHmoi;Integrated Securit" +
-            "y=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=QLCHmoi;Integrated Security=True")]
         public string QLCHmoiConnectionString {
             get {
                 return ((string)(this["QLCHmoiConnectionString"]));
