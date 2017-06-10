@@ -121,6 +121,12 @@
       <DependentUpon>CRDonViTinh.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CRNhanVien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRNhanVien.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReportChonhanghoa.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -466,6 +472,10 @@
     <EmbeddedResource Include="CRDonViTinh.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRDonViTinh.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRNhanVien.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRNhanVien.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportChonhanghoa.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
