@@ -720,6 +720,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="house_48.ico" />
+    <None Include="Resources\admin-icon.png" />
     <None Include="QLCHmoiDataSet.xsc">
       <DependentUpon>QLCHmoiDataSet.xsd</DependentUpon>
     </None>

@@ -39,11 +39,13 @@ namespace GiaoDienCuaHang
         private void buttonX1_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void buttonX2_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

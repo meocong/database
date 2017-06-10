@@ -134,6 +134,10 @@ namespace GiaoDienCuaHang
             ribbonPanel2.Enabled = false;
             ribbonPanel3.Enabled = false;
             ribbonPanel6.Enabled = false;
+            buttonItem9.Enabled = false;
+            buttonItem6.Enabled = false;
+            buttonItem7.Enabled = false;
+            buttonItem8.Enabled = false;
         }
 
         private void LogIn()
@@ -165,19 +169,21 @@ namespace GiaoDienCuaHang
                         phanquyen(Utilities.nhanvien.loainv.MaloaiNV);
                         buttonItem20.Enabled = false;
                         //dangnhap.Dispose();
+
+                        frmDShanghoahethan hethan = new frmDShanghoahethan();
+
+                        if (hethan.dataGridView1.Rows.Count > 1)
+                        {
+                            hethan.ShowDialog();
+                        }
                     }
                 }
             }
             else
             {
                 disable_menu();
-            }
-
-            frmDShanghoahethan hethan = new frmDShanghoahethan();
-
-            if (hethan.dataGridView1.Rows.Count > 1)
-            {
-                hethan.ShowDialog();
+                buttonItem20.Enabled = true;
+                buttonItem2.Enabled = false;
             }
         }
 
@@ -566,6 +572,10 @@ namespace GiaoDienCuaHang
             }
             i = 0;
             ribbonPanel3.Enabled = true;
+            buttonItem9.Enabled = false;
+            buttonItem6.Enabled = true;
+            buttonItem7.Enabled = true;
+            buttonItem8.Enabled = true;
         }
 
         private void QUANLY()
@@ -593,6 +603,10 @@ namespace GiaoDienCuaHang
             ribbonPanel2.Enabled = true;
             ribbonPanel3.Enabled = true;
             ribbonPanel6.Enabled = true;
+            buttonItem9.Enabled = true;
+            buttonItem6.Enabled = true;
+            buttonItem7.Enabled = true;
+            buttonItem8.Enabled = true;
         }
 
         private void tknvToolStripMenuItem_Click(object sender, EventArgs e)
@@ -707,6 +721,8 @@ namespace GiaoDienCuaHang
                 {
                     MessageBox.Show("Không tồn tại người dùng này!");
                     disable_menu();
+                    buttonItem20.Enabled = true;
+                    buttonItem2.Enabled = false;
                 }
                 else
                 {
@@ -714,17 +730,18 @@ namespace GiaoDienCuaHang
                     {
                         MessageBox.Show("Sai mật khẩu!");
                         disable_menu();
+                        buttonItem20.Enabled = true;
+                        buttonItem2.Enabled = false;
                     }
                     else
                     {
                         phanquyen(Utilities.nhanvien.loainv.MaloaiNV);
+                        buttonItem20.Enabled = false;
+                        buttonItem2.Enabled = true;
 
                     }
                 }
             }
-
-            buttonItem20.Enabled = false;
-            buttonItem2.Enabled = true;
         }
 
         private void buttonItem2_Click(object sender, EventArgs e)
