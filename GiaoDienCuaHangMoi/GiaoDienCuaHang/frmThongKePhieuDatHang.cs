@@ -42,7 +42,7 @@ namespace GiaoDienCuaHang
         {
             String cc = comboBox1.SelectedValue.ToString();
             GiaoDienCuaHang.DataLayer.PhieuDatHangData pdh1=new GiaoDienCuaHang.DataLayer.PhieuDatHangData();
-            CrystalReportPhieuDatHang parameter = new CrystalReportPhieuDatHang();
+            CRPhieuDatHang parameter = new CRPhieuDatHang();
             parameter.SetDataSource(pdh1.LayDS_PDH(cc));
             parameter.SetParameterValue("tenncc", comboBox1.Text);
             crystalReportViewer1.ReportSource = parameter;            

@@ -19,7 +19,7 @@ namespace GiaoDienCuaHang
         {
             String hh = comboBox1.SelectedValue.ToString();
             GiaoDienCuaHang.DataLayer.TonKhoData tk = new GiaoDienCuaHang.DataLayer.TonKhoData();
-            CrystalReportTonKho parameter = new CrystalReportTonKho();
+            CRTonKho parameter = new CRTonKho();
             parameter.SetDataSource(tk.LayDS_TonKho(hh));
             parameter.SetParameterValue("tenhh", comboBox1.Text);
             crystalReportViewer1.ReportSource = parameter; 

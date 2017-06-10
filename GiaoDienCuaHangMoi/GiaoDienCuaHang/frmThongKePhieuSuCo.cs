@@ -19,7 +19,7 @@ namespace GiaoDienCuaHang
         {
             String hh = comboBox1.SelectedValue.ToString();
             GiaoDienCuaHang.DataLayer.PhieuSuCoData psc = new GiaoDienCuaHang.DataLayer.PhieuSuCoData();
-            CrystalReportPhieuSuCo parameter = new CrystalReportPhieuSuCo();
+            CRPhieuSuCo parameter = new CRPhieuSuCo();
             parameter.SetDataSource(psc.LayDS_PhieuSuCo(hh));
             parameter.SetParameterValue("tenhh", comboBox1.Text);
             crystalReportViewer1.ReportSource = parameter; 

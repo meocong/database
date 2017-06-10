@@ -10,10 +10,10 @@ using System.Data.OleDb;
 using GiaoDienCuaHang.Controller;
 namespace GiaoDienCuaHang
 {
-    public partial class fDShanghoahethan : Form
+    public partial class frmDShanghoahethan : Form
     {
         HangHoaController ctrl = new HangHoaController();   
-        public fDShanghoahethan()
+        public frmDShanghoahethan()
         {
             InitializeComponent();
         }

@@ -313,6 +313,7 @@ C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fLoaiNhanVien.resources
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmAbout.resources
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDonViTinh.resources
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDShanghoahethan.resources
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmHangHoa.resources
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmKhachHang.resources
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmLapPhieuSuCo.resources
@@ -424,5 +425,9 @@ C:\Users\Trung\Desktop\code CSDL clone\database\GiaoDienCuaHangMoi\GiaoDienCuaHa
 C:\Users\Trung\Desktop\code CSDL clone\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.csproj.GenerateResource.Cache
 C:\Users\Trung\Desktop\code CSDL clone\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.exe
 C:\Users\Trung\Desktop\code CSDL clone\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.pdb
-C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fDShanghoahethan.resources
-C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDanhSachHangHoaSapHetHan.resources
+C:\Users\Trung\Desktop\clone\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\bin\Debug\GiaoDienCuaHang.exe.config
+C:\Users\Trung\Desktop\clone\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.exe
+C:\Users\Trung\Desktop\clone\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.pdb
+C:\Users\Trung\Desktop\New folder\GiaoDienCuaHangMoi\GiaoDienCuaHang\bin\Debug\GiaoDienCuaHang.exe.config
+C:\Users\Trung\Desktop\New folder\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.exe
+C:\Users\Trung\Desktop\New folder\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.pdb

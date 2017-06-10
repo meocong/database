@@ -19,7 +19,7 @@ namespace GiaoDienCuaHang
         {
             String kh = comboBox1.SelectedValue.ToString();
             GiaoDienCuaHang.DataLayer.PhieuBanHangData pbh = new GiaoDienCuaHang.DataLayer.PhieuBanHangData();
-            CrystalReportPhieuBanHang parameter = new CrystalReportPhieuBanHang();
+            CRPhieuBanHang parameter = new CRPhieuBanHang();
             parameter.SetDataSource(pbh.LayDSPhieuBanHang(kh));
             parameter.SetParameterValue("tenkh", comboBox1.Text);
             crystalReportViewer1.ReportSource = parameter;

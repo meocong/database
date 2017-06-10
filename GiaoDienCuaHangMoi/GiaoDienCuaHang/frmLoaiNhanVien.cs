@@ -27,14 +27,12 @@ namespace GiaoDienCuaHang
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            bool check = false;
-
             if (dataGridView1.Rows.Count == 1)
             {
                 MessageBox.Show("Bạn không còn gì để xóa!");
                 return;
             }
-            if (MessageBox.Show("Bạn chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
                 {
@@ -42,29 +40,10 @@ namespace GiaoDienCuaHang
                     {
                         continue;
                     }
-
-                    try
-                    {
-                        if (Int32.Parse(dataGridView1.Rows[oneCell.RowIndex].Cells[1].Value.ToString().Substring(2, 3)) <= 2)
-                        {
-                            if (check == false)
-                            {
-                                check = true;
-                                MessageBox.Show("Bạn không thể xóa loại nhân viên gốc!");
-                            }
-                            continue;
-                        }
-                    }
-                    catch (Exception Ex)
-                    {
-                        MessageBox.Show(Ex.Message);
-                    }
-
                     if (oneCell.Selected)
                         dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
                 }
             }
-            textBox2.Focus();
         }
 
         private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
