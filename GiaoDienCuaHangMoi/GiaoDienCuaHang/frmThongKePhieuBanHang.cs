@@ -31,15 +31,10 @@ namespace GiaoDienCuaHang
             comboBox1.DataSource = khdata.LayDSKhachHang("");
             comboBox1.DisplayMember = "HOTEN";
             comboBox1.ValueMember = "MAKH";
+            
+            
         }
 
-        private void bttHienThiToanBo_Click(object sender, EventArgs e)
-        {
-            String kh = comboBox1.SelectedValue.ToString();
-            GiaoDienCuaHang.DataLayer.PhieuBanHangData pbh = new GiaoDienCuaHang.DataLayer.PhieuBanHangData();
-            CrystalReportPhieuBanHang_V2 parameter = new CrystalReportPhieuBanHang_V2();
-            parameter.SetDataSource(pbh.LayDSPhieuBanHang(""));
-            crystalReportViewer1.ReportSource = parameter;
-        }
+       
     }
 }

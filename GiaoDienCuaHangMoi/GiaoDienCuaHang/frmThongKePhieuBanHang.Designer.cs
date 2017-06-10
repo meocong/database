@@ -35,7 +35,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonHT = new System.Windows.Forms.Button();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.bttHienThiToanBo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +59,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.bttHienThiToanBo);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.buttonHT);
@@ -110,16 +108,6 @@
             this.crystalReportViewer1.TabIndex = 1;
             this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
-            // bttHienThiToanBo
-            // 
-            this.bttHienThiToanBo.Location = new System.Drawing.Point(431, 20);
-            this.bttHienThiToanBo.Name = "bttHienThiToanBo";
-            this.bttHienThiToanBo.Size = new System.Drawing.Size(149, 23);
-            this.bttHienThiToanBo.TabIndex = 3;
-            this.bttHienThiToanBo.Text = "Hiển Thị Toàn Bộ";
-            this.bttHienThiToanBo.UseVisualStyleBackColor = true;
-            this.bttHienThiToanBo.Click += new System.EventHandler(this.bttHienThiToanBo_Click);
-            // 
             // frmThongKePhieuBanHang
             // 
             this.ClientSize = new System.Drawing.Size(808, 419);
@@ -143,6 +131,5 @@
         private System.Windows.Forms.Button buttonHT;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button bttHienThiToanBo;
     }
 }

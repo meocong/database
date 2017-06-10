@@ -537,6 +537,45 @@ GO
 		VALUES(@ID,'','DVT001','1/1/2017','0','0','0','')
 	END
 GO
+
+------------------Nhan Vien---------------------
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'AUTO_IDNhanVien')
+DROP FUNCTION dbo.AUTO_IDNhanVien;
+GO
+	CREATE FUNCTION dbo.AUTO_IDNhanVien()
+	RETURNS VARCHAR(6)
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(6)
+		IF (SELECT COUNT(MANV) FROM NHANVIEN) = 0
+			SET @ID = '001'
+		ELSE
+		BEGIN
+			SELECT @ID = MAX(RIGHT(MANV, LEN(MANV) - 2)) FROM NHANVIEN;
+			SET @ID = @ID + 1
+			WHILE LEN(@ID) < 3 
+			BEGIN 
+				SET @ID = '0' + @ID 
+			END
+		END
+		SET @ID = 'NV' + @ID
+
+		RETURN @ID
+	END
+GO
+
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_Candidate')
+DROP PROCEDURE dbo.Insert_New_Candidate;
+GO
+	CREATE PROCEDURE dbo.Insert_New_Candidate
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(6)
+		SELECT @ID = dbo.AUTO_IDNhanVien() 
+		INSERT INTO NHANVIEN
+		VALUES (@ID,'','','1/1/1996','GT001','','admin1','admin1','MNV002')
+	END
+GO
 -----------------------------------------------
 --==============NH?P LI?U ====================
 -----------------------------------------------

@@ -27,17 +27,5 @@ namespace GiaoDienCuaHang.DataLayer
        {
            ds.Update();
        }
-        public DataTable LayDS_TK_TonKho()
-        {
-            SqlCommand cmd = new SqlCommand("select THANG, NAM, SLTON, HANGHOA.TENHH  from TONKHO, HANGHOA where HANGHOA.MAHH = TONKHO.MAHH");
-            ds.Load(cmd);
-            return ds;
-        }
-        public DataTable LayDS_TK_TonKho_MotPhan(string mahh)
-        {
-            SqlCommand cmd = new SqlCommand("select THANG, NAM, SLTON, HANGHOA.TENHH  from TONKHO, HANGHOA where HANGHOA.MAHH = TONKHO.MAHH and TONKHO.MAHH = '" + mahh + "'");
-            ds.Load(cmd);
-            return ds;
-        }
     }
 }

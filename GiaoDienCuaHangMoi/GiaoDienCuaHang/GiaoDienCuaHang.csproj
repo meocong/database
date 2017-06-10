@@ -161,7 +161,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportPhieuBanHang_V2.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalReportPhieuDatHang.cs">
       <AutoGen>True</AutoGen>
@@ -191,13 +190,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportTonKho_V2.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalReportTonKho_V3.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportTonKho_V3.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataLayer\ChiTietPhieuBanHangData.cs" />
     <Compile Include="DataLayer\ChiTietPhieuDatHangData.cs" />
