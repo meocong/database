@@ -264,5 +264,11 @@ C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDien
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fDonViTinh.resources
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDonViTinh.resources
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmHangHoa.resources
+<<<<<<< HEAD
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmNhanVien.resources
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmLoaiNhanVien.resources
+=======
+E:\Subjects\database\GitHub project\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmHangHoa.resources
+E:\Subjects\database\GitHub project\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmNhaCungCap.resources
+E:\Subjects\database\GitHub project\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fDonViTinh.resources
+>>>>>>> 0756f605aef925ddbcc08f38c59677f0158c7cfe
