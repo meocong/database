@@ -50,7 +50,7 @@ namespace GiaoDienCuaHang {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section1 {
+        public CrystalDecisions.CrystalReports.Engine.Section ReportHeaderSection2 {
             get {
                 return this.ReportDefinition.Sections[0];
             }
