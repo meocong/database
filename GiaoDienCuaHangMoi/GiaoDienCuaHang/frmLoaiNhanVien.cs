@@ -27,13 +27,21 @@ namespace GiaoDienCuaHang
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (dataGridView1.Rows.Count == 1)
             {
-                IEnumerator ie = dataGridView1.SelectedRows.GetEnumerator();
-                while (ie.MoveNext())
+                MessageBox.Show("Bạn không còn gì để xóa!");
+                return;
+            }
+            if (MessageBox.Show("Bạn chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
                 {
-                    DataGridViewRow rows = (DataGridViewRow)ie.Current;
-                    dataGridView1.Rows.Remove(rows);
+                    if (oneCell.RowIndex == dataGridView1.Rows.Count - 1)
+                    {
+                        continue;
+                    }
+                    if (oneCell.Selected)
+                        dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
                 }
             }
         }

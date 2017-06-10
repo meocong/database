@@ -19,7 +19,7 @@ namespace GiaoDienCuaHang
         {
             GiaoDienCuaHang.DataLayer.NhaCungCapData ncc = new GiaoDienCuaHang.DataLayer.NhaCungCapData();
             DataTable TBL = ncc.LayDSNhaCungCap();
-            CRNhaCungCap report = new CRNhaCungCap();
+            CrystalReportNhaCungCap report = new CrystalReportNhaCungCap();
             report.SetDataSource(TBL);
             crystalReportViewer1.ReportSource = report;
         }

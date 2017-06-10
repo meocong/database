@@ -19,7 +19,7 @@ namespace GiaoDienCuaHang
         {
             String dvt = comboBox1.SelectedValue.ToString();
             GiaoDienCuaHang.DataLayer.HangHoaData hh = new GiaoDienCuaHang.DataLayer.HangHoaData();
-            CRHangHoa report = new CRHangHoa();
+            CrystalReportChonhanghoa report = new CrystalReportChonhanghoa();
 
             report.SetDataSource(hh.LayDSHangHoa(dvt));
             report.SetParameterValue("donvitinh", comboBox1.Text);

@@ -54,9 +54,14 @@ namespace GiaoDienCuaHang
             {
                 foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
                 {
+                    if (oneCell.RowIndex == dataGridView1.Rows.Count - 1)
+                    {
+                        continue;
+                    }
+
                     try
                     {
-                        if (Int32.Parse(dataGridView1.Rows[oneCell.RowIndex].Cells[0].Value.ToString().Substring(3, 3)) == 1)
+                        if (Int32.Parse(dataGridView1.Rows[oneCell.RowIndex].Cells[1].Value.ToString().Substring(2, 3)) == 1)
                         {
                             if (check == false)
                             {
@@ -66,11 +71,11 @@ namespace GiaoDienCuaHang
                             continue;
                         }
                     }
-                    catch
+                    catch (Exception Ex)
                     {
-                        continue;
+                        MessageBox.Show(Ex.Message);
                     }
-
+                    
                     if (oneCell.Selected)
                         dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
                 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -54,6 +54,7 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelHT = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -99,14 +100,14 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -314,6 +315,7 @@
             // 
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel2.Controls.Add(this.buttonX1);
             this.groupPanel2.Controls.Add(this.buttonSaving);
             this.groupPanel2.Controls.Add(this.buttonDeleting);
             this.groupPanel2.Controls.Add(this.buttonAdding);
@@ -359,12 +361,13 @@
             this.buttonSaving.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonSaving.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSaving.Image = global::GiaoDienCuaHang.Properties.Resources.save;
-            this.buttonSaving.Location = new System.Drawing.Point(6, 102);
+            this.buttonSaving.Location = new System.Drawing.Point(6, 101);
             this.buttonSaving.Name = "buttonSaving";
-            this.buttonSaving.Size = new System.Drawing.Size(249, 67);
+            this.buttonSaving.Size = new System.Drawing.Size(115, 67);
             this.buttonSaving.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonSaving.TabIndex = 2;
             this.buttonSaving.Text = "Lưu";
+            this.buttonSaving.Click += new System.EventHandler(this.buttonSaving_Click);
             // 
             // buttonDeleting
             // 
@@ -374,7 +377,7 @@
             this.buttonDeleting.Image = global::GiaoDienCuaHang.Properties.Resources.delete;
             this.buttonDeleting.Location = new System.Drawing.Point(140, 10);
             this.buttonDeleting.Name = "buttonDeleting";
-            this.buttonDeleting.Size = new System.Drawing.Size(115, 75);
+            this.buttonDeleting.Size = new System.Drawing.Size(126, 75);
             this.buttonDeleting.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonDeleting.TabIndex = 1;
             this.buttonDeleting.Text = "Xóa";
@@ -392,6 +395,7 @@
             this.buttonAdding.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonAdding.TabIndex = 0;
             this.buttonAdding.Text = "Thêm";
+            this.buttonAdding.Click += new System.EventHandler(this.buttonAdding_Click);
             // 
             // groupPanel1
             // 
@@ -568,6 +572,20 @@
             this.labelX1.TabIndex = 3;
             this.labelX1.Text = "Tồn Kho";
             // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonX1.Image = global::GiaoDienCuaHang.Properties.Resources.database_search_icon;
+            this.buttonX1.Location = new System.Drawing.Point(140, 102);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(126, 67);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 3;
+            this.buttonX1.Text = "Reset";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
             // frmTonKho
             // 
             this.ClientSize = new System.Drawing.Size(1214, 686);
@@ -618,5 +636,6 @@
         private DevComponents.DotNetBar.LabelX labelHT;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridView1;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }
