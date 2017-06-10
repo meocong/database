@@ -242,11 +242,23 @@
     <Compile Include="frmKhachHang.Designer.cs">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLoaiNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoaiNhanVien.Designer.cs">
+      <DependentUpon>frmLoaiNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNhaCungCap.Designer.cs">
       <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThongKeDonViTinh.cs">
       <SubType>Form</SubType>
@@ -412,9 +424,12 @@
     </Compile>
     <Compile Include="LIBRARY\DataGridViewCalendarColumn.cs" />
     <Compile Include="NewController\DonViTinhController.cs" />
+    <Compile Include="NewController\GioiTinhController.cs" />
     <Compile Include="NewController\HangHoaController.cs" />
     <Compile Include="NewController\KhachHangController.cs" />
+    <Compile Include="NewController\LoaiNhanVienController.cs" />
     <Compile Include="NewController\NhaCungCapController.cs" />
+    <Compile Include="NewController\NhanVienController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CrystalReportChonhanghoa.rpt">
@@ -493,8 +508,14 @@
       <SubType>Designer</SubType>
       <DependentUpon>frmLapPhieuSuCo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLoaiNhanVien.resx">
+      <DependentUpon>frmLoaiNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNhaCungCap.resx">
       <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongKeDonViTinh.resx">
       <SubType>Designer</SubType>

@@ -264,3 +264,5 @@ C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDien
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fDonViTinh.resources
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDonViTinh.resources
 C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmHangHoa.resources
+C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmNhanVien.resources
+C:\Learning\Data Base\Code\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmLoaiNhanVien.resources

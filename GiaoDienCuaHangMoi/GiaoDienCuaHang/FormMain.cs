@@ -31,7 +31,7 @@ namespace GiaoDienCuaHang
         frmTimKiemPhieuBanHang tkpbh = null;
         frmTimKiemPhieuDatHang tkpdh = null;
         frmTimKiemPhieuNhanHang tkpnh = null;
-        fNhanVien nv = null;
+        frmNhanVien nv = null;
 
 
         public FormMain()
@@ -470,7 +470,7 @@ namespace GiaoDienCuaHang
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (nv == null || nv.IsDisposed)
-                nv = new fNhanVien();
+                nv = new frmNhanVien();
             nv.MdiParent = this;
             nv.Show();
         }
@@ -838,7 +838,7 @@ namespace GiaoDienCuaHang
         private void buttonItem24_Click(object sender, EventArgs e)
         {
             if (nv == null || nv.IsDisposed)
-                nv = new fNhanVien();
+                nv = new frmNhanVien();
             nv.MdiParent = this;
             nv.Show();
         }
