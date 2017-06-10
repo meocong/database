@@ -990,5 +990,10 @@ namespace GiaoDienCuaHang
             tkkh.MdiParent = this;
             tkkh.Show();
         }
+
+        private void buttonItem11_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

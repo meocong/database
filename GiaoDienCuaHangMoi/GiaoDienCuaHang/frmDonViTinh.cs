@@ -112,7 +112,10 @@ namespace GiaoDienCuaHang
                     {
                         continue;
                     }
-                    
+                    if (oneCell.RowIndex == dataGridView1.Rows.Count - 1)
+                    {
+                        continue;
+                    }
                     if (oneCell.Selected)
                         dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
                 }

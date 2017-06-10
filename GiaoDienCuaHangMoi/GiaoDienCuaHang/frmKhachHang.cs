@@ -71,6 +71,10 @@ namespace GiaoDienCuaHang
             {
                 foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
                 {
+                    if (oneCell.RowIndex == dataGridView1.Rows.Count - 1)
+                    {
+                        continue;
+                    }
                     if (oneCell.Selected)
                         dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
                 }

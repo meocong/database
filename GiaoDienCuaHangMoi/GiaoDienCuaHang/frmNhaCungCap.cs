@@ -59,15 +59,21 @@ namespace GiaoDienCuaHang
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.Rows.Count == 1)
+            {
+                MessageBox.Show("Bạn không còn gì để xóa!");
+                return;
+            }
             if (MessageBox.Show("Bạn chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
-                IEnumerator ie = dataGridView1.SelectedRows.GetEnumerator();
-
-                while (ie.MoveNext())
+                foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
                 {
-                    DataGridViewRow row = (DataGridViewRow)ie.Current;
-                    dataGridView1.Rows.Remove(row);
+                    if (oneCell.RowIndex == dataGridView1.Rows.Count - 1)
+                    {
+                        continue;
+                    }
+                    if (oneCell.Selected)
+                        dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
                 }
             }
         }
@@ -170,6 +176,10 @@ namespace GiaoDienCuaHang
             {
                 foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
                 {
+                    if (oneCell.RowIndex == dataGridView1.Rows.Count - 1)
+                    {
+                        continue;
+                    }
                     if (oneCell.Selected)
                         dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
                 }

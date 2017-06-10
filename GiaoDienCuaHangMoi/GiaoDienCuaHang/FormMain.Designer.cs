@@ -257,6 +257,7 @@
             this.buttonItem11.Name = "buttonItem11";
             this.buttonItem11.SubItemsExpandWidth = 14;
             this.buttonItem11.Text = "Thoát";
+            this.buttonItem11.Click += new System.EventHandler(this.buttonItem11_Click_2);
             // 
             // ribbonBar10
             // 
