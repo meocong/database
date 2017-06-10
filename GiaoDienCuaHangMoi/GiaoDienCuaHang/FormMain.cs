@@ -32,6 +32,7 @@ namespace GiaoDienCuaHang
         frmTimKiemPhieuDatHang tkpdh = null;
         frmTimKiemPhieuNhanHang tkpnh = null;
         frmNhanVien nv = null;
+        frmLoaiNhanVien loainv = null;
 
 
         public FormMain()
@@ -1011,6 +1012,15 @@ namespace GiaoDienCuaHang
         private void buttonItem11_Click_2(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonItem9_Click_1(object sender, EventArgs e)
+        {
+            if (loainv == null || loainv.IsDisposed)
+                loainv = new frmLoaiNhanVien();
+            loainv.MdiParent = this;
+            loainv.Show();
+            
         }
     }
 }
