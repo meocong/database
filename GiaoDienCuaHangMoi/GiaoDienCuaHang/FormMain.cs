@@ -174,7 +174,11 @@ namespace GiaoDienCuaHang
             }
 
             frmDShanghoahethan hethan = new frmDShanghoahethan();
-            hethan.ShowDialog();
+
+            if (hethan.dataGridView1.Rows.Count > 1)
+            {
+                hethan.ShowDialog();
+            }
         }
 
         private void DisableAll()
