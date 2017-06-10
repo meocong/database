@@ -32,13 +32,11 @@ namespace GiaoDienCuaHang.NewController
             dvtctrl.LoadComboBoxDVT(cmbMDVT);
         }
 
-        public void HienThiDataGridViewHHsaphethan(DataGridView dgv, BindingNavigator bn)
+        public void HienThiDataGridViewHHsaphethan(DataGridView dgv, int month)
         {
             BindingSource bs = new BindingSource();
-            bs.DataSource = data.LayDSHHsaphethan();
+            bs.DataSource = data.LayDSHHsaphethan(month);
             dgv.DataSource = bs;
-            bn.BindingSource = bs;
-
         }
 
         public void LoadComboBoxHangHoa(ComboBox cmb)

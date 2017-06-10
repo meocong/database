@@ -16,12 +16,16 @@ namespace GiaoDienCuaHang.DataLayer
            ds.Load(new SqlCommand("select * from HANGHOA"));
            return ds;
        }
-       public DataTable LayDSHHsaphethan()
+       public DataTable LayDSHHsaphethan(int month)
        {
-           SqlCommand cmd = new SqlCommand("SELECT *, Cast(NGAYHETHAN - GetDate() as int) "
-                + " FROM HANGHOA WHERE Cast(NGAYHETHAN - GetDate() as int) <= 10 AND Cast(NGAYHETHAN - GetDate() as int) >= 0");
+            DateTime start = DateTime.Today.Date;
+            DateTime end = DateTime.Today.Date.AddMonths(month);
 
-           ds.Load(cmd);
+           SqlCommand cmd = new SqlCommand("SELECT * FROM HANGHOA WHERE NGAYHETHAN >= @start AND NGAYHETHAN <= @end");
+            cmd.Parameters.Add("start", SqlDbType.DateTime).Value = start;
+            cmd.Parameters.Add("end", SqlDbType.DateTime).Value = end;
+
+            ds.Load(cmd);
            return ds;
        }
        public DataTable LayDSHangHoa(String hh)

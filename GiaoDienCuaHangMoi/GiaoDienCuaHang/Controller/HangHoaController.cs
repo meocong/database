@@ -33,7 +33,7 @@ namespace GiaoDienCuaHang.Controller
        public void HienThiDataGridViewHHsaphethan(DataGridView dgv, BindingNavigator bn)
        {
            BindingSource bs = new BindingSource();
-           bs.DataSource = data.LayDSHHsaphethan();
+           bs.DataSource = data.LayDSHHsaphethan(2);
            dgv.DataSource = bs;
            bn.BindingSource = bs;
                     
