@@ -49,21 +49,6 @@ namespace GiaoDienCuaHang
             this.textBox2.DataBindings.Add("Text", dataGridView1.DataSource, "TENDVT", false, DataSourceUpdateMode.OnPropertyChanged);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            ctrl.Update();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            ctrl.Update();
-        }
-
-
-        private void toolStripButtonLuu_Click(object sender, EventArgs e)
-        {
-            ctrl.Update();
-        }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {

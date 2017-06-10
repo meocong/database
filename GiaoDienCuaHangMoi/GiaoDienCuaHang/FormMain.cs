@@ -172,6 +172,9 @@ namespace GiaoDienCuaHang
             {
                 disable_menu();
             }
+
+            frmDShanghoahethan hethan = new frmDShanghoahethan();
+            hethan.ShowDialog();
         }
 
         private void DisableAll()
