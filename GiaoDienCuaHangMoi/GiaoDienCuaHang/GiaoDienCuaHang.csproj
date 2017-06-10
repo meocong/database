@@ -161,6 +161,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportPhieuBanHang_V2.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalReportPhieuDatHang.cs">
       <AutoGen>True</AutoGen>
@@ -190,11 +191,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportTonKho_V2.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalReportTonKho_V3.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportTonKho_V3.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataLayer\ChiTietPhieuBanHangData.cs" />
     <Compile Include="DataLayer\ChiTietPhieuDatHangData.cs" />
@@ -437,6 +440,12 @@
     <Compile Include="frmTonKho.Designer.cs">
       <DependentUpon>frmTonKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="fTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTonKho.Designer.cs">
+      <DependentUpon>fTonKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="LIBRARY\DataGridViewCalendarColumn.cs" />
     <Compile Include="NewController\DonViTinhController.cs" />
     <Compile Include="NewController\GioiTinhController.cs" />
@@ -645,8 +654,11 @@
       <DependentUpon>frmTimKiemPhieuNhanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTonKho.resx">
-      <SubType>Designer</SubType>
       <DependentUpon>frmTonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTonKho.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>fTonKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
