@@ -152,10 +152,10 @@
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel7);
             this.ribbonControl1.Controls.Add(this.ribbonPanel6);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel7);
             this.ribbonControl1.Controls.Add(this.ribbonPanel8);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -297,6 +297,7 @@
             this.buttonItem12.Name = "buttonItem12";
             this.buttonItem12.SubItemsExpandWidth = 14;
             this.buttonItem12.Text = "Báo cáo sự cố";
+            this.buttonItem12.Click += new System.EventHandler(this.buttonItem29_Click);
             // 
             // ribbonBar3
             // 
@@ -338,6 +339,7 @@
             this.buttonItem8.Name = "buttonItem8";
             this.buttonItem8.SubItemsExpandWidth = 14;
             this.buttonItem8.Text = "Lập phiếu nhận hàng";
+            this.buttonItem8.Click += new System.EventHandler(this.buttonItem28_Click);
             // 
             // buttonItem7
             // 
@@ -346,6 +348,7 @@
             this.buttonItem7.Name = "buttonItem7";
             this.buttonItem7.SubItemsExpandWidth = 14;
             this.buttonItem7.Text = "Lập phiếu đặt hàng";
+            this.buttonItem7.Click += new System.EventHandler(this.buttonItem27_Click);
             // 
             // buttonItem6
             // 
@@ -354,6 +357,7 @@
             this.buttonItem6.Name = "buttonItem6";
             this.buttonItem6.SubItemsExpandWidth = 14;
             this.buttonItem6.Text = "Lập phiếu bán hàng";
+            this.buttonItem6.Click += new System.EventHandler(this.buttonItem26_Click);
             // 
             // ribbonBar2
             // 
@@ -754,7 +758,7 @@
             this.buttonItem29.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.buttonItem29.Name = "buttonItem29";
             this.buttonItem29.SubItemsExpandWidth = 14;
-            this.buttonItem29.Text = "Sự cố";
+            this.buttonItem29.Text = "Báo cáo sự cố";
             this.buttonItem29.Click += new System.EventHandler(this.buttonItem29_Click);
             // 
             // ribbonBar7
