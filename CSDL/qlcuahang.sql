@@ -575,6 +575,39 @@ GO
 		VALUES (@ID,'','','1/1/1996','GT001','','admin1','admin1','MNV002')
 	END
 GO
+
+------------------Nhan Vien---------------------
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'AUTO_IDTonKho')
+DROP FUNCTION dbo.AUTO_IDTonKho;
+GO
+	CREATE FUNCTION dbo.AUTO_IDTonKho()
+	RETURNS DATETIME
+	AS
+	BEGIN
+		DECLARE @ID DATETIME
+		IF (SELECT MAX(THOIGIAN) FROM TONKHO) = 0
+			SET @ID = '2007-04-03 00:00:00.000'
+		ELSE
+		BEGIN
+			SELECT @ID = MAX(THOIGIAN) FROM TONKHO;
+			SET @ID = @ID + 1
+		END
+		RETURN @ID
+	END
+GO
+
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_TonKho')
+DROP PROCEDURE dbo.Insert_New_TonKho;
+GO
+	CREATE PROCEDURE dbo.Insert_New_TonKho
+	AS
+	BEGIN
+		DECLARE @ID DATETIME
+		SELECT @ID = dbo.AUTO_IDTonKho() 
+		INSERT INTO TONKHO
+		VALUES (@ID,'HH001','')
+	END
+GO
 -----------------------------------------------
 --==============NH?P LI?U ====================
 -----------------------------------------------
