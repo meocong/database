@@ -22,41 +22,26 @@ namespace GiaoDienCuaHang
 
         private void frmTonKho_Load_1(object sender, EventArgs e)
         {
-            ctrl.HienThiDataGridView(dateTimePicker1, comboBox1, textBox1, dataGridView1);
+            ctrl.HienThiDataGridView(dateTimePicker1, comboBox1, textBox1, comboBoxEx1, dataGridView1);
         }
 
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        private void buttonDeleting_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
-        {
+            if (dataGridView1.Rows.Count == 1)
+            {
+                MessageBox.Show("Bạn không còn gì để xóa!");
+                return;
+            }
             if (MessageBox.Show("Bạn chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
-                IEnumerator ie = dataGridView1.SelectedRows.GetEnumerator();
-
-                while (ie.MoveNext())
+                foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
                 {
-                    DataGridViewRow row = (DataGridViewRow)ie.Current;
-                    dataGridView1.Rows.Remove(row);
+                    if (oneCell.Selected)
+                        dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
                 }
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            ctrl.Update();
-        }
-
-        private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-        }
 
     }
 }

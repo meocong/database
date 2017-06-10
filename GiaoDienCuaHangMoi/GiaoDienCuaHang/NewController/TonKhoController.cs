@@ -10,7 +10,7 @@ namespace GiaoDienCuaHang.NewController
     public class TonKhoController
     {
         TonKhoData data = new TonKhoData();
-        public void HienThiDataGridView(DateTimeInput dateTime, ComboBox cmbMSP, TextBox txtSLT, DataGridView dgv)
+        public void HienThiDataGridView(DateTimeInput dateTime, ComboBox cmbMSP, TextBox txtSLT, DataGridView dgv, ComboBox cmbMSPFind)
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = data.LayDSTonKho();
