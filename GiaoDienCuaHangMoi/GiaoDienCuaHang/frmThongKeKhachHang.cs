@@ -22,7 +22,7 @@ namespace GiaoDienCuaHang
             // TODO: This line of code loads data into the 'qLCHmoiDataSet.KHACHHANG' table. You can move, or remove it, as needed.
             GiaoDienCuaHang.DataLayer.KhachHangData kh = new GiaoDienCuaHang.DataLayer.KhachHangData();
             DataTable tbl = kh.LayDSKhachHang("");
-            CrystalReportKhachHang report = new CrystalReportKhachHang();
+            CRKhachHang report = new CRKhachHang();
             report.SetDataSource(tbl);
             crystalReportViewer1.ReportSource = report;
 
