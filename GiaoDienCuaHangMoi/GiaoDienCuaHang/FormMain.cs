@@ -14,7 +14,7 @@ namespace GiaoDienCuaHang
 {
     public partial class FormMain : Office2007RibbonForm
     {
-        fTonKho tonk = null;
+        frmTonKho tonk = null;
         frmThongKeTonKho tktkho = null;
         frmKhachHang kh = null;
         frmNhaCungCap ncc = null;
@@ -676,7 +676,7 @@ namespace GiaoDienCuaHang
         private void tồnKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (tonk == null || tonk.IsDisposed)
-                tonk = new fTonKho();
+                tonk = new frmTonKho();
             tonk.MdiParent = this;
             tonk.Show();
         }
@@ -851,7 +851,7 @@ namespace GiaoDienCuaHang
         private void buttonItem25_Click(object sender, EventArgs e)
         {
             if (tonk == null || tonk.IsDisposed)
-                tonk = new fTonKho();
+                tonk = new frmTonKho();
             tonk.MdiParent = this;
             tonk.Show();
         }

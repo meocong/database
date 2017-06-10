@@ -1,28 +1,26 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using DevComponents.DotNetBar;
-using GiaoDienCuaHang.NewController;
-using System.Collections;
-
+using System.Data.OleDb;
+using GiaoDienCuaHang.Controller;
 namespace GiaoDienCuaHang
 {
-    public partial class frmTonKho : DevComponents.DotNetBar.OfficeForm
+    public partial class fTonKho : Form
     {
         TonKhoController ctrl = new TonKhoController();
-
-        public frmTonKho()
+        public fTonKho()
         {
             InitializeComponent();
         }
 
-        private void frmTonKho_Load_1(object sender, EventArgs e)
+        private void frmTonKho_Load(object sender, EventArgs e)
         {
-            ctrl.HienThiDataGridView(dateTimePicker1, comboBox1, textBox1, dataGridView1);
+            ctrl.HienThiDataGridView(textBox3, textBox1, comboBox2, textBox2, dataGridView1, bindingNavigator1);
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
@@ -57,6 +55,5 @@ namespace GiaoDienCuaHang
                 e.Cancel = true;
             }
         }
-
     }
 }

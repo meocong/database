@@ -454,6 +454,7 @@
     <Compile Include="NewController\LoaiNhanVienController.cs" />
     <Compile Include="NewController\NhaCungCapController.cs" />
     <Compile Include="NewController\NhanVienController.cs" />
+    <Compile Include="NewController\TonKhoController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CrystalReportChonhanghoa.rpt">
