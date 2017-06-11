@@ -17,6 +17,20 @@ namespace GiaoDienCuaHang.DataLayer
             ds.Load(cmd);
             return ds;
         }
+
+        public DataTable FindingPDH(String ncc, DateTime start, DateTime end)
+        {
+            string SQL = "select * from PHIEUDATHANG WHERE MANCC = @ncc AND NGAYLAP >= @start AND NGAYLAP <= @end";
+
+            SqlCommand cmd = new SqlCommand(SQL);
+
+            cmd.Parameters.Add("ncc", SqlDbType.VarChar).Value = ncc;
+            cmd.Parameters.Add("start", SqlDbType.DateTime).Value = start;
+            cmd.Parameters.Add("end", SqlDbType.DateTime).Value = end;
+            ds.Load(cmd);
+            return ds;
+        }
+
        public DataTable LayDS_PDH(String pdh)
        {
            SqlCommand cmd = new SqlCommand("select * from PHIEUDATHANG where MANCC=@ncc");
@@ -64,6 +78,16 @@ namespace GiaoDienCuaHang.DataLayer
         public void Update()
         {
             ds.Update();
+        }
+
+        public void AddNewOrders()
+        {
+            ds.Exec("EXEC dbo.Insert_New_PhieuDatHang");
+        }
+
+        internal void AddNewDetailOrders(string text)
+        {
+            ds.Exec("EXEC dbo.Insert_New_ChiTietPhieuDatHang " + text );
         }
     }
 }

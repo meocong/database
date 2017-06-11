@@ -38,6 +38,28 @@ namespace GiaoDienCuaHang.Controller
          
       }
 
+        public void FindingPDH(ListView listview, String ncc, DateTime start, DateTime end)
+        {
+            listview.Items.Clear();
+            PhieuDatHangData datapdh = new PhieuDatHangData();
+            DataTable dtb = datapdh.FindingPDH(ncc, start, end);
+            int n = 0;
+            foreach (DataRow row in dtb.Rows)
+            {
+                ListViewItem item = new ListViewItem();
+                n++;
+                item.Text = n.ToString();
+                item.SubItems.Add(row["MAPHIEUDATHANG"].ToString());
+                item.SubItems.Add(ctrlNCC.LoadListViewSubItemNhaCungCap(row["MANCC"].ToString()));
+                item.SubItems.Add(ctrlNV.LoadListViewSubItemNhanVien(row["MANV"].ToString()));
+                item.SubItems.Add(row["NGAYLAP"].ToString());
+
+
+                listview.Items.Add(item);
+
+            }
+        }
+
        public void LoadComboBoxPhieuDatHang(ComboBox cmb)
        {
            cmb.DataSource = data.LayPDH();
@@ -51,8 +73,14 @@ namespace GiaoDienCuaHang.Controller
            ctrlNCC.LoadComboBoxNhaCungCap(cmbMaNCC);
            ctrlNV.LoadComboBoxNhanVien(cmbMaNV);
            ctrlHH.LoadComboBoxHangHoa(cmbMaSP);
-       }
-       public bool KiemTraTTChiTietPhieuDatHang(ListView listview, string strCTMaPhieuDH, string strCTMaSP)
+        }
+
+        public void HienThiComboBox(ComboBox cmbMaNCC)
+        {
+            ctrlNCC.LoadComboBoxNhaCungCap(cmbMaNCC);
+        }
+
+        public bool KiemTraTTChiTietPhieuDatHang(ListView listview, string strCTMaPhieuDH, string strCTMaSP)
        {
            foreach (ListViewItem item in listview.Items)
            {
@@ -97,7 +125,18 @@ namespace GiaoDienCuaHang.Controller
           
 
        }
-       string strTenPDH;
+
+        public void AddNewDetailOrders(string text)
+        {
+            data.AddNewDetailOrders(text);
+        }
+
+        public void AddNewOrders()
+        {
+            data.AddNewOrders();
+        }
+
+        string strTenPDH;
 
        public ListViewItem.ListViewSubItem LoadListViewSubItemPHIEUDATHANG(string str)
        {

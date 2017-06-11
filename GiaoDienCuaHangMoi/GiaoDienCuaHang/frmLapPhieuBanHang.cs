@@ -10,12 +10,12 @@ using GiaoDienCuaHang.Controller;
 
 namespace GiaoDienCuaHang
 {
-    public partial class fLapPhieuBanHang : Form
+    public partial class frmLapPhieuBanHang : Form
     {
         int tongtien=0;
         PhieuBanHangController ctrl = new PhieuBanHangController();
         ChiTietPhieuBanHangController ctrlCT = new ChiTietPhieuBanHangController();
-        public fLapPhieuBanHang()
+        public frmLapPhieuBanHang()
         {
             InitializeComponent();
         }

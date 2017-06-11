@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace GiaoDienCuaHang
 {
-    public partial class fLapPhieuNhanHang : Form
+    public partial class frmPhieuNhanHang : Form
     {
         int tongtien = 0;
         PhieuNhanHangController ctrl = new PhieuNhanHangController();
         ChiTietPhieuNhanHangController ctrlchitiet = new ChiTietPhieuNhanHangController();
         
-        public fLapPhieuNhanHang()
+        public frmPhieuNhanHang()
         {
             InitializeComponent();
         }

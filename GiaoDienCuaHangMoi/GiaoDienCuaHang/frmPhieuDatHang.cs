@@ -7,14 +7,15 @@ using System.Drawing;
 using System.Text;
 using GiaoDienCuaHang.Controller;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
 
 namespace GiaoDienCuaHang
 {
-    public partial class frmLapPhieuDatHang : Form
+    public partial class frmPhieuDatHang : OfficeForm
     {
         ChiTietPhieuDatHangController CTRLpdh = new ChiTietPhieuDatHangController();
         PhieuDatHangController Ctrl = new PhieuDatHangController();
-        public frmLapPhieuDatHang()
+        public frmPhieuDatHang()
         {
             InitializeComponent();
         }
@@ -23,6 +24,10 @@ namespace GiaoDienCuaHang
             Ctrl.HienThiListView(listView2);
             Ctrl.HienThiComboBox(comboBoxMNCC, comboBoxMNV, comboBoxMSP);
 
+
+            //Load combobox Tim Kiem
+            PhieuDatHangController temp = new PhieuDatHangController();
+            temp.HienThiComboBox(comboBox1);
         }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -57,33 +62,49 @@ namespace GiaoDienCuaHang
 
         private void buttonThemCT_Click(object sender, EventArgs e)
         {
-            if(textBoxCTMPDH.Text!="" && comboBoxMSP.Text!="")
-            {
-                if(Ctrl.KiemTraTTChiTietPhieuDatHang(listView1,textBoxCTMPDH.Text,comboBoxMSP.Text))
-                {
-                    ListViewItem item = new ListViewItem();
+            //if(textBoxCTMPDH.Text!="" && comboBoxMSP.Text!="")
+            //{
+            //    if(Ctrl.KiemTraTTChiTietPhieuDatHang(listView1,textBoxCTMPDH.Text,comboBoxMSP.Text))
+            //    {
+            //        ListViewItem item = new ListViewItem();
 
-                    int i = listView1.Items.Count;
-                    i++;
-                    item.Text = i.ToString();
-                    item.SubItems.Add(textBoxCTMPDH.Text);
-                    item.SubItems.Add(comboBoxMSP.Text);
-                    item.SubItems.Add(textBoxSL.Text);
-                    item.SubItems.Add(comboBoxMSP.SelectedValue.ToString());
+            //        int i = listView1.Items.Count;
+            //        i++;
+            //        item.Text = i.ToString();
+            //        item.SubItems.Add(textBoxCTMPDH.Text);
+            //        item.SubItems.Add(comboBoxMSP.Text);
+            //        item.SubItems.Add(textBoxSL.Text);
+            //        item.SubItems.Add(comboBoxMSP.SelectedValue.ToString());
                     
-                    listView1.Items.Add(item);
-                }
-                this.comboBoxMSP.Text = "";
-                this.textBoxSL.Text = "";
-                this.textBoxSL.Focus();
-            }
-            else MessageBox.Show("Bạn chưa chọn mã phiếu và mã sản phẩm hoặc chưa chọn mã phiếu hoặc chưa chọn mã sản phẩm. Vui lòng chọn lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //        listView1.Items.Add(item);
+            //    }
+            //    this.comboBoxMSP.Text = "";
+            //    this.textBoxSL.Text = "";
+            //    this.textBoxSL.Focus();
+            //}
+            //else MessageBox.Show("Bạn chưa chọn mã phiếu và mã sản phẩm hoặc chưa chọn mã phiếu hoặc chưa chọn mã sản phẩm. Vui lòng chọn lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             
+            if (textBoxMPDH.Text != "")
+            {
+                Ctrl.AddNewDetailOrders(textBoxMPDH.Text);
+                string temp = "";
+                try
+                {
+                    temp = comboBox1.SelectedValue.ToString();
+                }
+                catch
+                {
 
+                }
+                Ctrl.FindingPDH(listView2, temp, dateTimePicker3.Value.Date, dateTimePicker2.Value.Date);
+            }
+            else MessageBox.Show("Bạn chưa chọn mã phiếu. Vui lòng chọn lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
+            Ctrl.AddNewOrders();
+
             this.textBoxMPDH.Text = "";
             this.comboBoxMNCC.Text = "";
             this.comboBoxMNV.Text = "";
@@ -157,8 +178,28 @@ namespace GiaoDienCuaHang
             this.textBoxCTMPDH.Text = this.textBoxMPDH.Text;
         }
 
-       
+        private void Finding()
+        {
+            string temp = "";
+            try
+            {
+                temp = comboBox1.SelectedValue.ToString();
+            }
+            catch
+            {
 
-       
+            }
+            Ctrl.FindingPDH(listView2, temp, dateTimePicker3.Value.Date, dateTimePicker2.Value.Date);
+        }
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            Finding();
+        }
+
+        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+            Finding();
+        }
     }
 }

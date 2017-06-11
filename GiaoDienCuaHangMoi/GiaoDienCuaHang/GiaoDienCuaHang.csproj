@@ -284,11 +284,11 @@
     <Compile Include="DataService.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="fLapPhieuBanHang.cs">
+    <Compile Include="frmLapPhieuBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLapPhieuBanHang.Designer.cs">
-      <DependentUpon>fLapPhieuBanHang.cs</DependentUpon>
+    <Compile Include="frmLapPhieuBanHang.Designer.cs">
+      <DependentUpon>frmLapPhieuBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="fLapPhieuSuCo.cs">
       <SubType>Form</SubType>
@@ -428,17 +428,17 @@
     <Compile Include="fDonViTinh.Designer.cs">
       <DependentUpon>fDonViTinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLapPhieuDatHang.cs">
+    <Compile Include="frmPhieuDatHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLapPhieuDatHang.Designer.cs">
-      <DependentUpon>frmLapPhieuDatHang.cs</DependentUpon>
+    <Compile Include="frmPhieuDatHang.Designer.cs">
+      <DependentUpon>frmPhieuDatHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="fLapPhieuNhanHang.cs">
+    <Compile Include="frmPhieuNhanHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLapPhieuNhanHang.Designer.cs">
-      <DependentUpon>fLapPhieuNhanHang.cs</DependentUpon>
+    <Compile Include="frmPhieuNhanHang.Designer.cs">
+      <DependentUpon>frmPhieuNhanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="fHangHoa.cs">
       <SubType>Form</SubType>
@@ -621,9 +621,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>fHangHoa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLapPhieuBanHang.resx">
+    <EmbeddedResource Include="frmLapPhieuBanHang.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>fLapPhieuBanHang.cs</DependentUpon>
+      <DependentUpon>frmLapPhieuBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLapPhieuSuCo.resx">
       <DependentUpon>fLapPhieuSuCo.cs</DependentUpon>
@@ -698,13 +698,13 @@
       <SubType>Designer</SubType>
       <DependentUpon>fDonViTinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLapPhieuDatHang.resx">
+    <EmbeddedResource Include="frmPhieuDatHang.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>frmLapPhieuDatHang.cs</DependentUpon>
+      <DependentUpon>frmPhieuDatHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLapPhieuNhanHang.resx">
+    <EmbeddedResource Include="frmPhieuNhanHang.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>fLapPhieuNhanHang.cs</DependentUpon>
+      <DependentUpon>frmPhieuNhanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fKhachHang.resx">
       <SubType>Designer</SubType>

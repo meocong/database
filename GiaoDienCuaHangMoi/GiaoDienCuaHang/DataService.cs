@@ -38,7 +38,11 @@ namespace GiaoDienCuaHang
         {
             using (SqlConnection connection = new SqlConnection(strConn))
             {
-                m_Connection.Open();
+                if (m_Connection == null || m_Connection.State == ConnectionState.Closed)
+                {
+                    m_Connection = new SqlConnection(strConn);
+                    m_Connection.Open();
+                }
                 SqlCommand command = new SqlCommand(queryString, connection);
                 command.Connection.Open();
                 command.ExecuteNonQuery();

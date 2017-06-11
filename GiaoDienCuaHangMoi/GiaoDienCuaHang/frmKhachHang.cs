@@ -62,12 +62,32 @@ namespace GiaoDienCuaHang
 
         private void buttonDeleting_Click(object sender, EventArgs e)
         {
+            //if (dataGridView1.Rows.Count == 1)
+            //{
+            //    MessageBox.Show("Bạn không còn gì để xóa!");
+            //    return;
+            //}
+            //if (MessageBox.Show("Bạn chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //{
+            //    foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
+            //    {
+            //        if (oneCell.RowIndex == dataGridView1.Rows.Count - 1)
+            //        {
+            //            continue;
+            //        }
+            //        if (oneCell.Selected)
+            //            dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
+            //    }
+            //}
+
+            bool check = false;
+
             if (dataGridView1.Rows.Count == 1)
             {
                 MessageBox.Show("Bạn không còn gì để xóa!");
                 return;
             }
-            if (MessageBox.Show("Bạn chắc chắn xóa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
                 {
@@ -75,10 +95,30 @@ namespace GiaoDienCuaHang
                     {
                         continue;
                     }
+
+                    try
+                    {
+                        if (Int32.Parse(dataGridView1.Rows[oneCell.RowIndex].Cells[0].Value.ToString().Substring(2, 3)) == 1)
+                        {
+                            if (check == false)
+                            {
+                                check = true;
+                                MessageBox.Show("Bạn không thể xóa khách hàng mặc định!");
+                            }
+                            continue;
+                        }
+                    }
+                    catch
+                    {
+                        //MessageBox.Show(Ex.Message);
+                        continue;
+                    }
+
                     if (oneCell.Selected)
                         dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
                 }
             }
+            //textBox2.Focus();
         }
 
         private void buttonAdding_Click(object sender, EventArgs e)

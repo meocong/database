@@ -1,6 +1,6 @@
 ﻿namespace GiaoDienCuaHang
 {
-    partial class fLapPhieuNhanHang
+    partial class frmPhieuNhanHang
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLapPhieuNhanHang));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhieuNhanHang));
             this.labelLPNH = new System.Windows.Forms.Label();
             this.groupBoxPNH = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();

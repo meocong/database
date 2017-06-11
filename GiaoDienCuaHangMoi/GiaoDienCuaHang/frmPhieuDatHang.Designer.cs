@@ -1,6 +1,6 @@
 ﻿namespace GiaoDienCuaHang
 {
-    partial class frmLapPhieuDatHang
+    partial class frmPhieuDatHang
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLapPhieuDatHang));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhieuDatHang));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2Cn = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -70,25 +70,38 @@
             this.lbMSP = new System.Windows.Forms.Label();
             this.buttonThemCT = new System.Windows.Forms.Button();
             this.buttonXoaCT = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxTTTK = new System.Windows.Forms.GroupBox();
+            this.labelDen = new System.Windows.Forms.Label();
+            this.labelTu = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2Cn.SuspendLayout();
             this.groupBDSPDH.SuspendLayout();
             this.groupBoxTTPDH.SuspendLayout();
             this.groupBoxCTPDH.SuspendLayout();
             this.groupBoxTTCTPDH.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBoxTTTK.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MistyRose;
+            this.panel1.Controls.Add(this.groupBoxTTTK);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.groupBox2Cn);
-            this.panel1.Controls.Add(this.groupBDSPDH);
             this.panel1.Controls.Add(this.groupBoxTTPDH);
             this.panel1.Controls.Add(this.labelPDH);
+            this.panel1.Controls.Add(this.groupBoxTTCTPDH);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(871, 223);
+            this.panel1.Size = new System.Drawing.Size(1185, 333);
             this.panel1.TabIndex = 0;
             // 
             // groupBox2Cn
@@ -99,12 +112,12 @@
             this.groupBox2Cn.Controls.Add(this.button3);
             this.groupBox2Cn.Controls.Add(this.buttonXoa);
             this.groupBox2Cn.Controls.Add(this.buttonThem);
-            this.groupBox2Cn.Location = new System.Drawing.Point(285, 158);
+            this.groupBox2Cn.Location = new System.Drawing.Point(29, 268);
             this.groupBox2Cn.Name = "groupBox2Cn";
             this.groupBox2Cn.Size = new System.Drawing.Size(453, 62);
             this.groupBox2Cn.TabIndex = 4;
             this.groupBox2Cn.TabStop = false;
-            this.groupBox2Cn.Text = "Chức Năng";
+            this.groupBox2Cn.Text = "Chức Năng Phiếu Đặt Hàng";
             // 
             // button1
             // 
@@ -178,9 +191,9 @@
             // groupBDSPDH
             // 
             this.groupBDSPDH.Controls.Add(this.listView2);
-            this.groupBDSPDH.Location = new System.Drawing.Point(285, 49);
+            this.groupBDSPDH.Location = new System.Drawing.Point(29, 339);
             this.groupBDSPDH.Name = "groupBDSPDH";
-            this.groupBDSPDH.Size = new System.Drawing.Size(552, 106);
+            this.groupBDSPDH.Size = new System.Drawing.Size(582, 313);
             this.groupBDSPDH.TabIndex = 2;
             this.groupBDSPDH.TabStop = false;
             this.groupBDSPDH.Text = "Danh Sách Phiếu Đặt Hàng";
@@ -198,7 +211,7 @@
             this.listView2.GridLines = true;
             this.listView2.Location = new System.Drawing.Point(3, 16);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(546, 87);
+            this.listView2.Size = new System.Drawing.Size(576, 294);
             this.listView2.TabIndex = 0;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -207,25 +220,27 @@
             // stt
             // 
             this.stt.Text = "STT";
+            this.stt.Width = 41;
             // 
             // columnHeaderMAPDH
             // 
             this.columnHeaderMAPDH.Text = "Mã Phiếu Đặt Hàng";
-            this.columnHeaderMAPDH.Width = 109;
+            this.columnHeaderMAPDH.Width = 111;
             // 
             // columnHeaderMNCC
             // 
-            this.columnHeaderMNCC.Text = "Mã Nhà Cung Cấp";
-            this.columnHeaderMNCC.Width = 105;
+            this.columnHeaderMNCC.Text = "Nhà Cung Cấp";
+            this.columnHeaderMNCC.Width = 180;
             // 
             // colHeaderMNV
             // 
-            this.colHeaderMNV.Text = "Mã Nhân Viên";
-            this.colHeaderMNV.Width = 107;
+            this.colHeaderMNV.Text = "Nhân Viên";
+            this.colHeaderMNV.Width = 129;
             // 
             // columnHeaderNL
             // 
             this.columnHeaderNL.Text = "Ngày Lập";
+            this.columnHeaderNL.Width = 75;
             // 
             // groupBoxTTPDH
             // 
@@ -237,9 +252,9 @@
             this.groupBoxTTPDH.Controls.Add(this.labelNL);
             this.groupBoxTTPDH.Controls.Add(this.labelMNCC);
             this.groupBoxTTPDH.Controls.Add(this.labelMPDH);
-            this.groupBoxTTPDH.Location = new System.Drawing.Point(0, 49);
+            this.groupBoxTTPDH.Location = new System.Drawing.Point(29, 66);
             this.groupBoxTTPDH.Name = "groupBoxTTPDH";
-            this.groupBoxTTPDH.Size = new System.Drawing.Size(271, 171);
+            this.groupBoxTTPDH.Size = new System.Drawing.Size(307, 176);
             this.groupBoxTTPDH.TabIndex = 1;
             this.groupBoxTTPDH.TabStop = false;
             this.groupBoxTTPDH.Text = "Thông Tin Phiếu Đặt Hàng";
@@ -249,7 +264,7 @@
             this.comboBoxMNV.FormattingEnabled = true;
             this.comboBoxMNV.Location = new System.Drawing.Point(104, 103);
             this.comboBoxMNV.Name = "comboBoxMNV";
-            this.comboBoxMNV.Size = new System.Drawing.Size(136, 21);
+            this.comboBoxMNV.Size = new System.Drawing.Size(197, 21);
             this.comboBoxMNV.TabIndex = 9;
             // 
             // comboBoxMNCC
@@ -257,7 +272,7 @@
             this.comboBoxMNCC.FormattingEnabled = true;
             this.comboBoxMNCC.Location = new System.Drawing.Point(104, 63);
             this.comboBoxMNCC.Name = "comboBoxMNCC";
-            this.comboBoxMNCC.Size = new System.Drawing.Size(136, 21);
+            this.comboBoxMNCC.Size = new System.Drawing.Size(197, 21);
             this.comboBoxMNCC.TabIndex = 8;
             // 
             // dateTimePicker1
@@ -265,14 +280,14 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(104, 139);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(136, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(197, 20);
             this.dateTimePicker1.TabIndex = 7;
             // 
             // textBoxMPDH
             // 
             this.textBoxMPDH.Location = new System.Drawing.Point(104, 26);
             this.textBoxMPDH.Name = "textBoxMPDH";
-            this.textBoxMPDH.Size = new System.Drawing.Size(136, 20);
+            this.textBoxMPDH.Size = new System.Drawing.Size(197, 20);
             this.textBoxMPDH.TabIndex = 4;
             this.textBoxMPDH.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxMPDH_Validating);
             // 
@@ -281,9 +296,9 @@
             this.labelMNV.AutoSize = true;
             this.labelMNV.Location = new System.Drawing.Point(3, 106);
             this.labelMNV.Name = "labelMNV";
-            this.labelMNV.Size = new System.Drawing.Size(75, 13);
+            this.labelMNV.Size = new System.Drawing.Size(57, 13);
             this.labelMNV.TabIndex = 3;
-            this.labelMNV.Text = "Mã Nhân Viên";
+            this.labelMNV.Text = "Nhân Viên";
             // 
             // labelNL
             // 
@@ -299,9 +314,9 @@
             this.labelMNCC.AutoSize = true;
             this.labelMNCC.Location = new System.Drawing.Point(3, 66);
             this.labelMNCC.Name = "labelMNCC";
-            this.labelMNCC.Size = new System.Drawing.Size(95, 13);
+            this.labelMNCC.Size = new System.Drawing.Size(77, 13);
             this.labelMNCC.TabIndex = 1;
-            this.labelMNCC.Text = "Mã Nhà Cung Cấp";
+            this.labelMNCC.Text = "Nhà Cung Cấp";
             // 
             // labelMPDH
             // 
@@ -314,10 +329,12 @@
             // 
             // labelPDH
             // 
+            this.labelPDH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPDH.AutoSize = true;
             this.labelPDH.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPDH.ForeColor = System.Drawing.Color.Crimson;
-            this.labelPDH.Location = new System.Drawing.Point(238, 9);
+            this.labelPDH.Location = new System.Drawing.Point(477, 19);
             this.labelPDH.Name = "labelPDH";
             this.labelPDH.Size = new System.Drawing.Size(201, 31);
             this.labelPDH.TabIndex = 0;
@@ -326,9 +343,9 @@
             // groupBoxCTPDH
             // 
             this.groupBoxCTPDH.Controls.Add(this.listView1);
-            this.groupBoxCTPDH.Location = new System.Drawing.Point(326, 239);
+            this.groupBoxCTPDH.Location = new System.Drawing.Point(617, 339);
             this.groupBoxCTPDH.Name = "groupBoxCTPDH";
-            this.groupBoxCTPDH.Size = new System.Drawing.Size(514, 145);
+            this.groupBoxCTPDH.Size = new System.Drawing.Size(554, 313);
             this.groupBoxCTPDH.TabIndex = 2;
             this.groupBoxCTPDH.TabStop = false;
             this.groupBoxCTPDH.Text = "Danh Sách Chi Tiết Phiếu Đặt Hàng";
@@ -346,7 +363,7 @@
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(3, 16);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(508, 126);
+            this.listView1.Size = new System.Drawing.Size(548, 294);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -360,12 +377,12 @@
             // columnHeaderMPDH
             // 
             this.columnHeaderMPDH.Text = "Mã Phiếu Đặt Hàng";
-            this.columnHeaderMPDH.Width = 99;
+            this.columnHeaderMPDH.Width = 113;
             // 
             // columnHeaderMSP
             // 
-            this.columnHeaderMSP.Text = "Tên Sản Phẩm";
-            this.columnHeaderMSP.Width = 81;
+            this.columnHeaderMSP.Text = "Sản Phẩm";
+            this.columnHeaderMSP.Width = 199;
             // 
             // columnHeaderSL
             // 
@@ -375,6 +392,7 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Mã Sản Phẩm";
+            this.columnHeader1.Width = 112;
             // 
             // groupBoxTTCTPDH
             // 
@@ -384,9 +402,9 @@
             this.groupBoxTTCTPDH.Controls.Add(this.comboBoxMSP);
             this.groupBoxTTCTPDH.Controls.Add(this.lbMPDH);
             this.groupBoxTTCTPDH.Controls.Add(this.lbMSP);
-            this.groupBoxTTCTPDH.Location = new System.Drawing.Point(6, 229);
+            this.groupBoxTTCTPDH.Location = new System.Drawing.Point(852, 66);
             this.groupBoxTTCTPDH.Name = "groupBoxTTCTPDH";
-            this.groupBoxTTCTPDH.Size = new System.Drawing.Size(253, 155);
+            this.groupBoxTTCTPDH.Size = new System.Drawing.Size(319, 176);
             this.groupBoxTTCTPDH.TabIndex = 3;
             this.groupBoxTTCTPDH.TabStop = false;
             this.groupBoxTTCTPDH.Text = "Thông Tin Chi Tiết Phiếu Đặt Hàng";
@@ -396,7 +414,7 @@
             this.textBoxCTMPDH.Location = new System.Drawing.Point(113, 23);
             this.textBoxCTMPDH.Name = "textBoxCTMPDH";
             this.textBoxCTMPDH.ReadOnly = true;
-            this.textBoxCTMPDH.Size = new System.Drawing.Size(121, 20);
+            this.textBoxCTMPDH.Size = new System.Drawing.Size(200, 20);
             this.textBoxCTMPDH.TabIndex = 7;
             this.textBoxCTMPDH.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCTMPDH_Validating);
             // 
@@ -404,7 +422,7 @@
             // 
             this.textBoxSL.Location = new System.Drawing.Point(113, 99);
             this.textBoxSL.Name = "textBoxSL";
-            this.textBoxSL.Size = new System.Drawing.Size(121, 20);
+            this.textBoxSL.Size = new System.Drawing.Size(200, 20);
             this.textBoxSL.TabIndex = 6;
             // 
             // lbSL
@@ -421,7 +439,7 @@
             this.comboBoxMSP.FormattingEnabled = true;
             this.comboBoxMSP.Location = new System.Drawing.Point(113, 61);
             this.comboBoxMSP.Name = "comboBoxMSP";
-            this.comboBoxMSP.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxMSP.Size = new System.Drawing.Size(200, 21);
             this.comboBoxMSP.TabIndex = 5;
             // 
             // lbMPDH
@@ -438,42 +456,150 @@
             this.lbMSP.AutoSize = true;
             this.lbMSP.Location = new System.Drawing.Point(6, 64);
             this.lbMSP.Name = "lbMSP";
-            this.lbMSP.Size = new System.Drawing.Size(74, 13);
+            this.lbMSP.Size = new System.Drawing.Size(56, 13);
             this.lbMSP.TabIndex = 5;
-            this.lbMSP.Text = "Mã Sản Phẩm";
+            this.lbMSP.Text = "Sản Phẩm";
             // 
             // buttonThemCT
             // 
             this.buttonThemCT.Image = ((System.Drawing.Image)(resources.GetObject("buttonThemCT.Image")));
-            this.buttonThemCT.Location = new System.Drawing.Point(262, 276);
+            this.buttonThemCT.Location = new System.Drawing.Point(6, 17);
             this.buttonThemCT.Name = "buttonThemCT";
-            this.buttonThemCT.Size = new System.Drawing.Size(58, 37);
+            this.buttonThemCT.Size = new System.Drawing.Size(82, 37);
             this.buttonThemCT.TabIndex = 4;
+            this.buttonThemCT.Text = "Thêm";
+            this.buttonThemCT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonThemCT.UseVisualStyleBackColor = true;
             this.buttonThemCT.Click += new System.EventHandler(this.buttonThemCT_Click);
             // 
             // buttonXoaCT
             // 
             this.buttonXoaCT.Image = ((System.Drawing.Image)(resources.GetObject("buttonXoaCT.Image")));
-            this.buttonXoaCT.Location = new System.Drawing.Point(262, 319);
+            this.buttonXoaCT.Location = new System.Drawing.Point(94, 17);
             this.buttonXoaCT.Name = "buttonXoaCT";
-            this.buttonXoaCT.Size = new System.Drawing.Size(58, 36);
+            this.buttonXoaCT.Size = new System.Drawing.Size(85, 36);
             this.buttonXoaCT.TabIndex = 5;
+            this.buttonXoaCT.Text = "Xóa";
+            this.buttonXoaCT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonXoaCT.UseVisualStyleBackColor = true;
             this.buttonXoaCT.Click += new System.EventHandler(this.buttonXoaCT_Click);
             // 
-            // frmLapPhieuDatHang
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonThemCT);
+            this.groupBox1.Controls.Add(this.buttonXoaCT);
+            this.groupBox1.Location = new System.Drawing.Point(852, 268);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(313, 62);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chức Năng Chi Tiết Phiếu Đặt Hàng";
+            // 
+            // groupBoxTTTK
+            // 
+            this.groupBoxTTTK.Controls.Add(this.labelDen);
+            this.groupBoxTTTK.Controls.Add(this.labelTu);
+            this.groupBoxTTTK.Controls.Add(this.dateTimePicker2);
+            this.groupBoxTTTK.Controls.Add(this.dateTimePicker3);
+            this.groupBoxTTTK.Controls.Add(this.comboBox1);
+            this.groupBoxTTTK.Controls.Add(this.label1);
+            this.groupBoxTTTK.Controls.Add(this.label3);
+            this.groupBoxTTTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxTTTK.Location = new System.Drawing.Point(354, 104);
+            this.groupBoxTTTK.Name = "groupBoxTTTK";
+            this.groupBoxTTTK.Size = new System.Drawing.Size(476, 118);
+            this.groupBoxTTTK.TabIndex = 7;
+            this.groupBoxTTTK.TabStop = false;
+            this.groupBoxTTTK.Text = "Tìm Kiếm";
+            // 
+            // labelDen
+            // 
+            this.labelDen.AutoSize = true;
+            this.labelDen.ForeColor = System.Drawing.Color.Purple;
+            this.labelDen.Location = new System.Drawing.Point(286, 75);
+            this.labelDen.Name = "labelDen";
+            this.labelDen.Size = new System.Drawing.Size(32, 16);
+            this.labelDen.TabIndex = 10;
+            this.labelDen.Text = "Đến";
+            // 
+            // labelTu
+            // 
+            this.labelTu.AutoSize = true;
+            this.labelTu.ForeColor = System.Drawing.Color.Purple;
+            this.labelTu.Location = new System.Drawing.Point(98, 75);
+            this.labelTu.Name = "labelTu";
+            this.labelTu.Size = new System.Drawing.Size(24, 16);
+            this.labelTu.TabIndex = 9;
+            this.labelTu.Text = "Từ";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(340, 72);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(110, 22);
+            this.dateTimePicker2.TabIndex = 8;
+            this.dateTimePicker2.Value = new System.DateTime(2999, 6, 11, 12, 48, 0, 0);
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker3.Location = new System.Drawing.Point(129, 71);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(107, 22);
+            this.dateTimePicker3.TabIndex = 7;
+            this.dateTimePicker3.Value = new System.DateTime(2000, 6, 11, 12, 48, 0, 0);
+            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "NCC001",
+            "NCC002",
+            "NCC003",
+            "NCC004",
+            "NCC005"});
+            this.comboBox1.Location = new System.Drawing.Point(129, 25);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(321, 24);
+            this.comboBox1.TabIndex = 3;
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Purple;
+            this.label1.Location = new System.Drawing.Point(6, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Ngày Lập";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Purple;
+            this.label3.Location = new System.Drawing.Point(6, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nhà Cung Cấp";
+            // 
+            // frmPhieuDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(871, 482);
-            this.Controls.Add(this.buttonXoaCT);
-            this.Controls.Add(this.buttonThemCT);
-            this.Controls.Add(this.groupBoxTTCTPDH);
+            this.ClientSize = new System.Drawing.Size(1185, 672);
+            this.Controls.Add(this.groupBDSPDH);
             this.Controls.Add(this.groupBoxCTPDH);
             this.Controls.Add(this.panel1);
-            this.Name = "frmLapPhieuDatHang";
+            this.DoubleBuffered = true;
+            this.Name = "frmPhieuDatHang";
             this.Text = "frmLapPhieuDatHang";
             this.Load += new System.EventHandler(this.frmLapPhieuDatHang_Load);
             this.panel1.ResumeLayout(false);
@@ -485,6 +611,9 @@
             this.groupBoxCTPDH.ResumeLayout(false);
             this.groupBoxTTCTPDH.ResumeLayout(false);
             this.groupBoxTTCTPDH.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBoxTTTK.ResumeLayout(false);
+            this.groupBoxTTTK.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -532,6 +661,14 @@
         private System.Windows.Forms.ColumnHeader stt;
         private System.Windows.Forms.ColumnHeader columnHeaderSTT;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxTTTK;
+        private System.Windows.Forms.Label labelDen;
+        private System.Windows.Forms.Label labelTu;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }

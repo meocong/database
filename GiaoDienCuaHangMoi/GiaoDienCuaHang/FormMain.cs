@@ -15,14 +15,25 @@ namespace GiaoDienCuaHang
     public partial class FormMain : Office2007RibbonForm
     {
         frmTonKho tonk = null;
-        frmThongKeTonKho tktkho = null;
+
+        frmThongKeDonViTinh thongkedvt = null;
+        frmThongKeHangHoatheoDVT thongkehhtdvt = null;
+        frmThongKeKhachHang thongkekh = null;
+        frmThongKeNhaCungCap thongkencc = null;
+        frmThongKeNhanVien thongkenv = null;
+        frmThongKePhieuBanHang thongkepbh = null;
+        frmThongKePhieuDatHang thongkepdh = null;
+        frmThongKePhieuNhanHang thongkepnh = null;
+        frmThongKePhieuSuCo thongkepsc = null;
+        frmThongKeTonKho thongketkho = null;
+
         frmKhachHang kh = null;
         frmNhaCungCap ncc = null;
         frmHangHoa hh = null;
         frmDonViTinh dvt = null;
-        fLapPhieuBanHang pbh = null;
-        frmLapPhieuDatHang pdh = null;
-        fLapPhieuNhanHang pnh = null;
+        frmLapPhieuBanHang pbh = null;
+        frmPhieuDatHang pdh = null;
+        frmPhieuNhanHang pnh = null;
         fLapPhieuSuCo psc = null;
         frmTimKiemKhachHang tkkh = null;
         frmTimKiemNhaCungCap tkncc = null;
@@ -313,7 +324,7 @@ namespace GiaoDienCuaHang
         private void BHToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (pbh == null || pbh.IsDisposed)
-                pbh = new fLapPhieuBanHang();
+                pbh = new frmLapPhieuBanHang();
             pbh.MdiParent = this;
             pbh.Show();
         }
@@ -321,7 +332,7 @@ namespace GiaoDienCuaHang
         private void DHToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (pdh == null || pdh.IsDisposed)
-                pdh = new frmLapPhieuDatHang();
+                pdh = new frmPhieuDatHang();
             pdh.MdiParent = this;
             pdh.Show();
         }
@@ -329,7 +340,7 @@ namespace GiaoDienCuaHang
         private void NHToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (pnh == null || pnh.IsDisposed)
-                pnh = new fLapPhieuNhanHang();
+                pnh = new frmPhieuNhanHang();
             pnh.MdiParent = this;
             pnh.Show();
         }
@@ -345,7 +356,7 @@ namespace GiaoDienCuaHang
         private void toolStripButtonPBH_Click(object sender, EventArgs e)
         {
             if (pbh == null || pbh.IsDisposed)
-                pbh = new fLapPhieuBanHang();
+                pbh = new frmLapPhieuBanHang();
             pbh.MdiParent = this;
             pbh.Show();
         }
@@ -353,7 +364,7 @@ namespace GiaoDienCuaHang
         private void toolStripButtonPDH_Click(object sender, EventArgs e)
         {
             if (pdh == null || pdh.IsDisposed)
-                pdh = new frmLapPhieuDatHang();
+                pdh = new frmPhieuDatHang();
             pdh.MdiParent = this;
             pdh.Show();
         }
@@ -361,7 +372,7 @@ namespace GiaoDienCuaHang
         private void toolStripButtonPNH_Click(object sender, EventArgs e)
         {
             if (pnh == null || pnh.IsDisposed)
-                pnh = new fLapPhieuNhanHang();
+                pnh = new frmPhieuNhanHang();
             pnh.MdiParent = this;
             pnh.Show();
         }
@@ -369,7 +380,7 @@ namespace GiaoDienCuaHang
         private void taskItemBH_Click(object sender, EventArgs e)
         {
             if (pbh == null || pbh.IsDisposed)
-                pbh = new fLapPhieuBanHang();
+                pbh = new frmLapPhieuBanHang();
             pbh.MdiParent = this;
             pbh.Show();
         }
@@ -377,7 +388,7 @@ namespace GiaoDienCuaHang
         private void taskItemDH_Click(object sender, EventArgs e)
         {
             if (pdh == null || pdh.IsDisposed)
-                pdh = new frmLapPhieuDatHang();
+                pdh = new frmPhieuDatHang();
             pdh.MdiParent = this;
             pdh.Show();
         }
@@ -385,7 +396,7 @@ namespace GiaoDienCuaHang
         private void taskItemNH_Click(object sender, EventArgs e)
         {
             if (pnh == null || pnh.IsDisposed)
-                pnh = new fLapPhieuNhanHang();
+                pnh = new frmPhieuNhanHang();
             pnh.MdiParent = this;
             pnh.Show();
         }
@@ -475,17 +486,18 @@ namespace GiaoDienCuaHang
 
         private void thongToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThongKeKhachHang tkkh1 = new frmThongKeKhachHang();
-            tkkh1.MdiParent = this;
-            tkkh1.Show();
-
+            if (thongkekh == null || thongkekh.IsDisposed)
+                thongkekh = new frmThongKeKhachHang();
+            thongkekh.MdiParent = this;
+            thongkekh.Show();
         }
 
         private void TKHHToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThongKeHangHoatheoDVT tkhh = new frmThongKeHangHoatheoDVT();
-            tkhh.MdiParent = this;
-            tkhh.Show();
+            if (thongkehhtdvt == null || thongkehhtdvt.IsDisposed)
+                thongkehhtdvt = new frmThongKeHangHoatheoDVT();
+            thongkehhtdvt.MdiParent = this;
+            thongkehhtdvt.Show();
         }
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -625,60 +637,66 @@ namespace GiaoDienCuaHang
 
         private void tknvToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThongKeNhanVien tknv1 = new frmThongKeNhanVien();
-            tknv1.MdiParent = this;
-            tknv1.Show();
-
+            if (thongkenv == null || thongkenv.IsDisposed)
+                thongkenv = new frmThongKeNhanVien();
+            thongkenv.MdiParent = this;
+            thongkenv.Show();
         }
 
         private void TKNCCToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThongKeNhaCungCap tkncc1 = new frmThongKeNhaCungCap();
-            tkncc1.MdiParent = this;
-            tkncc1.Show();
+            if (thongkencc == null || thongkencc.IsDisposed)
+                thongkencc = new frmThongKeNhaCungCap();
+            thongkencc.MdiParent = this;
+            thongkencc.Show();
         }
 
         private void TKTKToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (tktkho == null || tktkho.IsDisposed)
-                tktkho = new frmThongKeTonKho();
-            tktkho.MdiParent = this;
-            tktkho.Show();
+            if (thongketkho == null || thongketkho.IsDisposed)
+                thongketkho = new frmThongKeTonKho();
+            thongketkho.MdiParent = this;
+            thongketkho.Show();
         }
 
         private void thốngKêĐơnVịTínhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThongKeDonViTinh tkdvt = new frmThongKeDonViTinh();
-            tkdvt.MdiParent = this;
-            tkdvt.Show();
+            if (thongkedvt == null || thongkedvt.IsDisposed)
+                thongkedvt = new frmThongKeDonViTinh();
+            thongkedvt.MdiParent = this;
+            thongkedvt.Show();
         }
 
         private void thốngKêPhiếuBánHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThongKePhieuBanHang tkpbh = new frmThongKePhieuBanHang();
-            tkpbh.MdiParent = this;
-            tkpbh.Show();
+            if (thongkepbh == null || thongkepbh.IsDisposed)
+                thongkepbh = new frmThongKePhieuBanHang();
+            thongkepbh.MdiParent = this;
+            thongkepbh.Show();
         }
 
         private void thốngKêPhiếuNhậnHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThongKePhieuNhanHang tkpnh = new frmThongKePhieuNhanHang();
-            tkpnh.MdiParent = this;
-            tkpnh.Show();
+            if (thongkepnh == null || thongkepnh.IsDisposed)
+                thongkepnh = new frmThongKePhieuNhanHang();
+            thongkepnh.MdiParent = this;
+            thongkepnh.Show();
         }
 
         private void thốngKêPhiếuĐặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThongKePhieuDatHang tkpdh = new frmThongKePhieuDatHang();
-            tkpnh.MdiParent = this;
-            tkpnh.Show();
+            if (thongkepdh == null || thongkepdh.IsDisposed)
+                thongkepdh = new frmThongKePhieuDatHang();
+            thongkepdh.MdiParent = this;
+            thongkepdh.Show();
         }
 
         private void thốngKêPhiếuSựCốToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThongKePhieuSuCo tkpsc = new frmThongKePhieuSuCo();
-            tkpnh.MdiParent = this;
-            tkpnh.Show();
+            if (thongkepsc == null || thongkepsc.IsDisposed)
+                thongkepsc = new frmThongKePhieuSuCo();
+            thongkepsc.MdiParent = this;
+            thongkepsc.Show();
         }
 
         private void saoChépDựPhòngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -804,7 +822,7 @@ namespace GiaoDienCuaHang
         private void buttonItem6_Click(object sender, EventArgs e)
         {
             if (pbh == null || pbh.IsDisposed)
-                pbh = new fLapPhieuBanHang();
+                pbh = new frmLapPhieuBanHang();
             pbh.MdiParent = this;
             pbh.Show();
         }
@@ -812,7 +830,7 @@ namespace GiaoDienCuaHang
         private void buttonItem7_Click(object sender, EventArgs e)
         {
             if (pdh == null || pdh.IsDisposed)
-                pdh = new frmLapPhieuDatHang();
+                pdh = new frmPhieuDatHang();
             pdh.MdiParent = this;
             pdh.Show();
         }
@@ -820,7 +838,7 @@ namespace GiaoDienCuaHang
         private void buttonItem8_Click(object sender, EventArgs e)
         {
             if (pnh == null || pnh.IsDisposed)
-                pnh = new fLapPhieuNhanHang();
+                pnh = new frmPhieuNhanHang();
             pnh.MdiParent = this;
             pnh.Show();
         }
@@ -924,7 +942,7 @@ namespace GiaoDienCuaHang
         private void buttonItem26_Click(object sender, EventArgs e)
         {
             if (pbh == null || pbh.IsDisposed)
-                pbh = new fLapPhieuBanHang();
+                pbh = new frmLapPhieuBanHang();
             pbh.MdiParent = this;
             pbh.Show();
         }
@@ -932,7 +950,7 @@ namespace GiaoDienCuaHang
         private void buttonItem27_Click(object sender, EventArgs e)
         {
             if (pdh == null || pdh.IsDisposed)
-                pdh = new frmLapPhieuDatHang();
+                pdh = new frmPhieuDatHang();
             pdh.MdiParent = this;
             pdh.Show();
         }
@@ -940,7 +958,7 @@ namespace GiaoDienCuaHang
         private void buttonItem28_Click(object sender, EventArgs e)
         {
             if (pnh == null || pnh.IsDisposed)
-                pnh = new fLapPhieuNhanHang();
+                pnh = new frmPhieuNhanHang();
             pnh.MdiParent = this;
             pnh.Show();
         }
@@ -955,73 +973,82 @@ namespace GiaoDienCuaHang
 
         private void buttonItem34_Click(object sender, EventArgs e)
         {
-            frmThongKeNhaCungCap tkncc1 = new frmThongKeNhaCungCap();
-            tkncc1.MdiParent = this;
-            tkncc1.Show();
+            if (thongkencc == null || thongkencc.IsDisposed)
+                thongkencc = new frmThongKeNhaCungCap();
+            thongkencc.MdiParent = this;
+            thongkencc.Show();
         }
 
         private void buttonItem35_Click(object sender, EventArgs e)
         {
-            frmThongKeHangHoatheoDVT tkhh = new frmThongKeHangHoatheoDVT();
-            tkhh.MdiParent = this;
-            tkhh.Show();
+            if (thongkehhtdvt == null || thongkehhtdvt.IsDisposed)
+                thongkehhtdvt = new frmThongKeHangHoatheoDVT();
+            thongkehhtdvt.MdiParent = this;
+            thongkehhtdvt.Show();
         }
 
         private void buttonItem36_Click(object sender, EventArgs e)
         {
-            if (tktkho == null || tktkho.IsDisposed)
-                tktkho = new frmThongKeTonKho();
-            tktkho.MdiParent = this;
-            tktkho.Show();
+            if (thongketkho == null || thongketkho.IsDisposed)
+                thongketkho = new frmThongKeTonKho();
+            thongketkho.MdiParent = this;
+            thongketkho.Show();
         }
 
         private void buttonItem37_Click(object sender, EventArgs e)
         {
-            frmThongKeKhachHang tkkh1 = new frmThongKeKhachHang();
-            tkkh1.MdiParent = this;
-            tkkh1.Show();
+            if (thongkekh == null || thongkekh.IsDisposed)
+                thongkekh = new frmThongKeKhachHang();
+            thongkekh.MdiParent = this;
+            thongkekh.Show();
         }
 
         private void buttonItem41_Click(object sender, EventArgs e)
         {
-            frmThongKeDonViTinh tkdvt = new frmThongKeDonViTinh();
-            tkdvt.MdiParent = this;
-            tkdvt.Show();
+            if (thongkedvt == null || thongkedvt.IsDisposed)
+                thongkedvt = new frmThongKeDonViTinh();
+            thongkedvt.MdiParent = this;
+            thongkedvt.Show();
         }
 
         private void buttonItem38_Click(object sender, EventArgs e)
         {
-            frmThongKeNhanVien tknv1 = new frmThongKeNhanVien();
-            tknv1.MdiParent = this;
-            tknv1.Show();
+            if (thongkenv == null || thongkenv.IsDisposed)
+                thongkenv = new frmThongKeNhanVien();
+            thongkenv.MdiParent = this;
+            thongkenv.Show();
         }
 
         private void buttonItem39_Click(object sender, EventArgs e)
         {
-            frmThongKePhieuBanHang tkpbh = new frmThongKePhieuBanHang();
-            tkpbh.MdiParent = this;
-            tkpbh.Show();
+            if (thongkepbh == null || thongkepbh.IsDisposed)
+                thongkepbh = new frmThongKePhieuBanHang();
+            thongkepbh.MdiParent = this;
+            thongkepbh.Show();
         }
 
         private void buttonItem40_Click(object sender, EventArgs e)
         {
-            frmThongKePhieuDatHang tkpdh = new frmThongKePhieuDatHang();
-            tkpdh.MdiParent = this;
-            tkpdh.Show();
+            if (thongkepdh == null || thongkepdh.IsDisposed)
+                thongkepdh = new frmThongKePhieuDatHang();
+            thongkepdh.MdiParent = this;
+            thongkepdh.Show();
         }
 
         private void buttonItem42_Click(object sender, EventArgs e)
         {
-            frmThongKePhieuNhanHang tkpnh = new frmThongKePhieuNhanHang();
-            tkpnh.MdiParent = this;
-            tkpnh.Show();
+            if (thongkepnh == null || thongkepnh.IsDisposed)
+                thongkepnh = new frmThongKePhieuNhanHang();
+            thongkepnh.MdiParent = this;
+            thongkepnh.Show();
         }
 
         private void buttonItem43_Click(object sender, EventArgs e)
         {
-            frmThongKePhieuSuCo tkpsc = new frmThongKePhieuSuCo();
-            tkpsc.MdiParent = this;
-            tkpsc.Show();
+            if (thongkepsc == null || thongkepsc.IsDisposed)
+                thongkepsc = new frmThongKePhieuSuCo();
+            thongkepsc.MdiParent = this;
+            thongkepsc.Show();
         }
 
         private void buttonItem33_Click(object sender, EventArgs e)
