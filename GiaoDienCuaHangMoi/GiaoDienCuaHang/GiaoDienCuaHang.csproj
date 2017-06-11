@@ -173,6 +173,7 @@
       <DependentUpon>CRTonKhoCopy.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CRTonKho.cs">
       <AutoGen>True</AutoGen>
@@ -289,6 +290,12 @@
     <Compile Include="fLapPhieuBanHang.Designer.cs">
       <DependentUpon>fLapPhieuBanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="fLapPhieuSuCo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLapPhieuSuCo.Designer.cs">
+      <DependentUpon>fLapPhieuSuCo.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLoaiNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +307,12 @@
     </Compile>
     <Compile Include="frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDanhSachHangHoaSapHetHan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDanhSachHangHoaSapHetHan.Designer.cs">
+      <DependentUpon>frmDanhSachHangHoaSapHetHan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDonViTinh.cs">
       <SubType>Form</SubType>
@@ -414,10 +427,6 @@
     </Compile>
     <Compile Include="frmLapPhieuNhanHang.Designer.cs">
       <DependentUpon>frmLapPhieuNhanHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmLapPhieuSuCo.cs" />
-    <Compile Include="frmLapPhieuSuCo.Designer.cs">
-      <DependentUpon>frmLapPhieuSuCo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThongKeHangHoatheoDVT.cs">
       <SubType>Form</SubType>
@@ -628,12 +637,18 @@
       <SubType>Designer</SubType>
       <DependentUpon>fLapPhieuBanHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fLapPhieuSuCo.resx">
+      <DependentUpon>fLapPhieuSuCo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fLoaiNhanVien.resx">
       <SubType>Designer</SubType>
       <DependentUpon>fLoaiNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDanhSachHangHoaSapHetHan.resx">
+      <DependentUpon>frmDanhSachHangHoaSapHetHan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDonViTinh.resx">
       <DependentUpon>frmDonViTinh.cs</DependentUpon>
@@ -647,10 +662,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLapPhieuSuCo.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>frmLapPhieuSuCo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoaiNhanVien.resx">
       <DependentUpon>frmLoaiNhanVien.cs</DependentUpon>
@@ -817,6 +828,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="house_48.ico" />
+    <None Include="Resources\Business-Expired-icon2.png" />
     <None Include="QLCHmoiDataSet.xsc">
       <DependentUpon>QLCHmoiDataSet.xsd</DependentUpon>
     </None>

@@ -113,6 +113,16 @@ namespace GiaoDienCuaHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Business_Expired_icon {
+            get {
+                object obj = ResourceManager.GetObject("Business-Expired-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Warning_icon {
             get {
                 object obj = ResourceManager.GetObject("Button-Warning-icon", resourceCulture);

@@ -20,7 +20,7 @@ namespace GiaoDienCuaHang
         }
 
         private void frmLapPhieuSuCo_Load(object sender, EventArgs e)
-        {            
+        {
             ctrller.HienThiComboBox(comboBoxMSP);
             ctrller.HienThiListView(listView1);
         }
@@ -65,7 +65,7 @@ namespace GiaoDienCuaHang
                     listView1.Items.Remove(item);
                 }
             }
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace GiaoDienCuaHang
             {
                 ctrller.Luu_PhieuSuCo(textBoxMPSC, comboBoxMSP, dateTimePicker1, textBoxLD, textBoxSL, textBoxDG, textBoxTT);
                 ctrller.HienThiListView(listView1);
-                
+
             }
         }
 
@@ -89,6 +89,6 @@ namespace GiaoDienCuaHang
             print.ShowDialog();
         }
 
-             
+
     }
 }

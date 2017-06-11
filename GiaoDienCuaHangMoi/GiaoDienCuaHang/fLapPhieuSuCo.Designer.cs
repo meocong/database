@@ -1,90 +1,92 @@
 ﻿namespace GiaoDienCuaHang
 {
-    partial class fLapPhieuSuCo
-    {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class fLapPhieuSuCo
+	{
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Windows Form Designer generated code
+		#region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            this.panel1 = new System.Windows.Forms.Panel();
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+            this.columnHeaderTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderSLHH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonIn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.buttonXoa = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
+            this.columnHeaderLD = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderNgayHH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderMSP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderMPSC = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBoxTT = new System.Windows.Forms.TextBox();
             this.textBoxDG = new System.Windows.Forms.TextBox();
             this.textBoxSL = new System.Windows.Forms.TextBox();
             this.textBoxLD = new System.Windows.Forms.TextBox();
             this.comboBoxMSP = new System.Windows.Forms.ComboBox();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxMPSC = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.labelTT = new System.Windows.Forms.Label();
             this.labelDG = new System.Windows.Forms.Label();
             this.labelSL = new System.Windows.Forms.Label();
             this.labelNHH = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelMPSC = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderMPSC = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderMSP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderNgayHH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderLD = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderSLHH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDG = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // columnHeaderTT
             // 
-            this.panel1.Controls.Add(this.labelX1);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.textBoxTT);
-            this.panel1.Controls.Add(this.textBoxDG);
-            this.panel1.Controls.Add(this.textBoxSL);
-            this.panel1.Controls.Add(this.textBoxLD);
-            this.panel1.Controls.Add(this.comboBoxMSP);
-            this.panel1.Controls.Add(this.textBoxMPSC);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.labelTT);
-            this.panel1.Controls.Add(this.labelDG);
-            this.panel1.Controls.Add(this.labelSL);
-            this.panel1.Controls.Add(this.labelNHH);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.labelMPSC);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(981, 234);
-            this.panel1.TabIndex = 0;
+            this.columnHeaderTT.Text = "Tổng Tiền";
+            this.columnHeaderTT.Width = 88;
+            // 
+            // columnHeaderSLHH
+            // 
+            this.columnHeaderSLHH.Text = "Số Lượng Hư Hỏng";
+            this.columnHeaderSLHH.Width = 109;
+            // 
+            // labelX1
+            // 
+            this.labelX1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Times New Roman", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX1.ForeColor = System.Drawing.Color.Red;
+            this.labelX1.Location = new System.Drawing.Point(350, 3);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(365, 76);
+            this.labelX1.TabIndex = 16;
+            this.labelX1.Text = "Phiếu sự cố";
             // 
             // groupBox1
             // 
@@ -107,7 +109,6 @@
             this.buttonIn.TabIndex = 3;
             this.buttonIn.Text = "In";
             this.buttonIn.UseVisualStyleBackColor = true;
-            this.buttonIn.Click += new System.EventHandler(this.buttonIn_Click);
             // 
             // button3
             // 
@@ -117,7 +118,6 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Lưu";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // buttonXoa
             // 
@@ -127,7 +127,6 @@
             this.buttonXoa.TabIndex = 1;
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = true;
-            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // buttonThem
             // 
@@ -137,7 +136,26 @@
             this.buttonThem.TabIndex = 0;
             this.buttonThem.Text = "Thêm";
             this.buttonThem.UseVisualStyleBackColor = true;
-            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
+            // 
+            // columnHeaderLD
+            // 
+            this.columnHeaderLD.Text = "Lý Do";
+            this.columnHeaderLD.Width = 202;
+            // 
+            // columnHeaderNgayHH
+            // 
+            this.columnHeaderNgayHH.Text = "Ngày Hư Hỏng";
+            this.columnHeaderNgayHH.Width = 89;
+            // 
+            // columnHeaderMSP
+            // 
+            this.columnHeaderMSP.Text = "Mã Sản Phẩm";
+            this.columnHeaderMSP.Width = 83;
+            // 
+            // columnHeaderMPSC
+            // 
+            this.columnHeaderMPSC.Text = "Mã Phiếu Sự Cố";
+            this.columnHeaderMPSC.Width = 92;
             // 
             // dateTimePicker1
             // 
@@ -185,21 +203,16 @@
             this.comboBoxMSP.Size = new System.Drawing.Size(88, 21);
             this.comboBoxMSP.TabIndex = 9;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "STT";
+            // 
             // textBoxMPSC
             // 
             this.textBoxMPSC.Location = new System.Drawing.Point(146, 94);
             this.textBoxMPSC.Name = "textBoxMPSC";
             this.textBoxMPSC.Size = new System.Drawing.Size(88, 20);
             this.textBoxMPSC.TabIndex = 8;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(56, 182);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Lý Do";
             // 
             // labelTT
             // 
@@ -255,6 +268,44 @@
             this.labelMPSC.TabIndex = 1;
             this.labelMPSC.Text = "Mã Phiếu Sự Cố";
             // 
+            // columnHeaderDG
+            // 
+            this.columnHeaderDG.Text = "Đơn Giá";
+            this.columnHeaderDG.Width = 74;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.labelX1);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.textBoxTT);
+            this.panel1.Controls.Add(this.textBoxDG);
+            this.panel1.Controls.Add(this.textBoxSL);
+            this.panel1.Controls.Add(this.textBoxLD);
+            this.panel1.Controls.Add(this.comboBoxMSP);
+            this.panel1.Controls.Add(this.textBoxMPSC);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.labelTT);
+            this.panel1.Controls.Add(this.labelDG);
+            this.panel1.Controls.Add(this.labelSL);
+            this.panel1.Controls.Add(this.labelNHH);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.labelMPSC);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1068, 234);
+            this.panel1.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(56, 182);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Lý Do";
+            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -269,118 +320,60 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(0, 234);
+            this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(981, 230);
-            this.listView1.TabIndex = 2;
+            this.listView1.Size = new System.Drawing.Size(1068, 546);
+            this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "STT";
-            // 
-            // columnHeaderMPSC
-            // 
-            this.columnHeaderMPSC.Text = "Mã Phiếu Sự Cố";
-            this.columnHeaderMPSC.Width = 92;
-            // 
-            // columnHeaderMSP
-            // 
-            this.columnHeaderMSP.Text = "Mã Sản Phẩm";
-            this.columnHeaderMSP.Width = 83;
-            // 
-            // columnHeaderNgayHH
-            // 
-            this.columnHeaderNgayHH.Text = "Ngày Hư Hỏng";
-            this.columnHeaderNgayHH.Width = 89;
-            // 
-            // columnHeaderLD
-            // 
-            this.columnHeaderLD.Text = "Lý Do";
-            this.columnHeaderLD.Width = 202;
-            // 
-            // columnHeaderSLHH
-            // 
-            this.columnHeaderSLHH.Text = "Số Lượng Hư Hỏng";
-            this.columnHeaderSLHH.Width = 109;
-            // 
-            // columnHeaderDG
-            // 
-            this.columnHeaderDG.Text = "Đơn Giá";
-            this.columnHeaderDG.Width = 74;
-            // 
-            // columnHeaderTT
-            // 
-            this.columnHeaderTT.Text = "Tổng Tiền";
-            this.columnHeaderTT.Width = 88;
-            // 
-            // labelX1
-            // 
-            this.labelX1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Times New Roman", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.ForeColor = System.Drawing.Color.Red;
-            this.labelX1.Location = new System.Drawing.Point(350, 3);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(278, 76);
-            this.labelX1.TabIndex = 16;
-            this.labelX1.Text = "Phiếu sự cố";
             // 
             // fLapPhieuSuCo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 464);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(1068, 546);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.listView1);
             this.DoubleBuffered = true;
             this.Name = "fLapPhieuSuCo";
-            this.Text = "frmLapPhieuSuCo";
+            this.Text = "fLapPhieuSuCo";
             this.Load += new System.EventHandler(this.frmLapPhieuSuCo_Load);
+            this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
-        }
+		}
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelMPSC;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeaderMPSC;
-        private System.Windows.Forms.ColumnHeader columnHeaderMSP;
-        private System.Windows.Forms.ColumnHeader columnHeaderNgayHH;
-        private System.Windows.Forms.ColumnHeader columnHeaderLD;
-        private System.Windows.Forms.ColumnHeader columnHeaderSLHH;
-        private System.Windows.Forms.ColumnHeader columnHeaderDG;
         private System.Windows.Forms.ColumnHeader columnHeaderTT;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label labelTT;
-        private System.Windows.Forms.Label labelDG;
-        private System.Windows.Forms.Label labelSL;
-        private System.Windows.Forms.Label labelNHH;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxMPSC;
-        private System.Windows.Forms.ComboBox comboBoxMSP;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBoxTT;
-        private System.Windows.Forms.TextBox textBoxDG;
-        private System.Windows.Forms.TextBox textBoxSL;
-        private System.Windows.Forms.TextBox textBoxLD;
+        private System.Windows.Forms.ColumnHeader columnHeaderSLHH;
+        private DevComponents.DotNetBar.LabelX labelX1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button buttonIn;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonThem;
+        private System.Windows.Forms.ColumnHeader columnHeaderLD;
+        private System.Windows.Forms.ColumnHeader columnHeaderNgayHH;
+        private System.Windows.Forms.ColumnHeader columnHeaderMSP;
+        private System.Windows.Forms.ColumnHeader columnHeaderMPSC;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBoxTT;
+        private System.Windows.Forms.TextBox textBoxDG;
+        private System.Windows.Forms.TextBox textBoxSL;
+        private System.Windows.Forms.TextBox textBoxLD;
+        private System.Windows.Forms.ComboBox comboBoxMSP;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private DevComponents.DotNetBar.LabelX labelX1;
+        private System.Windows.Forms.TextBox textBoxMPSC;
+        private System.Windows.Forms.Label labelTT;
+        private System.Windows.Forms.Label labelDG;
+        private System.Windows.Forms.Label labelSL;
+        private System.Windows.Forms.Label labelNHH;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelMPSC;
+        private System.Windows.Forms.ColumnHeader columnHeaderDG;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListView listView1;
     }
 }
