@@ -16,7 +16,17 @@ namespace GiaoDienCuaHang
             InitializeComponent();
         }
 
-        private void buttonchon_Click(object sender, EventArgs e)
+
+        private void frmThongKePhieuSuCo_Load(object sender, EventArgs e)
+        {
+            GiaoDienCuaHang.DataLayer.HangHoaData hhdata = new GiaoDienCuaHang.DataLayer.HangHoaData();
+            comboBox1.DataSource = hhdata.LayDSHangHoa();
+            comboBox1.DisplayMember = "TENHH";
+            comboBox1.ValueMember = "MAHH";
+
+        }
+
+        private void buttonX1_Click(object sender, EventArgs e)
         {
             String hh = comboBox1.SelectedValue.ToString();
             GiaoDienCuaHang.DataLayer.PhieuSuCoData psc = new GiaoDienCuaHang.DataLayer.PhieuSuCoData();
@@ -26,13 +36,13 @@ namespace GiaoDienCuaHang
             crystalReportViewer1.ReportSource = parameter;
         }
 
-        private void frmThongKePhieuSuCo_Load(object sender, EventArgs e)
+        private void buttonX2_Click(object sender, EventArgs e)
         {
-            GiaoDienCuaHang.DataLayer.HangHoaData hhdata = new GiaoDienCuaHang.DataLayer.HangHoaData();
-            comboBox1.DataSource = hhdata.LayDSHangHoa();
-            comboBox1.DisplayMember = "TENHH";
-            comboBox1.ValueMember = "MAHH";
-
+            String hh = comboBox1.SelectedValue.ToString();
+            GiaoDienCuaHang.DataLayer.PhieuSuCoData psc = new GiaoDienCuaHang.DataLayer.PhieuSuCoData();
+            CRPhieuSuCoCopy parameter = new CRPhieuSuCoCopy();
+            parameter.SetDataSource(psc.LayDS_PhieuSuCokhongdk());
+            crystalReportViewer1.ReportSource = parameter;
         }
     }
 }

@@ -36,6 +36,20 @@ namespace GiaoDienCuaHang.DataLayer
             ds.Load(cmd);
             return ds;
         }
+        public DataTable Lay_vw_DVT()
+        {
+            SqlCommand cmd = new SqlCommand("exec crt_vw_thongke_hanghoatheodvt select * from vw_hanghoa");
+            ds.Load(cmd);
+            return ds;
+        }
+        public DataTable Lay_vw_DVTcodk(string dvt)
+        {
+            SqlCommand cmd = new SqlCommand("exec crt_vw_thongke_hanghoatheodvt select * from vw_hanghoa where MADVT = '" + dvt + "'");
+            ds.Load(cmd);
+            return ds;
+        }
+
+
         public DataTable TimKiemHangHoa(String ten, String chonMaDVT, String MaDVT, String chonSL, String Soluong, String chonSLG, String SLGiam, String chonTLG, String TLGiam)
         {
 

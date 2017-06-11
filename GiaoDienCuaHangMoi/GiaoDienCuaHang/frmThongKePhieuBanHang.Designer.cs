@@ -30,9 +30,10 @@
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.buttonHT = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,41 +52,58 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.buttonX2);
+            this.panel2.Controls.Add(this.buttonX1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.buttonHT);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1174, 75);
             this.panel2.TabIndex = 3;
             // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.Location = new System.Drawing.Point(467, 12);
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Size = new System.Drawing.Size(177, 42);
+            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.TabIndex = 4;
+            this.buttonX2.Text = "Hiển Thị Toàn Bộ";
+            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(329, 12);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(102, 42);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 3;
+            this.buttonX1.Text = "Chọn";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 26);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Firebrick;
+            this.label1.Location = new System.Drawing.Point(40, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(161, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tên Khách Hàng";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(142, 23);
+            this.comboBox1.Location = new System.Drawing.Point(207, 23);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(106, 21);
+            this.comboBox1.Size = new System.Drawing.Size(106, 28);
             this.comboBox1.TabIndex = 1;
-            // 
-            // buttonHT
-            // 
-            this.buttonHT.Location = new System.Drawing.Point(254, 21);
-            this.buttonHT.Name = "buttonHT";
-            this.buttonHT.Size = new System.Drawing.Size(75, 23);
-            this.buttonHT.TabIndex = 0;
-            this.buttonHT.Text = "Hiển thị";
-            this.buttonHT.UseVisualStyleBackColor = true;
-            this.buttonHT.Click += new System.EventHandler(this.buttonHT_Click);
             // 
             // frmThongKePhieuBanHang
             // 
@@ -108,6 +126,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button buttonHT;
+        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }

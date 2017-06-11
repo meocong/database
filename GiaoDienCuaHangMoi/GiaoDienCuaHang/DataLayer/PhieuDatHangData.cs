@@ -40,7 +40,13 @@ namespace GiaoDienCuaHang.DataLayer
            ds.Load(cmd);
            return ds;
        }
-       public DataTable LayCT_PDH()
+        public DataTable LayDS_PDHkhongdk()
+        {
+            SqlCommand cmd = new SqlCommand("select * from PHIEUDATHANG");
+            ds.Load(cmd);
+            return ds;
+        }
+        public DataTable LayCT_PDH()
        {
            SqlCommand cmd = new SqlCommand("select * from CHITIETPHIEUDATHANG");
            ds.Load(cmd);

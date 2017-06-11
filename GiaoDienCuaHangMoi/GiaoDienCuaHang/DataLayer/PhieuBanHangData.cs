@@ -29,8 +29,13 @@ namespace GiaoDienCuaHang.DataLayer
            ds.Load(cmd);
            return ds;
        }
-
-       public DataTable TimKiemPhieuBanHang(String MaKH, String chonMaNV, String MaNV, String chonNgayLap,DateTime TuNgay,DateTime DenNgay)
+        public DataTable LayDSPhieuBanHangkhongdk()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM PHIEUBANHANG");
+            ds.Load(cmd);
+            return ds;
+        }
+        public DataTable TimKiemPhieuBanHang(String MaKH, String chonMaNV, String MaNV, String chonNgayLap,DateTime TuNgay,DateTime DenNgay)
        {
 
            SqlCommand cmd = new SqlCommand();

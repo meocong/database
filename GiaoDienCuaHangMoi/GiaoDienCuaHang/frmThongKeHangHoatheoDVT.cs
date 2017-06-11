@@ -20,12 +20,9 @@ namespace GiaoDienCuaHang
         {
             String dvt = comboBox1.SelectedValue.ToString();
             GiaoDienCuaHang.DataLayer.HangHoaData hh = new GiaoDienCuaHang.DataLayer.HangHoaData();
-            CrystalReportChonhanghoa report = new CrystalReportChonhanghoa();
-
-            report.SetDataSource(hh.LayDSHangHoa(dvt));
+            CRHangHoa report = new CRHangHoa();
+            report.SetDataSource(hh.Lay_vw_DVTcodk(dvt));
             report.SetParameterValue("donvitinh", comboBox1.Text);
-
-
             crystalReportViewer1.ReportSource = report;
         }
 
@@ -35,6 +32,25 @@ namespace GiaoDienCuaHang
             comboBox1.DataSource = dvtdata.LayDSDonViTinh();
             comboBox1.DisplayMember = "TENDVT";
             comboBox1.ValueMember = "MADVT";
+        }
+
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            String dvt = comboBox1.SelectedValue.ToString();
+            GiaoDienCuaHang.DataLayer.HangHoaData hh = new GiaoDienCuaHang.DataLayer.HangHoaData();
+            CRHangHoa report = new CRHangHoa();
+            report.SetDataSource(hh.Lay_vw_DVTcodk(dvt));
+            report.SetParameterValue("dvt", comboBox1.Text);
+            crystalReportViewer1.ReportSource = report;
+        }
+
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            String dvt = comboBox1.SelectedValue.ToString();
+            GiaoDienCuaHang.DataLayer.HangHoaData hh = new GiaoDienCuaHang.DataLayer.HangHoaData();
+            CRHangHoaCopy report = new CRHangHoaCopy();
+            report.SetDataSource(hh.Lay_vw_DVT());
+            crystalReportViewer1.ReportSource = report;
         }
     }
 }

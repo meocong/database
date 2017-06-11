@@ -22,6 +22,12 @@ namespace GiaoDienCuaHang.DataLayer
            ds.Load(cmd);
            return ds;
        }
+        public DataTable LayDS_PhieuSuCokhongdk()
+        {
+            SqlCommand cmd = new SqlCommand("select * from PHIEUSUCO");
+            ds.Load(cmd);
+            return ds;
+        }
         public DataRow NewRow()
         {
             return ds.NewRow();

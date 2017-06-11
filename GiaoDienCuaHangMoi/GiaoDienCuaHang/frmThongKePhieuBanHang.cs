@@ -16,15 +16,15 @@ namespace GiaoDienCuaHang
             InitializeComponent();
         }
 
-        private void buttonHT_Click(object sender, EventArgs e)
+       /* private void buttonHT_Click(object sender, EventArgs e)
         {
             String kh = comboBox1.SelectedValue.ToString();
             GiaoDienCuaHang.DataLayer.PhieuBanHangData pbh = new GiaoDienCuaHang.DataLayer.PhieuBanHangData();
             CRPhieuBanHang parameter = new CRPhieuBanHang();
             parameter.SetDataSource(pbh.LayDSPhieuBanHang(kh));
-            //parameter.SetParameterValue("tenkh", comboBox1.Text);
+            parameter.SetParameterValue("tenkh", comboBox1.Text);
             crystalReportViewer1.ReportSource = parameter;
-        }
+        }*/
 
         private void frmThongKePhieuBanHang_Load(object sender, EventArgs e)
         {
@@ -32,8 +32,24 @@ namespace GiaoDienCuaHang
             comboBox1.DataSource = khdata.LayDSKhachHang("");
             comboBox1.DisplayMember = "HOTEN";
             comboBox1.ValueMember = "MAKH";
+        }
 
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            String kh = comboBox1.SelectedValue.ToString();
+            GiaoDienCuaHang.DataLayer.PhieuBanHangData pbh = new GiaoDienCuaHang.DataLayer.PhieuBanHangData();
+            CRPhieuBanHang parameter = new CRPhieuBanHang();
+            parameter.SetDataSource(pbh.LayDSPhieuBanHang(kh));
+            parameter.SetParameterValue("tenkh", comboBox1.Text);
+            crystalReportViewer1.ReportSource = parameter;
+        }
 
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            GiaoDienCuaHang.DataLayer.PhieuBanHangData pbh = new GiaoDienCuaHang.DataLayer.PhieuBanHangData();
+            CRPhieuBanHangCopy parameter = new CRPhieuBanHangCopy();
+            parameter.SetDataSource(pbh.LayDSPhieuBanHangkhongdk());
+            crystalReportViewer1.ReportSource = parameter;
         }
     }
 }

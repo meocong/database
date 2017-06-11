@@ -20,7 +20,7 @@ namespace GiaoDienCuaHang
         {
             GiaoDienCuaHang.DataLayer.NhanVienData nv = new GiaoDienCuaHang.DataLayer.NhanVienData();
             DataTable tbl = nv.LayDSNhanVien();
-            CrystalReportNhanVien report = new CrystalReportNhanVien();
+            CRNhanVien report = new CRNhanVien();
             report.SetDataSource(tbl);
             crystalReportViewer1.ReportSource = report;
         }

@@ -127,6 +127,12 @@
       <DependentUpon>CRHangHoa.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CRHangHoaCopy.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRHangHoaCopy.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CRKhachHang.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -151,10 +157,22 @@
       <DependentUpon>CRPhieuBanHang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CRPhieuBanHangCopy.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRPhieuBanHangCopy.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CRPhieuDatHang.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRPhieuDatHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRPhieuDatHangCopy.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRPhieuDatHangCopy.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CRPhieuNhanHang.cs">
@@ -163,22 +181,34 @@
       <DependentUpon>CRPhieuNhanHang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CRPhieuNhanHangCopy.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRPhieuNhanHangCopy.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CRPhieuSuCo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRPhieuSuCo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CRTonKhoCopy.cs">
-      <DependentUpon>CRTonKhoCopy.rpt</DependentUpon>
+    <Compile Include="CRPhieuSuCoCopy.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>CRPhieuSuCoCopy.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CRTonKho.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRTonKho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRTonKhoCopy.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRTonKhoCopy.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalReportChonhanghoa.cs">
@@ -350,66 +380,6 @@
     <Compile Include="frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThongKeDonViTinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongKeDonViTinh.Designer.cs">
-      <DependentUpon>frmThongKeDonViTinh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThongKeHangHoatheoDVT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongKeHangHoatheoDVT.Designer.cs">
-      <DependentUpon>frmThongKeHangHoatheoDVT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThongKeKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongKeKhachHang.Designer.cs">
-      <DependentUpon>frmThongKeKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThongKeNhaCungCap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongKeNhaCungCap.Designer.cs">
-      <DependentUpon>frmThongKeNhaCungCap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThongKeNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongKeNhanVien.Designer.cs">
-      <DependentUpon>frmThongKeNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThongKePhieuBanHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongKePhieuBanHang.Designer.cs">
-      <DependentUpon>frmThongKePhieuBanHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThongKePhieuDatHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongKePhieuDatHang.Designer.cs">
-      <DependentUpon>frmThongKePhieuDatHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThongKePhieuNhanHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongKePhieuNhanHang.Designer.cs">
-      <DependentUpon>frmThongKePhieuNhanHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThongKePhieuSuCo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongKePhieuSuCo.Designer.cs">
-      <DependentUpon>frmThongKePhieuSuCo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThongKeTonKho.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongKeTonKho.Designer.cs">
-      <DependentUpon>frmThongKeTonKho.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -464,6 +434,46 @@
     <Compile Include="fNhanVien.Designer.cs">
       <DependentUpon>fNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThongKeDonViTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeDonViTinh.Designer.cs" />
+    <Compile Include="frmThongKeHangHoatheoDVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeHangHoatheoDVT.Designer.cs" />
+    <Compile Include="frmThongKeKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeKhachHang.Designer.cs" />
+    <Compile Include="frmThongKeNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeNhaCungCap.Designer.cs" />
+    <Compile Include="frmThongKeNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeNhanVien.Designer.cs" />
+    <Compile Include="frmThongKePhieuBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKePhieuBanHang.Designer.cs" />
+    <Compile Include="frmThongKePhieuDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKePhieuDatHang.Designer.cs" />
+    <Compile Include="frmThongKePhieuNhanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKePhieuNhanHang.Designer.cs" />
+    <Compile Include="frmThongKePhieuSuCo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKePhieuSuCo.Designer.cs" />
+    <Compile Include="frmThongKeTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeTonKho.Designer.cs" />
     <Compile Include="frmTimKiemDVT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -525,6 +535,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRHangHoa.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRHangHoaCopy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRHangHoaCopy.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRKhachHang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRKhachHang.cs</LastGenOutput>
@@ -541,25 +555,41 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRPhieuBanHang.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRPhieuBanHangCopy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRPhieuBanHangCopy.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRPhieuDatHang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRPhieuDatHang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRPhieuDatHangCopy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRPhieuDatHangCopy.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CRPhieuNhanHang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRPhieuNhanHang.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRPhieuNhanHangCopy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRPhieuNhanHangCopy.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRPhieuSuCo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRPhieuSuCo.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CRTonKhoCopy.rpt">
+    <EmbeddedResource Include="CRPhieuSuCoCopy.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CRTonKhoCopy.cs</LastGenOutput>
+      <LastGenOutput>CRPhieuSuCoCopy.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CRTonKho.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRTonKho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRTonKhoCopy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRTonKhoCopy.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportChonhanghoa.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -656,36 +686,6 @@
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThongKeDonViTinh.resx">
-      <DependentUpon>frmThongKeDonViTinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThongKeHangHoatheoDVT.resx">
-      <DependentUpon>frmThongKeHangHoatheoDVT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThongKeKhachHang.resx">
-      <DependentUpon>frmThongKeKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThongKeNhaCungCap.resx">
-      <DependentUpon>frmThongKeNhaCungCap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThongKeNhanVien.resx">
-      <DependentUpon>frmThongKeNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThongKePhieuBanHang.resx">
-      <DependentUpon>frmThongKePhieuBanHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThongKePhieuDatHang.resx">
-      <DependentUpon>frmThongKePhieuDatHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThongKePhieuNhanHang.resx">
-      <DependentUpon>frmThongKePhieuNhanHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThongKePhieuSuCo.resx">
-      <DependentUpon>frmThongKePhieuSuCo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThongKeTonKho.resx">
-      <DependentUpon>frmThongKeTonKho.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormMain.cs</DependentUpon>
@@ -718,6 +718,16 @@
       <SubType>Designer</SubType>
       <DependentUpon>fNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKeDonViTinh.resx" />
+    <EmbeddedResource Include="frmThongKeHangHoatheoDVT.resx" />
+    <EmbeddedResource Include="frmThongKeKhachHang.resx" />
+    <EmbeddedResource Include="frmThongKeNhaCungCap.resx" />
+    <EmbeddedResource Include="frmThongKeNhanVien.resx" />
+    <EmbeddedResource Include="frmThongKePhieuBanHang.resx" />
+    <EmbeddedResource Include="frmThongKePhieuDatHang.resx" />
+    <EmbeddedResource Include="frmThongKePhieuNhanHang.resx" />
+    <EmbeddedResource Include="frmThongKePhieuSuCo.resx" />
+    <EmbeddedResource Include="frmThongKeTonKho.resx" />
     <EmbeddedResource Include="frmTimKiemDVT.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmTimKiemDVT.cs</DependentUpon>

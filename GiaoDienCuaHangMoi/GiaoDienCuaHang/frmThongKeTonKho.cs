@@ -41,5 +41,23 @@ namespace GiaoDienCuaHang
             parameter.SetDataSource(tk.Lay_vw_TK_TonKho());
             crystalReportViewer1.ReportSource = parameter;
         }
+
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            String hh = comboBox1.SelectedValue.ToString();
+            GiaoDienCuaHang.DataLayer.TonKhoData tk = new GiaoDienCuaHang.DataLayer.TonKhoData();
+            CRTonKho parameter = new CRTonKho();
+            parameter.SetDataSource(tk.Lay_vw_TK_TonKho_coDK(hh));
+            parameter.SetParameterValue("tenhanghoa", comboBox1.Text);
+            crystalReportViewer1.ReportSource = parameter;
+        }
+
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            GiaoDienCuaHang.DataLayer.TonKhoData tk = new GiaoDienCuaHang.DataLayer.TonKhoData();
+            CRTonKhoCopy parameter = new CRTonKhoCopy();
+            parameter.SetDataSource(tk.Lay_vw_TK_TonKho());
+            crystalReportViewer1.ReportSource = parameter;
+        }
     }
 }

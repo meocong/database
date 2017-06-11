@@ -30,7 +30,13 @@ namespace GiaoDienCuaHang.DataLayer
            ds.Load(cmd);
            return ds;
        }
-       public DataRow NewRow()
+        public DataTable LayDS_PhieuNhanHangkhongdk()
+        {
+            SqlCommand cmd = new SqlCommand("select * from PHIEUNHANHANG");
+            ds.Load(cmd);
+            return ds;
+        }
+        public DataRow NewRow()
        {
            return ds.NewRow();
        }
