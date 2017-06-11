@@ -301,12 +301,6 @@
     <Compile Include="frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDanhSachHangHoaSapHetHan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDanhSachHangHoaSapHetHan.Designer.cs">
-      <DependentUpon>frmDanhSachHangHoaSapHetHan.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDonViTinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -421,11 +415,9 @@
     <Compile Include="frmLapPhieuNhanHang.Designer.cs">
       <DependentUpon>frmLapPhieuNhanHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="fLapPhieuSuCo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fLapPhieuSuCo.Designer.cs">
-      <DependentUpon>fLapPhieuSuCo.cs</DependentUpon>
+    <Compile Include="frmLapPhieuSuCo.cs" />
+    <Compile Include="frmLapPhieuSuCo.Designer.cs">
+      <DependentUpon>frmLapPhieuSuCo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThongKeHangHoatheoDVT.cs">
       <SubType>Form</SubType>
@@ -643,9 +635,6 @@
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDanhSachHangHoaSapHetHan.resx">
-      <DependentUpon>frmDanhSachHangHoaSapHetHan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmDonViTinh.resx">
       <DependentUpon>frmDonViTinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -659,9 +648,9 @@
     <EmbeddedResource Include="frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLapPhieuSuCo.resx">
+    <EmbeddedResource Include="frmLapPhieuSuCo.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>fLapPhieuSuCo.cs</DependentUpon>
+      <DependentUpon>frmLapPhieuSuCo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoaiNhanVien.resx">
       <DependentUpon>frmLoaiNhanVien.cs</DependentUpon>
@@ -828,7 +817,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="house_48.ico" />
-    <None Include="Resources\Business-Expired-icon1.png" />
     <None Include="QLCHmoiDataSet.xsc">
       <DependentUpon>QLCHmoiDataSet.xsd</DependentUpon>
     </None>
