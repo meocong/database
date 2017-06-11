@@ -39,13 +39,6 @@ namespace GiaoDienCuaHang
             ctrl.Update();
         }
 
-
-        private void buttonReportHH_Click(object sender, EventArgs e)
-        {
-            fThongKeHangHoatheoDVT tkhh2 = new fThongKeHangHoatheoDVT();
-            tkhh2.Show();
-        }
-
         public void Finding()
         {
             ctrl.TimKiemHH(textBoxX1.Text, textBoxX2.Text, dateTimeInput1, dateTimeInput3, (Int32)numericUpDown1.Value, (Int32)numericUpDown2.Value, dataGridView1);

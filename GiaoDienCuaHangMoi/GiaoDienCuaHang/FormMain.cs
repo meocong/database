@@ -180,7 +180,7 @@ namespace GiaoDienCuaHang
                         }
                         hethan.Show();
 
-                        if (hethan.dataGridView1.Rows.Count < 1)
+                        if (hethan.dataGridView1.Rows.Count < 2)
                         {
                             hethan.Close();
                         }

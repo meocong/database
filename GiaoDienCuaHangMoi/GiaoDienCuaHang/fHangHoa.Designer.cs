@@ -119,7 +119,6 @@
             this.buttonReportHH.TabIndex = 16;
             this.buttonReportHH.Text = "Report";
             this.buttonReportHH.UseVisualStyleBackColor = true;
-            this.buttonReportHH.Click += new System.EventHandler(this.buttonReportHH_Click);
             // 
             // label1
             // 

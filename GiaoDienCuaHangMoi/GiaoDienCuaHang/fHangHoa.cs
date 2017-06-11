@@ -64,11 +64,6 @@ namespace GiaoDienCuaHang
             tkh.Show();
         }
 
-        private void buttonReportHH_Click(object sender, EventArgs e)
-        {
-            fThongKeHangHoatheoDVT tkhh2 = new fThongKeHangHoatheoDVT();
-            tkhh2.Show();
-        }
 
         private void textBox1_Validating(object sender, CancelEventArgs e)
         {
