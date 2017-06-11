@@ -49,7 +49,7 @@ namespace GiaoDienCuaHang
             {
 
             }
-     
+
             this.textBox1.DataBindings.Add("Text", dataGridView1.DataSource, "MANCC", false, DataSourceUpdateMode.OnPropertyChanged);
             this.textBox1.Enabled = false;
             this.textBox2.DataBindings.Add("Text", dataGridView1.DataSource, "TENNCC", false, DataSourceUpdateMode.OnPropertyChanged);

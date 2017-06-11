@@ -52,7 +52,7 @@ namespace GiaoDienCuaHang
             {
 
             }
-                      
+
             this.textBox1.DataBindings.Add("Text", dataGridView1.DataSource, "MAKH", true, DataSourceUpdateMode.OnPropertyChanged);
             this.textBox1.Enabled = false;
             this.textBox2.DataBindings.Add("Text", dataGridView1.DataSource, "HOTEN", true, DataSourceUpdateMode.OnPropertyChanged);
@@ -153,7 +153,7 @@ namespace GiaoDienCuaHang
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
-        {   
+        {
             //dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[1].Value = textBox2.Text;
             //dataGridView1.Update();
             //dataGridView1.Refresh();

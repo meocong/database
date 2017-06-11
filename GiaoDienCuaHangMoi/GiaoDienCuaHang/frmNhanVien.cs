@@ -71,11 +71,12 @@ namespace GiaoDienCuaHang
                             continue;
                         }
                     }
-                    catch (Exception Ex)
+                    catch 
                     {
-                        MessageBox.Show(Ex.Message);
+                        //MessageBox.Show(Ex.Message);
+                        continue;
                     }
-                    
+
                     if (oneCell.Selected)
                         dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
                 }

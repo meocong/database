@@ -7,12 +7,14 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using GiaoDienCuaHang.Controller;
+using DevComponents.DotNetBar;
+
 namespace GiaoDienCuaHang
 {
-    public partial class frmLapPhieuSuCo : Form
+    public partial class fLapPhieuSuCo : Office2007Form
     {
         PhieuSuCoController ctrller = new PhieuSuCoController();
-        public frmLapPhieuSuCo()
+        public fLapPhieuSuCo()
         {
             InitializeComponent();
         }

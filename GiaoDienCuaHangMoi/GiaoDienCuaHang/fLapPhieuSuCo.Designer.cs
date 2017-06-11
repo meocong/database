@@ -1,6 +1,6 @@
 ﻿namespace GiaoDienCuaHang
 {
-    partial class frmLapPhieuSuCo
+    partial class fLapPhieuSuCo
     {
         /// <summary>
         /// Required designer variable.
@@ -48,7 +48,6 @@
             this.labelNHH = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelMPSC = new System.Windows.Forms.Label();
-            this.labelPSC = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderMPSC = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,12 +57,14 @@
             this.columnHeaderSLHH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDG = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.labelX1);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.textBoxTT);
@@ -79,11 +80,10 @@
             this.panel1.Controls.Add(this.labelNHH);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.labelMPSC);
-            this.panel1.Controls.Add(this.labelPSC);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(889, 189);
+            this.panel1.Size = new System.Drawing.Size(981, 234);
             this.panel1.TabIndex = 0;
             // 
             // groupBox1
@@ -92,7 +92,7 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.buttonXoa);
             this.groupBox1.Controls.Add(this.buttonThem);
-            this.groupBox1.Location = new System.Drawing.Point(589, 68);
+            this.groupBox1.Location = new System.Drawing.Point(627, 94);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(143, 105);
             this.groupBox1.TabIndex = 15;
@@ -143,14 +143,14 @@
             // 
             this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(286, 69);
+            this.dateTimePicker1.Location = new System.Drawing.Point(324, 95);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(109, 20);
             this.dateTimePicker1.TabIndex = 14;
             // 
             // textBoxTT
             // 
-            this.textBoxTT.Location = new System.Drawing.Point(480, 110);
+            this.textBoxTT.Location = new System.Drawing.Point(518, 136);
             this.textBoxTT.Name = "textBoxTT";
             this.textBoxTT.ReadOnly = true;
             this.textBoxTT.Size = new System.Drawing.Size(100, 20);
@@ -158,21 +158,21 @@
             // 
             // textBoxDG
             // 
-            this.textBoxDG.Location = new System.Drawing.Point(480, 70);
+            this.textBoxDG.Location = new System.Drawing.Point(518, 96);
             this.textBoxDG.Name = "textBoxDG";
             this.textBoxDG.Size = new System.Drawing.Size(100, 20);
             this.textBoxDG.TabIndex = 12;
             // 
             // textBoxSL
             // 
-            this.textBoxSL.Location = new System.Drawing.Point(286, 111);
+            this.textBoxSL.Location = new System.Drawing.Point(324, 137);
             this.textBoxSL.Name = "textBoxSL";
             this.textBoxSL.Size = new System.Drawing.Size(109, 20);
             this.textBoxSL.TabIndex = 11;
             // 
             // textBoxLD
             // 
-            this.textBoxLD.Location = new System.Drawing.Point(74, 153);
+            this.textBoxLD.Location = new System.Drawing.Point(112, 179);
             this.textBoxLD.Name = "textBoxLD";
             this.textBoxLD.Size = new System.Drawing.Size(506, 20);
             this.textBoxLD.TabIndex = 10;
@@ -180,14 +180,14 @@
             // comboBoxMSP
             // 
             this.comboBoxMSP.FormattingEnabled = true;
-            this.comboBoxMSP.Location = new System.Drawing.Point(108, 110);
+            this.comboBoxMSP.Location = new System.Drawing.Point(146, 136);
             this.comboBoxMSP.Name = "comboBoxMSP";
             this.comboBoxMSP.Size = new System.Drawing.Size(88, 21);
             this.comboBoxMSP.TabIndex = 9;
             // 
             // textBoxMPSC
             // 
-            this.textBoxMPSC.Location = new System.Drawing.Point(108, 68);
+            this.textBoxMPSC.Location = new System.Drawing.Point(146, 94);
             this.textBoxMPSC.Name = "textBoxMPSC";
             this.textBoxMPSC.Size = new System.Drawing.Size(88, 20);
             this.textBoxMPSC.TabIndex = 8;
@@ -195,7 +195,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 156);
+            this.label7.Location = new System.Drawing.Point(56, 182);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 7;
@@ -204,7 +204,7 @@
             // labelTT
             // 
             this.labelTT.AutoSize = true;
-            this.labelTT.Location = new System.Drawing.Point(412, 118);
+            this.labelTT.Location = new System.Drawing.Point(450, 144);
             this.labelTT.Name = "labelTT";
             this.labelTT.Size = new System.Drawing.Size(56, 13);
             this.labelTT.TabIndex = 6;
@@ -213,7 +213,7 @@
             // labelDG
             // 
             this.labelDG.AutoSize = true;
-            this.labelDG.Location = new System.Drawing.Point(412, 72);
+            this.labelDG.Location = new System.Drawing.Point(450, 98);
             this.labelDG.Name = "labelDG";
             this.labelDG.Size = new System.Drawing.Size(46, 13);
             this.labelDG.TabIndex = 5;
@@ -222,7 +222,7 @@
             // labelSL
             // 
             this.labelSL.AutoSize = true;
-            this.labelSL.Location = new System.Drawing.Point(202, 114);
+            this.labelSL.Location = new System.Drawing.Point(240, 140);
             this.labelSL.Name = "labelSL";
             this.labelSL.Size = new System.Drawing.Size(53, 13);
             this.labelSL.TabIndex = 4;
@@ -231,7 +231,7 @@
             // labelNHH
             // 
             this.labelNHH.AutoSize = true;
-            this.labelNHH.Location = new System.Drawing.Point(202, 72);
+            this.labelNHH.Location = new System.Drawing.Point(240, 98);
             this.labelNHH.Name = "labelNHH";
             this.labelNHH.Size = new System.Drawing.Size(78, 13);
             this.labelNHH.TabIndex = 3;
@@ -240,7 +240,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 113);
+            this.label2.Location = new System.Drawing.Point(56, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 2;
@@ -249,21 +249,11 @@
             // labelMPSC
             // 
             this.labelMPSC.AutoSize = true;
-            this.labelMPSC.Location = new System.Drawing.Point(18, 71);
+            this.labelMPSC.Location = new System.Drawing.Point(56, 97);
             this.labelMPSC.Name = "labelMPSC";
             this.labelMPSC.Size = new System.Drawing.Size(84, 13);
             this.labelMPSC.TabIndex = 1;
             this.labelMPSC.Text = "Mã Phiếu Sự Cố";
-            // 
-            // labelPSC
-            // 
-            this.labelPSC.AutoSize = true;
-            this.labelPSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPSC.Location = new System.Drawing.Point(315, 9);
-            this.labelPSC.Name = "labelPSC";
-            this.labelPSC.Size = new System.Drawing.Size(116, 24);
-            this.labelPSC.TabIndex = 0;
-            this.labelPSC.Text = "Phiếu Sự Cố";
             // 
             // listView1
             // 
@@ -276,11 +266,12 @@
             this.columnHeaderSLHH,
             this.columnHeaderDG,
             this.columnHeaderTT});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(0, 189);
+            this.listView1.Location = new System.Drawing.Point(0, 234);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(850, 138);
+            this.listView1.Size = new System.Drawing.Size(981, 230);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -325,14 +316,31 @@
             this.columnHeaderTT.Text = "Tổng Tiền";
             this.columnHeaderTT.Width = 88;
             // 
-            // frmLapPhieuSuCo
+            // labelX1
+            // 
+            this.labelX1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Times New Roman", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX1.ForeColor = System.Drawing.Color.Red;
+            this.labelX1.Location = new System.Drawing.Point(350, 3);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(278, 76);
+            this.labelX1.TabIndex = 16;
+            this.labelX1.Text = "Phiếu sự cố";
+            // 
+            // fLapPhieuSuCo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 327);
+            this.ClientSize = new System.Drawing.Size(981, 464);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.panel1);
-            this.Name = "frmLapPhieuSuCo";
+            this.DoubleBuffered = true;
+            this.Name = "fLapPhieuSuCo";
             this.Text = "frmLapPhieuSuCo";
             this.Load += new System.EventHandler(this.frmLapPhieuSuCo_Load);
             this.panel1.ResumeLayout(false);
@@ -345,7 +353,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelPSC;
         private System.Windows.Forms.Label labelMPSC;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeaderMPSC;
@@ -374,5 +381,6 @@
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private DevComponents.DotNetBar.LabelX labelX1;
     }
 }
