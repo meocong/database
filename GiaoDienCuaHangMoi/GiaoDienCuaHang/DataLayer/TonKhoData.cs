@@ -112,5 +112,18 @@ namespace GiaoDienCuaHang.DataLayer
             }
             ds.m_Connection.Close();
         }
+
+        public DataTable Lay_vw_TK_TonKho()
+        {
+            SqlCommand cmd = new SqlCommand("exec crt_vw_thongke_tonkho select * from vw_tonkho");
+            ds.Load(cmd);
+            return ds;
+        }
+        public DataTable Lay_vw_TK_TonKho_coDK( string tenhh)
+        {
+            SqlCommand cmd = new SqlCommand("exec crt_vw_thongke_tonkho select * from vw_tonkho where MAHH = '" + tenhh + "'");
+            ds.Load(cmd);
+            return ds;
+        }
     }
 }

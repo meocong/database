@@ -12,7 +12,7 @@ namespace GiaoDienCuaHang
         public SqlConnection m_Connection;
         SqlDataAdapter m_DataAdapter;
         SqlCommand m_Command;
-        string strConn = "Data Source=.;Initial Catalog=QLCHmoi;Integrated Security=True";//Data Source=.\\SQLEXPRESS;Initial Catalog=QLCHmoi;Integrated Security=True
+        string strConn = "Data Source=.\\SQLEXPRESS;Initial Catalog=QLCHmoi;Integrated Security=True";//Data Source=.\\SQLEXPRESS;Initial Catalog=QLCHmoi;Integrated Security=True
 
         public DataService()
         {

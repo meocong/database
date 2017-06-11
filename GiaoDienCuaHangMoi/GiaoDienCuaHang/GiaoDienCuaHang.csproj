@@ -169,6 +169,12 @@
       <DependentUpon>CRPhieuSuCo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CRTonKhoCopy.cs">
+      <DependentUpon>CRTonKhoCopy.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="CRTonKho.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -552,6 +558,10 @@
     <EmbeddedResource Include="CRPhieuSuCo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRPhieuSuCo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRTonKhoCopy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRTonKhoCopy.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CRTonKho.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
