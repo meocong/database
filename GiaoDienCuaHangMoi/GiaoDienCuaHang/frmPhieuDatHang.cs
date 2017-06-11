@@ -94,6 +94,10 @@ namespace GiaoDienCuaHang
             {
                 Ctrl.AddNewDetailOrders(textBoxMPDH.Text);
                 Finding();
+
+                this.comboBoxMSP.Text = "";
+                this.textBoxSL.Text = "";
+                this.textBoxSL.Focus();
             }
             else MessageBox.Show("Bạn chưa chọn mã phiếu. Vui lòng chọn lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
@@ -101,6 +105,7 @@ namespace GiaoDienCuaHang
         private void buttonThem_Click(object sender, EventArgs e)
         {
             Ctrl.AddNewOrders();
+            Finding();
 
             this.textBoxMPDH.Text = "";
             this.comboBoxMNCC.Text = "";
@@ -186,6 +191,7 @@ namespace GiaoDienCuaHang
                 dem--;
                 return;
             }
+            MessageBox.Show("xxx");
             string tempNCC = "";
             try
             {

@@ -38,6 +38,38 @@ namespace GiaoDienCuaHang.Controller
 
 
         }
+
+        public void LoadNV(ComboBox comboBox3)
+        {
+            ctrlNV.LoadComboBoxNhanVien(comboBox3);
+        }
+
+        public void LoadNCC(ComboBox comboBox1)
+        {
+            ctrlNCC.LoadComboBoxNhaCungCap(comboBox1);
+        }
+
+        public void FindingPNH(ListView listview, string tempNCC, DateTime date1, DateTime date2, string tempNV)
+        {
+            listview.Items.Clear();
+            DataTable dtb = data.FindingPDH(tempNCC, date1, date2, tempNV);
+            int n = 0;
+            foreach (DataRow row in dtb.Rows)
+            {
+                ListViewItem item = new ListViewItem();
+                n++;
+                item.Text = n.ToString();
+                item.SubItems.Add(row["MAPHIEU"].ToString());
+                item.SubItems.Add(ctrlNCC.LoadListViewSubItemNhaCungCap(row["MANCC"].ToString()));
+                item.SubItems.Add(ctrlNV.LoadListViewSubItemNhanVien(row["MANV"].ToString()));
+                item.SubItems.Add(row["NGAYLAP"].ToString());
+                item.SubItems.Add(row["TONGTIEN"].ToString());
+
+                listview.Items.Add(item);
+
+            }
+        }
+
         public void HienThiComboBox(ComboBox cmbMNCC, ComboBox cmbMNV, ComboBox cmbMSP,ComboBox cmbMPDH)
         {
             ctrlNCC.LoadComboBoxNhaCungCap(cmbMNCC);
@@ -107,6 +139,15 @@ namespace GiaoDienCuaHang.Controller
            dg.DataSource = tbl;
 
        }
-     
+
+        public void AddNewReceive()
+        {
+            data.AddNewReceive();
+        }
+
+        public void AddNewDetailReceive(string text)
+        {
+            data.AddNewDetailReceive(text);
+        }
     }
 }

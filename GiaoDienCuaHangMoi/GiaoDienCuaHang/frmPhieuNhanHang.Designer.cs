@@ -557,6 +557,7 @@
             this.buttonThemCTPNH.Text = "Thêm";
             this.buttonThemCTPNH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonThemCTPNH.UseVisualStyleBackColor = true;
+            this.buttonThemCTPNH.Click += new System.EventHandler(this.buttonThemCTPNH_Click_1);
             // 
             // buttonXoaCTPNH
             // 
@@ -630,6 +631,8 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(111, 22);
             this.dateTimePicker2.TabIndex = 10;
+            this.dateTimePicker2.Value = new System.DateTime(2999, 1, 1, 16, 25, 0, 0);
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
             // dateTimePicker3
             // 
@@ -639,6 +642,8 @@
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(115, 22);
             this.dateTimePicker3.TabIndex = 9;
+            this.dateTimePicker3.Value = new System.DateTime(2000, 1, 1, 16, 25, 0, 0);
+            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
             // comboBox3
             // 
@@ -653,6 +658,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(337, 24);
             this.comboBox3.TabIndex = 6;
+            this.comboBox3.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
             // comboBox1
             // 
@@ -667,6 +673,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(337, 24);
             this.comboBox1.TabIndex = 4;
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
             // label1
             // 

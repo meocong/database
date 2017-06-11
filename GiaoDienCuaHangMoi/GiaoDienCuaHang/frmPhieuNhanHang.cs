@@ -14,6 +14,7 @@ namespace GiaoDienCuaHang
     public partial class frmPhieuNhanHang : OfficeForm
     {
         int tongtien = 0;
+        int dem = 6;
         PhieuNhanHangController ctrl = new PhieuNhanHangController();
         ChiTietPhieuNhanHangController ctrlchitiet = new ChiTietPhieuNhanHangController();
         
@@ -32,6 +33,11 @@ namespace GiaoDienCuaHang
             ctrl.HienThiComboBox(comboBoxMANCC, comboBoxMANV, comboBoxMASP,comboBoxMPDH);
             ctrl.HienThiListView(listViewpnh);
 
+            PhieuNhanHangController ctrl1 = new PhieuNhanHangController();
+            ctrl1.LoadNCC(comboBox1);
+
+            PhieuNhanHangController ctrl2 = new PhieuNhanHangController();
+            ctrl2.LoadNV(comboBox3);
         }
 
        
@@ -149,7 +155,35 @@ namespace GiaoDienCuaHang
 
         }
 
-       
+        private void Finding()
+        {
+            if (dem > 0)
+            {
+                dem--;
+                return;
+            }
+            string tempNCC = "";
+            try
+            {
+                tempNCC = comboBox1.SelectedValue.ToString();
+            }
+            catch
+            {
+
+            }
+
+            string tempNV = "";
+            try
+            {
+                tempNV = comboBox3.SelectedValue.ToString();
+            }
+            catch
+            {
+
+            }
+            ctrl.FindingPNH(listViewpnh, tempNCC, dateTimePicker3.Value.Date, dateTimePicker2.Value.Date, tempNV);
+        }
+
         private void taskItemInPNH_Click(object sender, EventArgs e)
         {
             PrintDialog print = new PrintDialog();
@@ -182,6 +216,8 @@ namespace GiaoDienCuaHang
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
+            ctrl.AddNewReceive();
+            Finding();
             this.textBox1.Text = "";
             this.comboBoxMANCC.Text = "";
             this.comboBoxMANV.Text = "";
@@ -216,6 +252,22 @@ namespace GiaoDienCuaHang
         {
             frmTimKiemPhieuDatHang TKPDH = new frmTimKiemPhieuDatHang();
             TKPDH.Show();
+        }
+
+        private void buttonThemCTPNH_Click_1(object sender, EventArgs e)
+        {
+            ctrl.AddNewDetailReceive(textBox1.Text);
+            Finding();
+        }
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            Finding();
+        }
+
+        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+            Finding();
         }
     }
 }

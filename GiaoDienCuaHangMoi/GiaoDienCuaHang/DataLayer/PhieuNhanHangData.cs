@@ -68,9 +68,34 @@ namespace GiaoDienCuaHang.DataLayer
 
 
        }
-       public void Update()
+
+        public DataTable FindingPDH(string ncc, DateTime start, DateTime end, string nv)
+        {
+            string SQL = "select * from PHIEUNHANHANG WHERE MANCC LIKE '%' + @ncc+ '%' AND MANV LIKE '%' + @nv+ '%' AND NGAYLAP >= @start AND NGAYLAP <= @end";
+
+            SqlCommand cmd = new SqlCommand(SQL);
+
+            cmd.Parameters.Add("ncc", SqlDbType.VarChar).Value = ncc;
+            cmd.Parameters.Add("nv", SqlDbType.VarChar).Value = nv;
+            cmd.Parameters.Add("start", SqlDbType.DateTime).Value = start;
+            cmd.Parameters.Add("end", SqlDbType.DateTime).Value = end;
+            ds.Load(cmd);
+            return ds;
+        }
+
+        public void Update()
        {
            ds.Update();
        }
+
+        public void AddNewReceive()
+        {
+            ds.Exec("EXEC dbo.Insert_New_PhieuNhanHang");
+        }
+
+        public void AddNewDetailReceive(String text)
+        {
+            ds.Exec("EXEC dbo.Insert_New_ChiTietPhieuNhanHang " + text);
+        }
     }
 }

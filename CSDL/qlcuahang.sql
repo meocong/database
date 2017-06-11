@@ -672,6 +672,68 @@ GO
 	END
 GO
 
+
+------------------Phieu Nhan Hang---------------------
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'AUTO_IDPhieuNhanHang')
+DROP FUNCTION dbo.AUTO_IDPhieuNhanHang;
+GO
+	CREATE FUNCTION dbo.AUTO_IDPhieuNhanHang()
+	RETURNS VARCHAR(6)
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(6)
+		IF (SELECT COUNT(MAPHIEU) FROM PHIEUNHANHANG) = 0
+			SET @ID = '001'
+		ELSE
+		BEGIN
+			SELECT @ID = MAX(RIGHT(MAPHIEU, LEN(MAPHIEU) - 3)) FROM PHIEUNHANHANG;
+			SET @ID = @ID + 1
+			WHILE LEN(@ID) < 3 
+			BEGIN 
+				SET @ID = '0' + @ID 
+			END
+		END
+		SET @ID = 'PNH' + @ID
+
+		RETURN @ID
+	END
+GO
+
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_PhieuNhanHang')
+DROP PROCEDURE dbo.Insert_New_PhieuNhanHang;
+GO
+	CREATE PROCEDURE dbo.Insert_New_PhieuNhanHang
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(6)
+		SELECT @ID = dbo.AUTO_IDPhieuNhanHang() 
+
+		DECLARE @THISDAY DATETIME
+		SELECT @THISDAY = GETDATE()
+
+		INSERT INTO PHIEUNHANHANG
+		VALUES (@ID,'NCC001','NV001',@THISDAY,'0')
+	END
+GO
+
+------------------Chi Tiet Phieu Nhan Hang---------------------
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_ChiTietPhieuNhanHang')
+DROP PROCEDURE dbo.Insert_New_ChiTietPhieuNhanHang;
+GO
+	CREATE PROCEDURE dbo.Insert_New_ChiTietPhieuNhanHang
+	@ID VARCHAR(6)
+	AS
+	BEGIN
+		DECLARE @THISDAY DATETIME
+		SELECT @THISDAY = GETDATE()
+
+		IF NOT EXISTS(SELECT * FROM CHITIETPHIEUNHANHANG WHERE MAPHIEU = @ID AND MAHH = 'HH001')
+		BEGIN
+			INSERT INTO CHITIETPHIEUNHANHANG
+				VALUES (@ID,'HH001','0','0','','PDH001')
+		END
+	END
+GO
 -----------------------------------------------
 --==============NH?P LI?U ====================
 -----------------------------------------------

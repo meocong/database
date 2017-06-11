@@ -180,6 +180,7 @@ namespace GiaoDienCuaHang
                     }
                     else
                     {
+                        this.BackgroundImage = null;
                         phanquyen(Utilities.nhanvien.loainv.MaloaiNV);
                         buttonItem20.Enabled = false;
                         //dangnhap.Dispose();
