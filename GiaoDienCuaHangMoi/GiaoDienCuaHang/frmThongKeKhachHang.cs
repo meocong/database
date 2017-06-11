@@ -37,6 +37,6 @@ namespace GiaoDienCuaHang
             crystalReportViewer1.ReportSource = report;
         }
 
-        
+
     }
 }

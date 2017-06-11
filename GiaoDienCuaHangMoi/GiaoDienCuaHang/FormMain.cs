@@ -181,7 +181,9 @@ namespace GiaoDienCuaHang
                     else
                     {
                         this.BackgroundImage = null;
-                        
+                        this.BackgroundImageLayout = ImageLayout.None;
+                        this.DoubleBuffered = true;
+
                         phanquyen(Utilities.nhanvien.loainv.MaloaiNV);
                         buttonItem20.Enabled = false;
                         //dangnhap.Dispose();

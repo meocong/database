@@ -16,15 +16,15 @@ namespace GiaoDienCuaHang
             InitializeComponent();
         }
 
-       /* private void buttonHT_Click(object sender, EventArgs e)
-        {
-            String kh = comboBox1.SelectedValue.ToString();
-            GiaoDienCuaHang.DataLayer.PhieuBanHangData pbh = new GiaoDienCuaHang.DataLayer.PhieuBanHangData();
-            CRPhieuBanHang parameter = new CRPhieuBanHang();
-            parameter.SetDataSource(pbh.LayDSPhieuBanHang(kh));
-            parameter.SetParameterValue("tenkh", comboBox1.Text);
-            crystalReportViewer1.ReportSource = parameter;
-        }*/
+        /* private void buttonHT_Click(object sender, EventArgs e)
+         {
+             String kh = comboBox1.SelectedValue.ToString();
+             GiaoDienCuaHang.DataLayer.PhieuBanHangData pbh = new GiaoDienCuaHang.DataLayer.PhieuBanHangData();
+             CRPhieuBanHang parameter = new CRPhieuBanHang();
+             parameter.SetDataSource(pbh.LayDSPhieuBanHang(kh));
+             parameter.SetParameterValue("tenkh", comboBox1.Text);
+             crystalReportViewer1.ReportSource = parameter;
+         }*/
 
         private void frmThongKePhieuBanHang_Load(object sender, EventArgs e)
         {
