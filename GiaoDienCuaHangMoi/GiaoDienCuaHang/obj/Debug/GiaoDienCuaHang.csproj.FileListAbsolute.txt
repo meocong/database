@@ -503,3 +503,13 @@ C:\Users\Trung\Desktop\clone\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Deb
 C:\Users\Trung\Desktop\clone\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.csproj.GenerateResource.Cache
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDanhSachHangHoaSapHetHan.resources
 C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fLapPhieuSuCo.resources
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKeDonViTinh.resources
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKeHangHoatheoDVT.resources
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKeKhachHang.resources
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKeNhaCungCap.resources
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKeNhanVien.resources
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKePhieuBanHang.resources
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKePhieuDatHang.resources
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKePhieuNhanHang.resources
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKePhieuSuCo.resources
+C:\Learning\Data Base\Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKeTonKho.resources

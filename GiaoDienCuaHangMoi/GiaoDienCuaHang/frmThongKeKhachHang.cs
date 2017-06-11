@@ -5,17 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
 
 namespace GiaoDienCuaHang
 {
-    public partial class frmThongKeKhachHang : Form
+    public partial class frmThongKeKhachHang : DevComponents.DotNetBar.OfficeForm
     {
         public frmThongKeKhachHang()
         {
             InitializeComponent();
         }
 
-      
 
         private void frmThongKeKhachHang_Load(object sender, EventArgs e)
         {
@@ -40,7 +40,7 @@ namespace GiaoDienCuaHang
 
         private void bttXemBaoCao_Click(object sender, EventArgs e)
         {
-            if(txtMaKH.Text == "")
+            if (txtMaKH.Text == "")
             {
                 GiaoDienCuaHang.DataLayer.KhachHangData kh = new GiaoDienCuaHang.DataLayer.KhachHangData();
                 DataTable tbl = kh.LayDSKhachHang("");
@@ -57,10 +57,5 @@ namespace GiaoDienCuaHang
                 crystalReportViewer1.ReportSource = report;
             }
         }
-
-
     }
-
-
-    
 }

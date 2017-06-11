@@ -42,7 +42,7 @@ namespace GiaoDienCuaHang
 
         private void buttonReportHH_Click(object sender, EventArgs e)
         {
-            frmThongKeHangHoatheoDVT tkhh2 = new frmThongKeHangHoatheoDVT();
+            fThongKeHangHoatheoDVT tkhh2 = new fThongKeHangHoatheoDVT();
             tkhh2.Show();
         }
 

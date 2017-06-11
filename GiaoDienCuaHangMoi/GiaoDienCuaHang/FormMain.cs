@@ -476,6 +476,7 @@ namespace GiaoDienCuaHang
         private void thongToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongKeKhachHang tkkh1 = new frmThongKeKhachHang();
+            tkkh1.MdiParent = this;
             tkkh1.Show();
 
         }
@@ -483,6 +484,7 @@ namespace GiaoDienCuaHang
         private void TKHHToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongKeHangHoatheoDVT tkhh = new frmThongKeHangHoatheoDVT();
+            tkhh.MdiParent = this;
             tkhh.Show();
         }
 
@@ -624,6 +626,7 @@ namespace GiaoDienCuaHang
         private void tknvToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongKeNhanVien tknv1 = new frmThongKeNhanVien();
+            tknv1.MdiParent = this;
             tknv1.Show();
 
         }
@@ -631,6 +634,7 @@ namespace GiaoDienCuaHang
         private void TKNCCToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongKeNhaCungCap tkncc1 = new frmThongKeNhaCungCap();
+            tkncc1.MdiParent = this;
             tkncc1.Show();
         }
 
@@ -645,31 +649,36 @@ namespace GiaoDienCuaHang
         private void thốngKêĐơnVịTínhToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongKeDonViTinh tkdvt = new frmThongKeDonViTinh();
+            tkdvt.MdiParent = this;
             tkdvt.Show();
         }
 
         private void thốngKêPhiếuBánHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongKePhieuBanHang tkpbh = new frmThongKePhieuBanHang();
+            tkpbh.MdiParent = this;
             tkpbh.Show();
         }
 
         private void thốngKêPhiếuNhậnHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongKePhieuNhanHang tkpnh = new frmThongKePhieuNhanHang();
+            tkpnh.MdiParent = this;
             tkpnh.Show();
         }
 
         private void thốngKêPhiếuĐặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongKePhieuDatHang tkpdh = new frmThongKePhieuDatHang();
-            tkpdh.Show();
+            tkpnh.MdiParent = this;
+            tkpnh.Show();
         }
 
         private void thốngKêPhiếuSựCốToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongKePhieuSuCo tkpsc = new frmThongKePhieuSuCo();
-            tkpsc.Show();
+            tkpnh.MdiParent = this;
+            tkpnh.Show();
         }
 
         private void saoChépDựPhòngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -947,12 +956,14 @@ namespace GiaoDienCuaHang
         private void buttonItem34_Click(object sender, EventArgs e)
         {
             frmThongKeNhaCungCap tkncc1 = new frmThongKeNhaCungCap();
+            tkncc1.MdiParent = this;
             tkncc1.Show();
         }
 
         private void buttonItem35_Click(object sender, EventArgs e)
         {
             frmThongKeHangHoatheoDVT tkhh = new frmThongKeHangHoatheoDVT();
+            tkhh.MdiParent = this;
             tkhh.Show();
         }
 
@@ -967,42 +978,49 @@ namespace GiaoDienCuaHang
         private void buttonItem37_Click(object sender, EventArgs e)
         {
             frmThongKeKhachHang tkkh1 = new frmThongKeKhachHang();
+            tkkh1.MdiParent = this;
             tkkh1.Show();
         }
 
         private void buttonItem41_Click(object sender, EventArgs e)
         {
             frmThongKeDonViTinh tkdvt = new frmThongKeDonViTinh();
+            tkdvt.MdiParent = this;
             tkdvt.Show();
         }
 
         private void buttonItem38_Click(object sender, EventArgs e)
         {
             frmThongKeNhanVien tknv1 = new frmThongKeNhanVien();
+            tknv1.MdiParent = this;
             tknv1.Show();
         }
 
         private void buttonItem39_Click(object sender, EventArgs e)
         {
             frmThongKePhieuBanHang tkpbh = new frmThongKePhieuBanHang();
+            tkpbh.MdiParent = this;
             tkpbh.Show();
         }
 
         private void buttonItem40_Click(object sender, EventArgs e)
         {
             frmThongKePhieuDatHang tkpdh = new frmThongKePhieuDatHang();
+            tkpdh.MdiParent = this;
             tkpdh.Show();
         }
 
         private void buttonItem42_Click(object sender, EventArgs e)
         {
             frmThongKePhieuNhanHang tkpnh = new frmThongKePhieuNhanHang();
+            tkpnh.MdiParent = this;
             tkpnh.Show();
         }
 
         private void buttonItem43_Click(object sender, EventArgs e)
         {
             frmThongKePhieuSuCo tkpsc = new frmThongKePhieuSuCo();
+            tkpsc.MdiParent = this;
             tkpsc.Show();
         }
 

@@ -5,11 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
+using DevComponents.DotNetBar;
 
 namespace GiaoDienCuaHang
 {
-    public partial class frmThongKePhieuDatHang : Form
+    public partial class frmThongKePhieuDatHang : DevComponents.DotNetBar.OfficeForm
     {
         public frmThongKePhieuDatHang()
         {
@@ -25,7 +25,7 @@ namespace GiaoDienCuaHang
         //    report.SetDataSource(pdh1.LayDS_PDH(nv));
         //    report.SetParameterValue("tennv", comboBox1.Text);
 
-            
+
         //    crystalReportViewer1.ReportSource = report;
         //}
 
@@ -35,17 +35,17 @@ namespace GiaoDienCuaHang
             comboBox1.DataSource = nccdata.LayDSNhaCungCap();
             comboBox1.DisplayMember = "TENNCC";
             comboBox1.ValueMember = "MANCC";
-            
+
         }
 
         private void buttonhienthi_Click(object sender, EventArgs e)
         {
             String cc = comboBox1.SelectedValue.ToString();
-            GiaoDienCuaHang.DataLayer.PhieuDatHangData pdh1=new GiaoDienCuaHang.DataLayer.PhieuDatHangData();
+            GiaoDienCuaHang.DataLayer.PhieuDatHangData pdh1 = new GiaoDienCuaHang.DataLayer.PhieuDatHangData();
             CRPhieuDatHang parameter = new CRPhieuDatHang();
             parameter.SetDataSource(pdh1.LayDS_PDH(cc));
             parameter.SetParameterValue("tenncc", comboBox1.Text);
-            crystalReportViewer1.ReportSource = parameter;            
+            crystalReportViewer1.ReportSource = parameter;
         }
     }
 }

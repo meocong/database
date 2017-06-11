@@ -5,10 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
 
 namespace GiaoDienCuaHang
 {
-    public partial class frmThongKeNhaCungCap : Form
+    public partial class frmThongKeNhaCungCap : DevComponents.DotNetBar.OfficeForm
     {
         public frmThongKeNhaCungCap()
         {
@@ -24,6 +25,5 @@ namespace GiaoDienCuaHang
             crystalReportViewer1.ReportSource = report;
         }
 
-      
     }
 }

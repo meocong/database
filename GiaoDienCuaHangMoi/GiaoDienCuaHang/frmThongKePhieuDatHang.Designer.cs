@@ -28,13 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.buttonhienthi = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelTenNV = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 100);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.SelectionFormula = "";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1167, 565);
+            this.crystalReportViewer1.TabIndex = 4;
+            this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
             // buttonhienthi
             // 
@@ -54,8 +67,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(838, 100);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(1167, 100);
+            this.panel1.TabIndex = 3;
             // 
             // labelTenNV
             // 
@@ -76,26 +89,12 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
             // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 100);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.SelectionFormula = "";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(838, 323);
-            this.crystalReportViewer1.TabIndex = 2;
-            this.crystalReportViewer1.ViewTimeSelectionFormula = "";
-            // 
             // frmThongKePhieuDatHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 423);
+            this.ClientSize = new System.Drawing.Size(1167, 665);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Name = "frmThongKePhieuDatHang";
             this.Text = "frmThongKePhieuDatHang";
             this.Load += new System.EventHandler(this.frmThongKePhieuDatHang_Load);
@@ -107,10 +106,10 @@
 
         #endregion
 
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.Button buttonhienthi;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelTenNV;
         private System.Windows.Forms.ComboBox comboBox1;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
     }
 }

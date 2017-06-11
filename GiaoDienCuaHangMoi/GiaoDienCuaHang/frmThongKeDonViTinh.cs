@@ -5,10 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
 
 namespace GiaoDienCuaHang
 {
-    public partial class frmThongKeDonViTinh : Form
+    public partial class frmThongKeDonViTinh : DevComponents.DotNetBar.OfficeForm
     {
         public frmThongKeDonViTinh()
         {

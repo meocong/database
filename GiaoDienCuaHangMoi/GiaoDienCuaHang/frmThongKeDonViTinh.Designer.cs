@@ -40,16 +40,15 @@ namespace GiaoDienCuaHang
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.SelectionFormula = "";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(782, 420);
-            this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(882, 505);
+            this.crystalReportViewer1.TabIndex = 1;
             this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
             // frmThongKeDonViTinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 420);
+            this.ClientSize = new System.Drawing.Size(882, 505);
             this.Controls.Add(this.crystalReportViewer1);
+            this.DoubleBuffered = true;
             this.Name = "frmThongKeDonViTinh";
             this.Text = "frmThongKeDonViTinh";
             this.Shown += new System.EventHandler(this.frmThongKeDonViTinh_Shown);
