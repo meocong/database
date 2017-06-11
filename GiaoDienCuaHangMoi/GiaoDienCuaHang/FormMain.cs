@@ -181,6 +181,7 @@ namespace GiaoDienCuaHang
                     else
                     {
                         this.BackgroundImage = null;
+                        
                         phanquyen(Utilities.nhanvien.loainv.MaloaiNV);
                         buttonItem20.Enabled = false;
                         //dangnhap.Dispose();
@@ -190,11 +191,12 @@ namespace GiaoDienCuaHang
                             hethan = new frmDanhSachHangHoaSapHetHan();
                             hethan.MdiParent = this;
                         }
-                        hethan.Show();
 
-                        if (hethan.dataGridView1.Rows.Count < 2)
+                        hethan.Loaddi();
+
+                        if (hethan.dataGridView1.Rows.Count >= 2)
                         {
-                            hethan.Close();
+                            hethan.Show();
                         }
                     }
                 }

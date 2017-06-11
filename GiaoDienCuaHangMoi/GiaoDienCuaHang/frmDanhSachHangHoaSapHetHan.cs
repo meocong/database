@@ -24,6 +24,11 @@ namespace GiaoDienCuaHang
             ctrl.HienThiDataGridViewHHsaphethan(dataGridView1, (int)numericUpDown1.Value);
         }
 
+        public void Loaddi()
+        {
+            ctrl.HienThiDataGridViewHHsaphethan(dataGridView1, (int)numericUpDown1.Value);
+        }
+
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             ctrl.HienThiDataGridViewHHsaphethan(dataGridView1, (int)numericUpDown1.Value);
