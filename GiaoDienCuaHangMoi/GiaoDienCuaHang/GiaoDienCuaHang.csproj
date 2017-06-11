@@ -798,6 +798,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="house_48.ico" />
+    <None Include="icon\TimPBH.ico" />
     <None Include="Resources\Business-Expired-icon2.png" />
     <None Include="QLCHmoiDataSet.xsc">
       <DependentUpon>QLCHmoiDataSet.xsd</DependentUpon>

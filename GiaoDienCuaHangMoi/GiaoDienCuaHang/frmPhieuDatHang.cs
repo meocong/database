@@ -15,6 +15,8 @@ namespace GiaoDienCuaHang
     {
         ChiTietPhieuDatHangController CTRLpdh = new ChiTietPhieuDatHangController();
         PhieuDatHangController Ctrl = new PhieuDatHangController();
+        int dem = 6;
+
         public frmPhieuDatHang()
         {
             InitializeComponent();
@@ -27,7 +29,11 @@ namespace GiaoDienCuaHang
 
             //Load combobox Tim Kiem
             PhieuDatHangController temp = new PhieuDatHangController();
-            temp.HienThiComboBox(comboBox1);
+            temp.HienThiComboBoxNCC(comboBox1);
+
+            //Load combobox Nhan Vien
+            PhieuDatHangController temp1 = new PhieuDatHangController();
+            temp.HienThiComboBoxNV(comboBox4);
         }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -87,16 +93,7 @@ namespace GiaoDienCuaHang
             if (textBoxMPDH.Text != "")
             {
                 Ctrl.AddNewDetailOrders(textBoxMPDH.Text);
-                string temp = "";
-                try
-                {
-                    temp = comboBox1.SelectedValue.ToString();
-                }
-                catch
-                {
-
-                }
-                Ctrl.FindingPDH(listView2, temp, dateTimePicker3.Value.Date, dateTimePicker2.Value.Date);
+                Finding();
             }
             else MessageBox.Show("Bạn chưa chọn mã phiếu. Vui lòng chọn lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
@@ -161,7 +158,11 @@ namespace GiaoDienCuaHang
         private void button1_Click(object sender, EventArgs e)
         {
             PrintDialog print = new PrintDialog();
-            print.ShowDialog();
+            //print.ShowDialog();
+
+            if (print.ShowDialog() == DialogResult.OK)
+            {
+            }
         }
 
         private void textBoxCTMPDH_Validating(object sender, CancelEventArgs e)
@@ -180,16 +181,31 @@ namespace GiaoDienCuaHang
 
         private void Finding()
         {
-            string temp = "";
+            if (dem > 0)
+            {
+                dem--;
+                return;
+            }
+            string tempNCC = "";
             try
             {
-                temp = comboBox1.SelectedValue.ToString();
+                tempNCC = comboBox1.SelectedValue.ToString();
             }
             catch
             {
 
             }
-            Ctrl.FindingPDH(listView2, temp, dateTimePicker3.Value.Date, dateTimePicker2.Value.Date);
+
+            string tempNV = "";
+            try
+            {
+                tempNV = comboBox4.SelectedValue.ToString();
+            }
+            catch
+            {
+
+            }
+            Ctrl.FindingPDH(listView2, tempNCC, dateTimePicker3.Value.Date, dateTimePicker2.Value.Date, tempNV);
         }
 
         private void comboBox1_TextChanged(object sender, EventArgs e)
@@ -198,6 +214,11 @@ namespace GiaoDienCuaHang
         }
 
         private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+            Finding();
+        }
+
+        private void comboBox4_TextChanged(object sender, EventArgs e)
         {
             Finding();
         }

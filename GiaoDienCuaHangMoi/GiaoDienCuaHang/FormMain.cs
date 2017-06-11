@@ -693,6 +693,7 @@ namespace GiaoDienCuaHang
 
         private void thốngKêPhiếuSựCốToolStripMenuItem_Click(object sender, EventArgs e)
         {
+ 
             if (thongkepsc == null || thongkepsc.IsDisposed)
                 thongkepsc = new frmThongKePhieuSuCo();
             thongkepsc.MdiParent = this;
@@ -1045,10 +1046,9 @@ namespace GiaoDienCuaHang
 
         private void buttonItem43_Click(object sender, EventArgs e)
         {
-            if (thongkepsc == null || thongkepsc.IsDisposed)
-                thongkepsc = new frmThongKePhieuSuCo();
-            thongkepsc.MdiParent = this;
-            thongkepsc.Show();
+            frmThongKePhieuSuCo tkpsc = new frmThongKePhieuSuCo();
+            tkpsc.MdiParent = this;
+            tkpsc.Show();
         }
 
         private void buttonItem33_Click(object sender, EventArgs e)

@@ -7,10 +7,11 @@ using System.Drawing;
 using System.Text;
 using GiaoDienCuaHang.Controller;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
 
 namespace GiaoDienCuaHang
 {
-    public partial class frmPhieuNhanHang : Form
+    public partial class frmPhieuNhanHang : OfficeForm
     {
         int tongtien = 0;
         PhieuNhanHangController ctrl = new PhieuNhanHangController();
@@ -178,8 +179,43 @@ namespace GiaoDienCuaHang
             frmTimKiemPhieuNhanHang tkpnh = new frmTimKiemPhieuNhanHang();
             tkpnh.Show();
         }
-        
 
-        
+        private void buttonThem_Click(object sender, EventArgs e)
+        {
+            this.textBox1.Text = "";
+            this.comboBoxMANCC.Text = "";
+            this.comboBoxMANV.Text = "";
+        }
+
+        private void buttonXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn chắc chắn xóa phải không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                IEnumerator ie = listViewpnh.SelectedItems.GetEnumerator();
+
+                while (ie.MoveNext())
+                {
+                    ListViewItem item = (ListViewItem)ie.Current;
+                    listViewpnh.Items.Remove(item);
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn lưu thông tin này phải không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ctrl.Luu_PhieuNhanHang(textBox1, comboBoxMANCC, comboBoxMANV, dateTimePicker1, textBox5);
+                ctrl.HienThiListView(listViewpnh);
+                ctrl.Luu_CTPhieuNhanHang(listView2);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmTimKiemPhieuDatHang TKPDH = new frmTimKiemPhieuDatHang();
+            TKPDH.Show();
+        }
     }
 }

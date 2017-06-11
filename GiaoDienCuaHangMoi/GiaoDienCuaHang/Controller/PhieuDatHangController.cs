@@ -38,11 +38,11 @@ namespace GiaoDienCuaHang.Controller
          
       }
 
-        public void FindingPDH(ListView listview, String ncc, DateTime start, DateTime end)
+        public void FindingPDH(ListView listview, String ncc, DateTime start, DateTime end, String nv)
         {
             listview.Items.Clear();
             PhieuDatHangData datapdh = new PhieuDatHangData();
-            DataTable dtb = datapdh.FindingPDH(ncc, start, end);
+            DataTable dtb = datapdh.FindingPDH(ncc, start, end, nv);
             int n = 0;
             foreach (DataRow row in dtb.Rows)
             {
@@ -75,9 +75,14 @@ namespace GiaoDienCuaHang.Controller
            ctrlHH.LoadComboBoxHangHoa(cmbMaSP);
         }
 
-        public void HienThiComboBox(ComboBox cmbMaNCC)
+        public void HienThiComboBoxNCC(ComboBox cmbMaNCC)
         {
             ctrlNCC.LoadComboBoxNhaCungCap(cmbMaNCC);
+        }
+
+        public void HienThiComboBoxNV(ComboBox cmbNV)
+        {
+            ctrlNV.LoadComboBoxNhanVien(cmbNV);
         }
 
         public bool KiemTraTTChiTietPhieuDatHang(ListView listview, string strCTMaPhieuDH, string strCTMaSP)

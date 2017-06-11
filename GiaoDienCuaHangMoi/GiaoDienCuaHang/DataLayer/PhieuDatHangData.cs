@@ -18,13 +18,14 @@ namespace GiaoDienCuaHang.DataLayer
             return ds;
         }
 
-        public DataTable FindingPDH(String ncc, DateTime start, DateTime end)
+        public DataTable FindingPDH(String ncc, DateTime start, DateTime end, String nv)
         {
-            string SQL = "select * from PHIEUDATHANG WHERE MANCC = @ncc AND NGAYLAP >= @start AND NGAYLAP <= @end";
+            string SQL = "select * from PHIEUDATHANG WHERE MANCC LIKE '%' + @ncc+ '%' AND MANV LIKE '%' + @nv+ '%' AND NGAYLAP >= @start AND NGAYLAP <= @end";
 
             SqlCommand cmd = new SqlCommand(SQL);
 
             cmd.Parameters.Add("ncc", SqlDbType.VarChar).Value = ncc;
+            cmd.Parameters.Add("nv", SqlDbType.VarChar).Value = nv;
             cmd.Parameters.Add("start", SqlDbType.DateTime).Value = start;
             cmd.Parameters.Add("end", SqlDbType.DateTime).Value = end;
             ds.Load(cmd);
