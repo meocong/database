@@ -36,7 +36,7 @@ namespace GiaoDienCuaHang
             textBoxX2.CharacterCasing = CharacterCasing.Upper;
             textBoxX3.CharacterCasing = CharacterCasing.Upper;
             textBoxX4.CharacterCasing = CharacterCasing.Upper;
-            textBox2.Focus();
+            //textBox2.Focus();
         }
 
         private void updateDataSource()
@@ -146,7 +146,7 @@ namespace GiaoDienCuaHang
         {
             dataGridView1.DataSource = ctrl.DataKhachHang(textID, textName, textAddress, textNumber).DataSource;
             updateDataSource();
-            textBox2.Focus();
+            //textBox2.Focus();
         }
 
         private void textBoxX1_TextChanged(object sender, EventArgs e)

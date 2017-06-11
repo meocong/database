@@ -81,7 +81,7 @@ namespace GiaoDienCuaHang
                         dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
                 }
             }
-            textBox2.Focus();
+            //textBox2.Focus();
         }
 
         private void dataGridView1_DataError_1(object sender, DataGridViewDataErrorEventArgs e)

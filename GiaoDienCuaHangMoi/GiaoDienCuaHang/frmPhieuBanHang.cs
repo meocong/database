@@ -260,7 +260,7 @@ namespace GiaoDienCuaHang
 
                 this.comboBoxMSP.Text = "";
                 this.textBoxDG.Text = "";
-                this.textBoxSL.Focus();
+                //this.textBoxSL.Focus();
             }
             else MessageBox.Show("Bạn chưa chọn mã phiếu. Vui lòng chọn lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }

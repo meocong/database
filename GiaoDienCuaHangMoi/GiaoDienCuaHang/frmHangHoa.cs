@@ -120,7 +120,7 @@ namespace GiaoDienCuaHang
                         dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
                 }
             }
-            textBox2.Focus();
+            //textBox2.Focus();
         }
 
         private void buttonSaving_Click(object sender, EventArgs e)
