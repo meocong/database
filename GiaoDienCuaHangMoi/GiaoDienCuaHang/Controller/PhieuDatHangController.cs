@@ -38,11 +38,11 @@ namespace GiaoDienCuaHang.Controller
          
       }
 
-        public void FindingPDH(ListView listview, String ncc, DateTime start, DateTime end, String nv)
+        public void FindingPDH(ListView listview, String kh, DateTime start, DateTime end, String nv)
         {
             listview.Items.Clear();
             PhieuDatHangData datapdh = new PhieuDatHangData();
-            DataTable dtb = datapdh.FindingPDH(ncc, start, end, nv);
+            DataTable dtb = datapdh.FindingPDH(kh, start, end, nv);
             int n = 0;
             foreach (DataRow row in dtb.Rows)
             {

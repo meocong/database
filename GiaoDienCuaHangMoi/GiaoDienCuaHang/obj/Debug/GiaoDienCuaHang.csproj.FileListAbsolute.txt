@@ -799,7 +799,6 @@ C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCu
 C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\bin\Debug\DevComponents.Instrumentation.xml
 C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.csprojResolveAssemblyReference.cache
 C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fHangHoa.resources
-C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmLapPhieuBanHang.resources
 C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fLapPhieuSuCo.resources
 C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fLoaiNhanVien.resources
 C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmAbout.resources
@@ -829,3 +828,6 @@ C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCu
 C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmTonKho.resources
 C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.Properties.Resources.resources
 C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.csproj.GenerateResource.Cache
+C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmPhieuBanHang.resources
+C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmThongKeTonKho.resources
+C:\Learning\Data Base\Code\Final Code 11h\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmThongKePhieuDatHang.resources

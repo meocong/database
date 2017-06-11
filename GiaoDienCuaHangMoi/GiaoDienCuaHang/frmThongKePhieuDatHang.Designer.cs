@@ -93,16 +93,16 @@
             this.labelTenNV.ForeColor = System.Drawing.Color.Purple;
             this.labelTenNV.Location = new System.Drawing.Point(68, 37);
             this.labelTenNV.Name = "labelTenNV";
-            this.labelTenNV.Size = new System.Drawing.Size(164, 29);
+            this.labelTenNV.Size = new System.Drawing.Size(99, 18);
             this.labelTenNV.TabIndex = 2;
-            this.labelTenNV.Text = "Tên nhân viên";
+            this.labelTenNV.Text = "Nhà cung cấp";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(238, 37);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
             // 
             // frmThongKePhieuDatHang

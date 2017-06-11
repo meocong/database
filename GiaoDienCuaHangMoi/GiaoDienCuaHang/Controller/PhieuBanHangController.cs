@@ -39,7 +39,17 @@ namespace GiaoDienCuaHang.Controller
            }
        }
 
-       public void HienThiComboBox(ComboBox cmbMaKH, ComboBox cmbMaNV,ComboBox cmbMaSP)
+        internal void HienThiComboBoxNV(ComboBox comboBox4)
+        {
+            ctrlnv.LoadComboBoxNhanVien(comboBox4);
+        }
+
+        internal void HienThiComboBoxKH(ComboBox comboBox1)
+        {
+            ctrlkh.LoadComboBoxKhachHang(comboBox1);
+        }
+
+        public void HienThiComboBox(ComboBox cmbMaKH, ComboBox cmbMaNV,ComboBox cmbMaSP)
        {
            ctrlkh.LoadComboBoxKhachHang(cmbMaKH);
            ctrlnv.LoadComboBoxNhanVien(cmbMaNV);
@@ -93,7 +103,13 @@ namespace GiaoDienCuaHang.Controller
            pbhdata.Update();
 
        }
-       public void TimKiemPBH(ComboBox cmbMKH, ComboBox cmbchonMNV, ComboBox cmbMNV,ComboBox cmbchonNgayLap,DateTimePicker tungay,DateTimePicker denngay, DataGridView dg)
+
+        public void AddNewOrders()
+        {
+            data.AddNewOrders();
+        }
+
+        public void TimKiemPBH(ComboBox cmbMKH, ComboBox cmbchonMNV, ComboBox cmbMNV,ComboBox cmbchonNgayLap,DateTimePicker tungay,DateTimePicker denngay, DataGridView dg)
        {
            DataTable tbl = data.TimKiemPhieuBanHang(cmbMKH.Text,cmbchonMNV.Text,cmbMNV.Text,cmbchonNgayLap.Text,tungay.Value.Date,denngay.Value.Date);
            if (tbl.Rows.Count == 0)
@@ -103,7 +119,31 @@ namespace GiaoDienCuaHang.Controller
            dg.DataSource = tbl;
 
        }
-      
 
-   }
+        public void FindingPDH(ListView listview, string kh, DateTime start, DateTime end, string nv)
+        {
+            listview.Items.Clear();
+            DataTable dtb = data.FindingPBH(kh, start, end, nv);
+            int n = 0;
+            foreach (DataRow row in dtb.Rows)
+            {
+                ListViewItem item = new ListViewItem();
+                n++;
+                item.Text = n.ToString();
+                item.SubItems.Add(row["MAPHIEU"].ToString());
+                item.SubItems.Add(row["MAKH"].ToString());
+                item.SubItems.Add(row["MANV"].ToString());
+                item.SubItems.Add(row["NGAYLAP"].ToString());
+                item.SubItems.Add(row["TONGTIEN"].ToString());
+
+                listview.Items.Add(item);
+
+            }
+        }
+
+        public void AddNewDetailOrders(string text)
+        {
+            data.AddNewDetailOrders(text);
+        }
+    }
 }

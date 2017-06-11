@@ -191,7 +191,7 @@ namespace GiaoDienCuaHang
                 dem--;
                 return;
             }
-            MessageBox.Show("xxx");
+
             string tempNCC = "";
             try
             {

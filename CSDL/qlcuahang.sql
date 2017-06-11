@@ -734,6 +734,69 @@ GO
 		END
 	END
 GO
+
+------------------Phieu Nhan Hang---------------------
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'AUTO_IDPhieuBanHang')
+DROP FUNCTION dbo.AUTO_IDPhieuBanHang;
+GO
+	CREATE FUNCTION dbo.AUTO_IDPhieuBanHang()
+	RETURNS VARCHAR(6)
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(6)
+		IF (SELECT COUNT(MAPHIEU) FROM PHIEUBANHANG) = 0
+			SET @ID = '001'
+		ELSE
+		BEGIN
+			SELECT @ID = MAX(RIGHT(MAPHIEU, LEN(MAPHIEU) - 3)) FROM PHIEUBANHANG;
+			SET @ID = @ID + 1
+			WHILE LEN(@ID) < 3 
+			BEGIN 
+				SET @ID = '0' + @ID 
+			END
+		END
+		SET @ID = 'PBH' + @ID
+
+		RETURN @ID
+	END
+GO
+
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_PhieuBanHang')
+DROP PROCEDURE dbo.Insert_New_PhieuBanHang;
+GO
+	CREATE PROCEDURE dbo.Insert_New_PhieuBanHang
+	AS
+	BEGIN
+		DECLARE @ID VARCHAR(6)
+		SELECT @ID = dbo.AUTO_IDPhieuBanHang() 
+
+		DECLARE @THISDAY DATETIME
+		SELECT @THISDAY = GETDATE()
+
+		INSERT INTO PHIEUBANHANG
+		VALUES (@ID,'KH001','NV001',@THISDAY,'0')
+	END
+GO
+
+------------------Chi Tiet Phieu Nhan Hang---------------------
+IF EXISTS(SELECT name FROM sys.objects WHERE name = N'Insert_New_ChiTietPhieuBanHang')
+DROP PROCEDURE dbo.Insert_New_ChiTietPhieuBanHang;
+GO
+	CREATE PROCEDURE dbo.Insert_New_ChiTietPhieuBanHang
+	@ID VARCHAR(6)
+	AS
+	BEGIN
+		DECLARE @THISDAY DATETIME
+		SELECT @THISDAY = GETDATE()
+
+		IF NOT EXISTS(SELECT * FROM CHITIETPHIEUBANHANG WHERE MAPHIEU = @ID AND MAHH = 'HH001')
+		BEGIN
+			INSERT INTO CHITIETPHIEUBANHANG
+				VALUES (@ID,'HH001','0','0','0')
+		END
+	END
+GO
+
 -----------------------------------------------
 --==============NH?P LI?U ====================
 -----------------------------------------------
@@ -821,7 +884,7 @@ VALUES ('DVT005','THUNG')
 
 -----------------HÀNG HÓA----------------------
 INSERT INTO HANGHOA
-VALUES ('HH001','HANG HOA MAC DINH','DVT003','11/10/2018','200','20','5','5000')
+VALUES ('HH001','HANG HOA MAC DINH','DVT003','11/10/2000','0','0','0','0')
 
 INSERT INTO HANGHOA
 VALUES ('HH002','BIA SAI GON','DVT003','11/10/2018','200','20','5','5000')

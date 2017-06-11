@@ -77,5 +77,29 @@ namespace GiaoDienCuaHang.DataLayer
        {
            ds.Update();
        }
+
+        public void AddNewOrders()
+        {
+            ds.Exec("EXEC dbo.Insert_New_PhieuBanHang");
+        }
+
+        internal void AddNewDetailOrders(string text)
+        {
+            ds.Exec("EXEC dbo.Insert_New_ChiTietPhieuBanHang " + text);
+        }
+
+        public DataTable FindingPBH(string kh, DateTime start, DateTime end, string nv)
+        {
+            string SQL = "SELECT * from PHIEUBANHANG WHERE MAKH LIKE '%' + @kh+ '%' AND MANV LIKE '%' + @nv+ '%' AND NGAYLAP >= @start AND NGAYLAP <= @end";
+
+            SqlCommand cmd = new SqlCommand(SQL);
+
+            cmd.Parameters.Add("kh", SqlDbType.VarChar).Value = kh;
+            cmd.Parameters.Add("nv", SqlDbType.VarChar).Value = nv;
+            cmd.Parameters.Add("start", SqlDbType.DateTime).Value = start;
+            cmd.Parameters.Add("end", SqlDbType.DateTime).Value = end;
+            ds.Load(cmd);
+            return ds;
+        }
     }
 }

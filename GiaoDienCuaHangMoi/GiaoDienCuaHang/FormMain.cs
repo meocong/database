@@ -31,7 +31,7 @@ namespace GiaoDienCuaHang
         frmNhaCungCap ncc = null;
         frmHangHoa hh = null;
         frmDonViTinh dvt = null;
-        frmLapPhieuBanHang pbh = null;
+        frmPhieuBanHang pbh = null;
         frmPhieuDatHang pdh = null;
         frmPhieuNhanHang pnh = null;
         fLapPhieuSuCo psc = null;
@@ -329,7 +329,7 @@ namespace GiaoDienCuaHang
         private void BHToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (pbh == null || pbh.IsDisposed)
-                pbh = new frmLapPhieuBanHang();
+                pbh = new frmPhieuBanHang();
             pbh.MdiParent = this;
             pbh.Show();
         }
@@ -361,7 +361,7 @@ namespace GiaoDienCuaHang
         private void toolStripButtonPBH_Click(object sender, EventArgs e)
         {
             if (pbh == null || pbh.IsDisposed)
-                pbh = new frmLapPhieuBanHang();
+                pbh = new frmPhieuBanHang();
             pbh.MdiParent = this;
             pbh.Show();
         }
@@ -385,7 +385,7 @@ namespace GiaoDienCuaHang
         private void taskItemBH_Click(object sender, EventArgs e)
         {
             if (pbh == null || pbh.IsDisposed)
-                pbh = new frmLapPhieuBanHang();
+                pbh = new frmPhieuBanHang();
             pbh.MdiParent = this;
             pbh.Show();
         }
@@ -828,7 +828,7 @@ namespace GiaoDienCuaHang
         private void buttonItem6_Click(object sender, EventArgs e)
         {
             if (pbh == null || pbh.IsDisposed)
-                pbh = new frmLapPhieuBanHang();
+                pbh = new frmPhieuBanHang();
             pbh.MdiParent = this;
             pbh.Show();
         }
@@ -948,7 +948,7 @@ namespace GiaoDienCuaHang
         private void buttonItem26_Click(object sender, EventArgs e)
         {
             if (pbh == null || pbh.IsDisposed)
-                pbh = new frmLapPhieuBanHang();
+                pbh = new frmPhieuBanHang();
             pbh.MdiParent = this;
             pbh.Show();
         }
