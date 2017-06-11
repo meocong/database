@@ -12,7 +12,7 @@ namespace GiaoDienCuaHang.NewController
     public class HangHoaController
     {
         HangHoaData data = new HangHoaData();
-        public void HienThiDataGridView(TextBox txtMHH, TextBox txtTHH, TextBox txtSL, ComboBox cmbMDVT, DateTimeInput dt, TextBox txtSLG, TextBox txtTLG, DataGridView dgv)
+        public void HienThiDataGridView(TextBox txtMHH, TextBox txtTHH, TextBox txtSL, ComboBox cmbMDVT, DateTimeInput dt, TextBox txtSLG, TextBox txtTLG, NumericUpDown dg, DataGridView dgv)
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = data.LayDSHangHoa();
@@ -24,6 +24,7 @@ namespace GiaoDienCuaHang.NewController
             dt.DataBindings.Add("Text", dgv.DataSource, "NGAYHETHAN", false, DataSourceUpdateMode.OnPropertyChanged);
             txtSLG.DataBindings.Add("Text", dgv.DataSource, "SOLUONGGIAM", false, DataSourceUpdateMode.OnPropertyChanged);
             txtTLG.DataBindings.Add("Text", dgv.DataSource, "TILEGIAM", false, DataSourceUpdateMode.OnPropertyChanged);
+            dg.DataBindings.Add("Text", dgv.DataSource, "DONGIA", false, DataSourceUpdateMode.OnPropertyChanged);
 
             DonViTinhController dvtctrl = new DonViTinhController();
             dgv.Columns.Add(dvtctrl.LoadComboBoxColumn());
@@ -47,7 +48,7 @@ namespace GiaoDienCuaHang.NewController
             //cmb.SelectedValue = "MAHH";
         }
 
-        internal void Reload_bindings(TextBox txtMHH, TextBox txtTHH, TextBox txtSL, ComboBox cmbMDVT, DateTimeInput dt, TextBox txtSLG, TextBox txtTLG, DataGridView dgv)
+        internal void Reload_bindings(TextBox txtMHH, TextBox txtTHH, TextBox txtSL, ComboBox cmbMDVT, DateTimeInput dt, TextBox txtSLG, TextBox txtTLG, NumericUpDown dg, DataGridView dgv)
         {
             try
             {
@@ -58,6 +59,7 @@ namespace GiaoDienCuaHang.NewController
                 dt.DataBindings.RemoveAt(0);
                 txtSLG.DataBindings.RemoveAt(0);
                 txtTLG.DataBindings.RemoveAt(0);
+                dg.DataBindings.RemoveAt(0);
             }
             catch
             {
@@ -71,6 +73,7 @@ namespace GiaoDienCuaHang.NewController
             dt.DataBindings.Add("Text", dgv.DataSource, "NGAYHETHAN", false, DataSourceUpdateMode.OnPropertyChanged);
             txtSLG.DataBindings.Add("Text", dgv.DataSource, "SOLUONGGIAM", false, DataSourceUpdateMode.OnPropertyChanged);
             txtTLG.DataBindings.Add("Text", dgv.DataSource, "TILEGIAM", false, DataSourceUpdateMode.OnPropertyChanged);
+            dg.DataBindings.Add("Text", dgv.DataSource, "DONGIA", false, DataSourceUpdateMode.OnPropertyChanged);
         }
 
         public DataGridViewComboBoxColumn LoadComboBoxColumn()
@@ -105,9 +108,9 @@ namespace GiaoDienCuaHang.NewController
             data.AddNewRow();
         }
 
-        public void TimKiemHH(string MaHH, string tenHH, DateTimeInput start, DateTimeInput end, Int32 beginCount, Int32 EndCount, DataGridView dg)
+        public void TimKiemHH(string MaHH, string tenHH, DateTimeInput start, DateTimeInput end, Int32 beginCount, Int32 EndCount, Int32 beginPrice, Int32 EndPrice, DataGridView dg)
         {
-            DataTable tbl = data.TimKiemHangHoaNew(MaHH, tenHH, start.Value.Date, end.Value.Date, beginCount, EndCount);
+            DataTable tbl = data.TimKiemHangHoaNew(MaHH, tenHH, start.Value.Date, end.Value.Date, beginCount, EndCount, beginPrice, EndPrice);
 
             dg.DataSource = tbl;
 

@@ -21,7 +21,7 @@ namespace GiaoDienCuaHang
 
         private void frmHangHoa_Load(object sender, EventArgs e)
         {
-            ctrl.HienThiDataGridView(textBox1, textBox2, textBox3, comboBox1, dateTimePicker1, textBox4, textBox5, dataGridView1);
+            ctrl.HienThiDataGridView(textBox1, textBox2, textBox3, comboBox1, dateTimePicker1, textBox4, textBox5, numericUpDown3, dataGridView1);
 
             textBox1.CharacterCasing = CharacterCasing.Upper;
             textBox2.CharacterCasing = CharacterCasing.Upper;
@@ -41,8 +41,8 @@ namespace GiaoDienCuaHang
 
         public void Finding()
         {
-            ctrl.TimKiemHH(textBoxX1.Text, textBoxX2.Text, dateTimeInput1, dateTimeInput3, (Int32)numericUpDown1.Value, (Int32)numericUpDown2.Value, dataGridView1);
-            ctrl.Reload_bindings(textBox1, textBox2, textBox3, comboBox1, dateTimePicker1, textBox4, textBox5, dataGridView1);
+            ctrl.TimKiemHH(textBoxX1.Text, textBoxX2.Text, dateTimeInput1, dateTimeInput3, (Int32)numericUpDown1.Value, (Int32)numericUpDown2.Value, (Int32)numericUpDown4.Value, (Int32)numericUpDown5.Value, dataGridView1);
+            ctrl.Reload_bindings(textBox1, textBox2, textBox3, comboBox1, dateTimePicker1, textBox4, textBox5, numericUpDown3, dataGridView1);
         }
 
         private void textBoxX1_TextChanged(object sender, EventArgs e)
@@ -134,6 +134,11 @@ namespace GiaoDienCuaHang
         private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
+        }
+
+        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        {
+            Finding();
         }
     }
 }

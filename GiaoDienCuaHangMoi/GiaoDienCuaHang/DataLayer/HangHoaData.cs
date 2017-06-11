@@ -78,7 +78,7 @@ namespace GiaoDienCuaHang.DataLayer
 
         }
 
-        public DataTable TimKiemHangHoaNew(string MaHH, string tenHH, DateTime start, DateTime end, Int32 beginCount, Int32 endCount)
+        public DataTable TimKiemHangHoaNew(string MaHH, string tenHH, DateTime start, DateTime end, Int32 beginCount, Int32 endCount, Int32 beginPrice, Int32 endPrice)
         {
             SqlCommand cmd = new SqlCommand();
             String SQL = "SELECT * FROM HANGHOA WHERE MAHH LIKE '%' + @mHH + '%' AND TENHH LIKE '%' + @tHH + '%' AND NGAYHETHAN >= @start AND NGAYHETHAN <=  @end ";
@@ -96,6 +96,12 @@ namespace GiaoDienCuaHang.DataLayer
 
             SQL += " AND SOLUONG <= @endCount ";
             cmd.Parameters.Add("endCount", SqlDbType.Int).Value = endCount;
+
+            SQL += " AND DONGIA >=  @beginPrice ";
+            cmd.Parameters.Add("beginPrice", SqlDbType.Int).Value = beginPrice;
+
+            SQL += " AND DONGIA <= @endPrice ";
+            cmd.Parameters.Add("endPrice", SqlDbType.Int).Value = endPrice;
 
             cmd.CommandText = SQL;
             ds.Load(cmd);
