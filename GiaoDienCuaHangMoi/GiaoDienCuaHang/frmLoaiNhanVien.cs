@@ -88,5 +88,10 @@ namespace GiaoDienCuaHang
                 e.Cancel = true;
             }
         }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }

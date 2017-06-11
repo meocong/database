@@ -130,5 +130,10 @@ namespace GiaoDienCuaHang
             dataGridView1.Update();
             dataGridView1.Refresh();
         }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }

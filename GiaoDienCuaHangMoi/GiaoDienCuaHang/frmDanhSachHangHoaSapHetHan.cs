@@ -28,5 +28,10 @@ namespace GiaoDienCuaHang
         {
             ctrl.HienThiDataGridViewHHsaphethan(dataGridView1, (int)numericUpDown1.Value);
         }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }

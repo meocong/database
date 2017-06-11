@@ -22,7 +22,7 @@ namespace GiaoDienCuaHang
         frmDonViTinh dvt = null;
         fLapPhieuBanHang pbh = null;
         frmLapPhieuDatHang pdh = null;
-        frmLapPhieuNhanHang pnh = null;
+        fLapPhieuNhanHang pnh = null;
         fLapPhieuSuCo psc = null;
         frmTimKiemKhachHang tkkh = null;
         frmTimKiemNhaCungCap tkncc = null;
@@ -329,7 +329,7 @@ namespace GiaoDienCuaHang
         private void NHToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (pnh == null || pnh.IsDisposed)
-                pnh = new frmLapPhieuNhanHang();
+                pnh = new fLapPhieuNhanHang();
             pnh.MdiParent = this;
             pnh.Show();
         }
@@ -361,7 +361,7 @@ namespace GiaoDienCuaHang
         private void toolStripButtonPNH_Click(object sender, EventArgs e)
         {
             if (pnh == null || pnh.IsDisposed)
-                pnh = new frmLapPhieuNhanHang();
+                pnh = new fLapPhieuNhanHang();
             pnh.MdiParent = this;
             pnh.Show();
         }
@@ -385,7 +385,7 @@ namespace GiaoDienCuaHang
         private void taskItemNH_Click(object sender, EventArgs e)
         {
             if (pnh == null || pnh.IsDisposed)
-                pnh = new frmLapPhieuNhanHang();
+                pnh = new fLapPhieuNhanHang();
             pnh.MdiParent = this;
             pnh.Show();
         }
@@ -820,7 +820,7 @@ namespace GiaoDienCuaHang
         private void buttonItem8_Click(object sender, EventArgs e)
         {
             if (pnh == null || pnh.IsDisposed)
-                pnh = new frmLapPhieuNhanHang();
+                pnh = new fLapPhieuNhanHang();
             pnh.MdiParent = this;
             pnh.Show();
         }
@@ -940,7 +940,7 @@ namespace GiaoDienCuaHang
         private void buttonItem28_Click(object sender, EventArgs e)
         {
             if (pnh == null || pnh.IsDisposed)
-                pnh = new frmLapPhieuNhanHang();
+                pnh = new fLapPhieuNhanHang();
             pnh.MdiParent = this;
             pnh.Show();
         }

@@ -564,7 +564,6 @@ C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHan
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmAbout.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDanhSachHangHoaSapHetHan.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDonViTinh.resources
-C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDShanghoahethan.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmHangHoa.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmKhachHang.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmLoaiNhanVien.resources
@@ -580,21 +579,10 @@ C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHan
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmThongKePhieuNhanHang.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmThongKePhieuSuCo.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmThongKeTonKho.resources
-C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKeDonViTinh.resources
-C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKeHangHoatheoDVT.resources
-C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKeKhachHang.resources
-C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKeNhaCungCap.resources
-C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKeNhanVien.resources
-C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKePhieuBanHang.resources
-C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKePhieuDatHang.resources
-C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKePhieuNhanHang.resources
-C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKePhieuSuCo.resources
-C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fThongKeTonKho.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.FormMain.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmDangNhap.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fDonViTinh.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmLapPhieuDatHang.resources
-C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmLapPhieuNhanHang.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fKhachHang.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fNhaCungCap.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fNhanVien.resources
@@ -606,6 +594,6 @@ C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHan
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmTimKiemPhieuDatHang.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmTimKiemPhieuNhanHang.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.frmTonKho.resources
-C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fTonKho.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.Properties.Resources.resources
 C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.csproj.GenerateResource.Cache
+C:\Learning\Data Base\Code\Final Code\database\GiaoDienCuaHangMoi\GiaoDienCuaHang\obj\Debug\GiaoDienCuaHang.fLapPhieuNhanHang.resources
